@@ -34,7 +34,7 @@ void func_8022FBDC(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
         return;
     }
 loop_3:
-    temp_v1 = (s32) (var_v1 + 3) & ~3;
+    temp_v1 = (s32) ((s8 *) var_v1 + 3) & ~3;
     temp_a1 = *(s32 *)temp_v1;
     temp_v1_2 = temp_v1 + 4;
     switch (temp_a1) {                              /* irregular */
@@ -56,7 +56,7 @@ loop_3:
         var_v1 = temp_v1_5 + 4;
         goto loop_3;
     default:
-        func_80231A24(D_80254B28, temp_a1, 1, 2);
+        func_80231A24(D_80254B28, (*(s32 *)temp_v1), 1, 2);
         break;
     }
 }

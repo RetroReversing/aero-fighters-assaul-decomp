@@ -53,89 +53,89 @@ void func_802B02B0(s32 arg0, f32 arg1, s32 *arg2, s32 *arg3) {
     } else {
         var_fa1 = arg1 - 0.5f;
     }
-    temp_fv0 = (f32) (s32) var_fa1;
-    if (temp_fv0 < D_80340F24) {
+    var_fa1 = (f32) (s32) var_fa1;
+    if (var_fa1 < D_80340F24) {
         var_v0 = 0xAE;
         var_v1 = 0x7F;
-    } else if ((D_80340F24 <= temp_fv0) && (temp_fv0 < D_80340F28)) {
+    } else if ((D_80340F24 <= var_fa1) && (var_fa1 < D_80340F28)) {
         var_v0 = 0xAC;
         var_v1 = 0x7F;
-    } else if ((D_80340F2C <= temp_fv0) && (temp_fv0 < D_80340F30)) {
+    } else if ((D_80340F2C <= var_fa1) && (var_fa1 < D_80340F30)) {
         var_v0 = 0xA9;
         var_v1 = 0x7F;
-    } else if ((D_80340F34 <= temp_fv0) && (temp_fv0 < D_80340F38)) {
+    } else if ((D_80340F34 <= var_fa1) && (var_fa1 < D_80340F38)) {
         var_v0 = 0xA5;
         var_v1 = 0x7F;
-    } else if ((D_80340F3C <= temp_fv0) && (temp_fv0 < D_80340F40)) {
+    } else if ((D_80340F3C <= var_fa1) && (var_fa1 < D_80340F40)) {
         var_v0 = 0xA3;
         var_v1 = 0x7F;
-    } else if ((D_80340F44 <= temp_fv0) && (temp_fv0 < D_80340F48)) {
+    } else if ((D_80340F44 <= var_fa1) && (var_fa1 < D_80340F48)) {
         var_v0 = 0xA0;
         var_v1 = 0x7F;
-    } else if ((D_80340F4C <= temp_fv0) && (temp_fv0 < D_80340F50)) {
+    } else if ((D_80340F4C <= var_fa1) && (var_fa1 < D_80340F50)) {
         var_v0 = 0x9D;
         var_v1 = 0x7F;
-    } else if ((D_80340F54 <= temp_fv0) && (temp_fv0 < -400.0f)) {
+    } else if ((D_80340F54 <= var_fa1) && (var_fa1 < -400.0f)) {
         var_v0 = 0xA8;
         var_v1 = 0x7F;
-    } else if ((temp_fv0 >= -400.0f) && (temp_fv0 < -250.0f)) {
+    } else if ((var_fa1 >= -400.0f) && (var_fa1 < -250.0f)) {
         var_v0 = 0xA2;
         var_v1 = 0x7F;
-    } else if ((temp_fv0 >= -250.0f) && (temp_fv0 < -150.0f)) {
+    } else if ((var_fa1 >= -250.0f) && (var_fa1 < -150.0f)) {
         var_v0 = 0x9F;
         var_v1 = 0x7F;
-    } else if ((temp_fv0 >= -150.0f) && (temp_fv0 < -75.0f)) {
+    } else if ((var_fa1 >= -150.0f) && (var_fa1 < -75.0f)) {
         var_v0 = 0x9C;
         var_v1 = 0x7F;
-    } else if ((temp_fv0 >= -75.0f) && (temp_fv0 < 0.0f)) {
+    } else if ((var_fa1 >= -75.0f) && (var_fa1 < 0.0f)) {
         var_v0 = 0xA7;
         var_v1 = 0x7F;
     } else {
-        if ((temp_fv0 >= 0.0f) && (temp_fv0 < 75.0f)) {
+        if ((var_fa1 >= 0.0f) && (var_fa1 < 75.0f)) {
             var_v0 = 0xA7;
             goto block_73;
         }
-        if ((temp_fv0 >= 75.0f) && (temp_fv0 < 150.0f)) {
+        if ((var_fa1 >= 75.0f) && (var_fa1 < 150.0f)) {
             var_v0 = 0x9C;
             goto block_73;
         }
-        if ((temp_fv0 >= 150.0f) && (temp_fv0 < 250.0f)) {
+        if ((var_fa1 >= 150.0f) && (var_fa1 < 250.0f)) {
             var_v0 = 0x9F;
             goto block_73;
         }
-        if ((temp_fv0 >= 250.0f) && (temp_fv0 < 400.0f)) {
+        if ((var_fa1 >= 250.0f) && (var_fa1 < 400.0f)) {
             var_v0 = 0xA2;
             goto block_73;
         }
-        if ((temp_fv0 >= 400.0f) && (temp_fv0 < D_80340F58)) {
+        if ((var_fa1 >= 400.0f) && (var_fa1 < D_80340F58)) {
             var_v0 = 0xA8;
             goto block_73;
         }
-        if ((D_80340F5C <= temp_fv0) && (temp_fv0 < D_80340F60)) {
+        if ((D_80340F5C <= var_fa1) && (var_fa1 < D_80340F60)) {
             var_v0 = 0x9D;
             goto block_73;
         }
-        if ((D_80340F64 <= temp_fv0) && (temp_fv0 < D_80340F68)) {
+        if ((D_80340F64 <= var_fa1) && (var_fa1 < D_80340F68)) {
             var_v0 = 0xA0;
             goto block_73;
         }
-        if ((D_80340F6C <= temp_fv0) && (temp_fv0 < D_80340F70)) {
+        if ((D_80340F6C <= var_fa1) && (var_fa1 < D_80340F70)) {
             var_v0 = 0xA3;
             goto block_73;
         }
-        if ((D_80340F74 <= temp_fv0) && (temp_fv0 < D_80340F78)) {
+        if ((D_80340F74 <= var_fa1) && (var_fa1 < D_80340F78)) {
             var_v0 = 0xA5;
             goto block_73;
         }
-        if ((D_80340F7C <= temp_fv0) && (temp_fv0 < D_80340F80)) {
+        if ((D_80340F7C <= var_fa1) && (var_fa1 < D_80340F80)) {
             var_v0 = 0xA9;
             goto block_73;
         }
-        if ((D_80340F84 <= temp_fv0) && (temp_fv0 < D_80340F88)) {
+        if ((D_80340F84 <= var_fa1) && (var_fa1 < D_80340F88)) {
             var_v0 = 0xAC;
             goto block_73;
         }
-        if (D_80340F8C <= temp_fv0) {
+        if (D_80340F8C <= var_fa1) {
             var_v0 = 0xAE;
 block_73:
             var_v1 = 0xC4;

@@ -14,7 +14,7 @@ typedef s32 M2C_UNK32;
 #endif
 
 M2C_UNK func_802C679C(void *);                      /* extern */
-M2C_UNK func_802E9E14(void *);                      /* extern */
+M2C_UNK func_802E9E14(void *, s32);                      /* extern */
 M2C_UNK func_80320C08(void *, M2C_UNK);             /* extern */
 M2C_UNK func_80320CB0();                            /* extern */
 extern M2C_UNK D_803440B0;
@@ -23,7 +23,7 @@ void func_8028BA48(void *arg0, s32 arg1) {
     if (arg0 != NULL) {
         M2C_FIELD(arg0, M2C_UNK **, 0x7C) = &D_803440B0;
         func_80320CB0();
-        func_802E9E14(arg0);
+        func_802E9E14(arg0, 2);
         func_80320C08(arg0, 0);
         if (arg1 & 1) {
             func_802C679C(arg0);

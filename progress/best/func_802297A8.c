@@ -15,12 +15,12 @@ typedef s32 M2C_UNK32;
 s32 func_80228DE0();
 
 void func_802297A8(s32 *arg0, void *arg1, void *arg2) {
-    s32 sp1C;
+    char sp1C[0x4C];
     s32 *var_v0;
 
     var_v0 = arg0;
     if ((arg1 == arg0) || (arg2 == arg0)) {
-        var_v0 = &sp1C;
+        var_v0 = sp1C;
     }
     M2C_FIELD(var_v0, f32 *, 0) = (f32) ((M2C_FIELD(arg1, f32 *, 0x30) * M2C_FIELD(arg2, f32 *, 0xC)) + ((M2C_FIELD(arg2, f32 *, 0) * M2C_FIELD(arg1, f32 *, 0)) + (M2C_FIELD(arg2, f32 *, 4) * M2C_FIELD(arg1, f32 *, 0x10)) + (M2C_FIELD(arg2, f32 *, 8) * M2C_FIELD(arg1, f32 *, 0x20))));
     M2C_FIELD(var_v0, f32 *, 4) = (f32) ((M2C_FIELD(arg1, f32 *, 0x34) * M2C_FIELD(arg2, f32 *, 0xC)) + ((M2C_FIELD(arg2, f32 *, 0) * M2C_FIELD(arg1, f32 *, 4)) + (M2C_FIELD(arg2, f32 *, 4) * M2C_FIELD(arg1, f32 *, 0x14)) + (M2C_FIELD(arg2, f32 *, 8) * M2C_FIELD(arg1, f32 *, 0x24))));
@@ -39,6 +39,6 @@ void func_802297A8(s32 *arg0, void *arg1, void *arg2) {
     M2C_FIELD(var_v0, f32 *, 0x38) = (f32) ((M2C_FIELD(arg1, f32 *, 0x38) * M2C_FIELD(arg2, f32 *, 0x3C)) + ((M2C_FIELD(arg2, f32 *, 0x30) * M2C_FIELD(arg1, f32 *, 8)) + (M2C_FIELD(arg2, f32 *, 0x34) * M2C_FIELD(arg1, f32 *, 0x18)) + (M2C_FIELD(arg2, f32 *, 0x38) * M2C_FIELD(arg1, f32 *, 0x28))));
     M2C_FIELD(var_v0, f32 *, 0x3C) = (f32) ((M2C_FIELD(arg1, f32 *, 0x3C) * M2C_FIELD(arg2, f32 *, 0x3C)) + ((M2C_FIELD(arg2, f32 *, 0x30) * M2C_FIELD(arg1, f32 *, 0xC)) + (M2C_FIELD(arg2, f32 *, 0x34) * M2C_FIELD(arg1, f32 *, 0x1C)) + (M2C_FIELD(arg2, f32 *, 0x38) * M2C_FIELD(arg1, f32 *, 0x2C))));
     if ((arg1 == arg0) || (arg2 == arg0)) {
-        func_80228DE0(arg0, &sp1C);
+        func_80228DE0(arg0, sp1C);
     }
 }

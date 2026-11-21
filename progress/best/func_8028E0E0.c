@@ -18,6 +18,8 @@ M2C_UNK func_8021B838(s32, M2C_UNK);                /* extern */
 M2C_UNK func_8021BAE0(s32);                         /* extern */
 
 void func_8028E0E0(void *arg0, M2C_UNK arg1, s32 arg2) {
+char *__repair_addr;
+
 int *__repair_home2 = &arg2;
 
     s32 temp_a0;
@@ -25,7 +27,9 @@ int *__repair_home2 = &arg2;
     if ((*__repair_home2) & 0xFF) {
         M2C_FIELD(arg0, s8 *, 0xC4) = 1;
         func_80205AA0(0, 1);
-        M2C_FIELD(M2C_FIELD(arg0, void **, 0), s32 *, 0x7168) = 9;
+__repair_addr = (char *)(M2C_FIELD(arg0, void **, 0));
+
+        M2C_FIELD(__repair_addr, s32 *, 0x7168) = 9;
         func_80205E0C(0, 9);
         func_8021B838(M2C_FIELD(arg0, s32 *, 0xC8), 2);
         M2C_FIELD(arg0, s8 *, 0x129) = 0;

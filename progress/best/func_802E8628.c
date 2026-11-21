@@ -20,27 +20,26 @@ s32 func_802E8628(void *arg0, s32 arg1) {
     s32 sp20;
     s32 temp_a0;
     s32 temp_a1;
+s32 __repair_result_temp_a1;
     s32 temp_a1_2;
     s32 temp_v0;
-    s32 var_v0;
 
-    var_v0 = 0;
     if ((M2C_FIELD(arg0, u8 *, 0x968) != 0) && (arg1 != M2C_FIELD(arg0, s32 *, 0x964))) {
         M2C_FIELD(arg0, s32 *, 0x964) = arg1;
-        temp_a1 = M2C_FIELD(arg0, s32 *, 0x944);
+        __repair_result_temp_a1 = M2C_FIELD(arg0, s32 *, 0x944);
         temp_v0 = D_8032AA74;
-        if (temp_a1 != 0xFF) {
+        if (__repair_result_temp_a1 != 0xFF) {
             sp24 = temp_v0;
-            func_80302908(temp_v0 + 0x8F4, temp_a1, 0x3D4CCCCD, 0x3F800000);
+            func_80302908(temp_v0 + 0x8F4, __repair_result_temp_a1, 0x3D4CCCCD, 0x3F800000);
         }
-        temp_a1_2 = M2C_FIELD(arg0, s32 *, 0x948);
+        temp_a1 = M2C_FIELD(arg0, s32 *, 0x948);
         temp_a0 = temp_v0 + 0x8F4;
-        if (temp_a1_2 != 0xFF) {
+        if (temp_a1 != 0xFF) {
             sp20 = temp_a0;
-            func_80302908(temp_a0, temp_a1_2, 0x3D4CCCCD, 0x3F800000);
+            func_80302908(temp_a0, temp_a1, 0x3D4CCCCD, 0x3F800000);
         }
         func_80302908(temp_a0, 0x8C, 0x3D4CCCCD, 0x3F800000);
-        var_v0 = 1;
+        return 1;
     }
-    return var_v0;
+    return 0;
 }

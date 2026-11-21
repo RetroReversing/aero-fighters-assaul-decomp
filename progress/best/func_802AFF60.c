@@ -16,10 +16,12 @@ M2C_UNK func_8022970C(M2C_UNK *);                   /* extern */
 M2C_UNK func_802AFFA4(s32, s32, M2C_UNK *);         /* extern */
 
 void func_802AFF60(s32 arg0, s32 arg1) {
-    f32 sp50;
-    M2C_UNK sp18;
+int *__repair_home0 = &arg0;
 
-    func_8022970C(&sp18);
+    f32 sp50;
+    char sp18[0x38];
+
+    func_8022970C(sp18);
     sp50 = 500.0f;
-    func_802AFFA4(arg0, arg1, &sp18);
+    func_802AFFA4((*__repair_home0), arg1, sp18);
 }

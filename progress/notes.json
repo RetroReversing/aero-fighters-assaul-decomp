@@ -994,14 +994,6 @@
   "handoff_inputs": "bffc1b1acd2d3c07df921e31fb90e945c37a26203aa1924df8fa8954089645e2:c8e377fb691cb04e92ce1744edbb1ef4b7d00367f2012b634f1f3ed8e2fdec23:f25f63dda2c28bd6ae535a1daa1f9bcd8b72824914fc6eac7c35d189d4ee1f6d"
  },
  {
-  "function": "__CSPPostNextSeqEvent",
-  "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 112-byte function fingerprint e450b9af5c68d24ebadd1ba900575fb0260d6e45; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
-  "by": "autopilot",
-  "created_at": 1795218546.441163,
-  "score_before": null,
-  "score_after": null
- },
- {
   "function": "spScale",
   "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 100-byte function fingerprint fec9d54bc209357b6a6032d4c87070427f3a836d; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
   "by": "autopilot",
@@ -1026,5 +1018,13 @@
   "score_before": 120,
   "score_after": 0,
   "handoff_inputs": "bffc1b1acd2d3c07df921e31fb90e945c37a26203aa1924df8fa8954089645e2:c8e377fb691cb04e92ce1744edbb1ef4b7d00367f2012b634f1f3ed8e2fdec23:308bba1dd217155938051f0965a64c36c80f6a3b0f5ac1955e1c9d5143fe3f48"
+ },
+ {
+  "function": "__CSPPostNextSeqEvent",
+  "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 112-byte function fingerprint e450b9af5c68d24ebadd1ba900575fb0260d6e45; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
+  "by": "autopilot",
+  "created_at": 1795218546.441163,
+  "score_before": null,
+  "score_after": null
  }
 ]

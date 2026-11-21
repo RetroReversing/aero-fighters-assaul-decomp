@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_802E7734();
+s32 func_802E7734(s32, s32, f32, f32, f32, f32, f32);
 s32 func_803084B0();
 extern s32 D_80343588;
 extern f32 D_8034358C;
@@ -33,13 +33,13 @@ s32 func_802D8474(void *arg0) {
     f32 temp_fs4;
     s32 temp_v0;
 
-    M2C_FIELD(arg0, s32 *, 0x7FA8) = func_803084B0((void *)6, 1, 3, 2, 0, 1, D_80343588, D_8034358C, D_80343590, 140.0f);
+    M2C_FIELD(arg0, s32 *, 0x7FA8) = func_803084B0((void *)6, 1, 3, 2, 0, 1, (*(f32 *)&D_80343588), D_8034358C, D_80343590, 140.0f);
     M2C_FIELD(arg0, s32 *, 0x7FAC) = func_803084B0(arg0, 9, 1, 4, 1, 0, 1, D_80343594, -278.0f, 600.0f, 90.0f);
     M2C_FIELD(arg0, s32 *, 0x7FB0) = func_803084B0(arg0, 7, 1, 4, 1, 0, 1, D_80343598, D_8034359C, D_803435A0, 90.0f);
+    M2C_FIELD(arg0, s32 *, 0x7FB4) = func_803084B0(arg0, 7, 1, 4, 1, 0, 1, D_803435A4, D_803435A8, 680.0f, 90.0f);
+    M2C_FIELD(arg0, u8 *, 0x7FCC) = 0;
     temp_fs0 = D_803435AC;
     temp_fs1 = D_803435B0;
-    M2C_FIELD(arg0, s32 *, 0x7FB4) = func_803084B0(arg0, 7, 1, 4, 1, 0, 1, D_803435A4, D_803435A8, 680.0f, 90.0f);
-    M2C_FIELD(arg0, s8 *, 0x7FCC) = 0;
     temp_v0 = func_803084B0(arg0, 0xD, 1, 0, 0, 0, 2, temp_fs0, 2000.0f, temp_fs1, 0.0f);
     M2C_FIELD(arg0, s32 *, 0x7FB8) = temp_v0;
     func_802E7734(temp_v0, 0, temp_fs0, temp_fs0, temp_fs1, 50.0f, 0.5f);

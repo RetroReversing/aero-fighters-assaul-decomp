@@ -24,16 +24,17 @@ extern u8 D_80285EB0;
 s32 func_8023EDC0(s32 arg0) {
 int *__repair_home0 = &arg0;
 
-    s32 sp1C;
+    
+s32 __repair_result_sp1C;
     s32 sp18;
     s32 temp_t1;
     s32 temp_v0;
 
-    sp1C = 0;
+    sp18 = 0;
     func_80245AD0();
     if (D_80285EB0 != 1) {
         func_8023EF2C();
-        sp1C = func_802465B0(1, &D_80285E70);
+        __repair_result_sp1C = func_802465B0(1, &D_80285E70);
         osRecvMesg((*__repair_home0), 0, 1);
     }
     sp18 = 0;
@@ -43,9 +44,9 @@ int *__repair_home0 = &arg0;
         sp18 = temp_t1;
     } while (temp_t1 < 0x10);
     D_80285EAC = 0;
-    temp_v0 = func_802465B0(0, &D_80285E70);
-    sp1C = temp_v0;
+    __repair_result_sp1C = func_802465B0(0, &D_80285E70);
+    sp18 = __repair_result_sp1C;
     D_80285EB0 = 1;
     func_80245B14();
-    return temp_v0;
+    return __repair_result_sp1C;
 }

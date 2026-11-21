@@ -13,6 +13,8 @@ typedef s32 M2C_UNK32;
 #endif
 
 void func_8031AE10(void *arg0) {
+s32 __repair_operand;
+
     f32 temp_fa0;
     f32 temp_fv0;
     f32 temp_fv1;
@@ -46,9 +48,9 @@ void func_8031AE10(void *arg0) {
     M2C_FIELD(arg0, f32 *, 0x64) = (f32) ((f32) var_v0 * M2C_FIELD(arg0, f32 *, 0xD4));
     if (M2C_FIELD(arg0, s16 *, 0x68) > 0) {
         if (M2C_FIELD(arg0, s16 *, 0xE8) >= (var_v0 - 1)) {
-            M2C_FIELD(arg0, s8 *, 0xEB) = 1;
+            M2C_FIELD(arg0, u8 *, 0xEB) = 1;
         } else {
-            M2C_FIELD(arg0, s8 *, 0xEB) = 0;
+            M2C_FIELD(arg0, u8 *, 0xEB) = 0;
         }
         M2C_FIELD(arg0, f32 *, 0xC0) = (f32) (M2C_FIELD(arg0, f32 *, 0xC0) + M2C_FIELD(arg0, f32 *, 0xC8));
         temp_fv0 = M2C_FIELD(arg0, f32 *, 0x5C);
@@ -74,7 +76,8 @@ void func_8031AE10(void *arg0) {
                     do {
                         temp_lo = var_v0_2 * 0xC;
                         var_v0_2 += 1;
-                        temp_v1 = M2C_FIELD(arg0, s32 *, 0xB4) + temp_lo;
+                        __repair_operand = M2C_FIELD(arg0, s32 *, 0xB4);
+                        temp_v1 = __repair_operand + temp_lo;
                         M2C_FIELD(temp_v1, f32 *, 0) = 0.0f;
                         M2C_FIELD(temp_v1, f32 *, 4) = 0.0f;
                         M2C_FIELD(temp_v1, f32 *, 8) = 0.0f;

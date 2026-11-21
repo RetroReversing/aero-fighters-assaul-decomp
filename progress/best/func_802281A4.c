@@ -38,7 +38,7 @@ void func_802281A4(void *arg0) {
                 temp_t3 = D_80275A58 * 0x10;
                 temp_a0 = D_80275A58 + 1;
                 D_80275A58 = temp_a0;
-                temp_s0 = *(&D_80275A48 + (D_8024E874 * 4)) + temp_t3;
+                temp_s0 = *(&D_80275A48 + D_8024E874) + temp_t3;
                 if (func_80231C58(temp_a0, "LIGHT_NLGFXS", &D_80280C02) != 0) {
                     D_80275A58 -= 1;
                 }
@@ -46,17 +46,17 @@ void func_802281A4(void *arg0) {
                 temp_v0 = (u32) (M2C_FIELD(arg0, f32 *, 0xC) * 255.0f * M2C_FIELD(temp_s1, f32 *, 4));
                 M2C_FIELD(temp_s0, s8 *, 4) = (s8) temp_v0;
                 M2C_FIELD(temp_s0, s8 *, 0) = (s8) temp_v0;
-                temp_v0_2 = (u32) (M2C_FIELD(arg0, f32 *, 0x10) * 255.0f * M2C_FIELD(temp_s1, f32 *, 8));
-                M2C_FIELD(temp_s0, s8 *, 5) = (s8) temp_v0_2;
-                M2C_FIELD(temp_s0, s8 *, 1) = (s8) temp_v0_2;
-                temp_v0_3 = (u32) (M2C_FIELD(arg0, f32 *, 0x14) * 255.0f * M2C_FIELD(temp_s1, f32 *, 0xC));
-                M2C_FIELD(temp_s0, s8 *, 6) = (s8) temp_v0_3;
-                M2C_FIELD(temp_s0, s8 *, 2) = (s8) temp_v0_3;
+                temp_v0 = (u32) (M2C_FIELD(arg0, f32 *, 0x10) * 255.0f * M2C_FIELD(temp_s1, f32 *, 8));
+                M2C_FIELD(temp_s0, s8 *, 5) = (s8) temp_v0;
+                M2C_FIELD(temp_s0, s8 *, 1) = (s8) temp_v0;
+                temp_v0 = (u32) (M2C_FIELD(arg0, f32 *, 0x14) * 255.0f * M2C_FIELD(temp_s1, f32 *, 0xC));
+                M2C_FIELD(temp_s0, s8 *, 6) = (s8) temp_v0;
+                M2C_FIELD(temp_s0, s8 *, 2) = (s8) temp_v0;
                 M2C_FIELD(temp_s0, s8 *, 8) = (s8) (s32) (M2C_FIELD(temp_s1, f32 *, 0x10) * 127.0f);
                 M2C_FIELD(temp_s0, s8 *, 9) = (s8) (s32) (M2C_FIELD(temp_s1, f32 *, 0x14) * 127.0f);
                 M2C_FIELD(temp_s0, s8 *, 0xA) = (s8) (s32) (M2C_FIELD(temp_s1, f32 *, 0x18) * 127.0f);
-            }
-            var_s3 += 1;
+            }/*__repair_loop_weight*/do {
+            var_s3 += 1;} while (0);
         } while (var_s3 < (s32) D_80280BFE);
     }
 }

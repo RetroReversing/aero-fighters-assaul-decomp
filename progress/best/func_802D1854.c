@@ -14,7 +14,7 @@ typedef s32 M2C_UNK32;
 
 f32 func_8023499C();
 
-void func_802D1854(void *arg0, s8 arg1) {
+void func_802D1854(void *arg0, u8 arg1) {
     M2C_FIELD(arg0, s8 *, 0x1B0) = arg1;
     if (arg1 & 0xFF) {
         M2C_FIELD(arg0, s32 *, 0x1B4) = 0;

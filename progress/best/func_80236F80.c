@@ -18,11 +18,13 @@ extern s32 D_A4500010;
 extern s32 D_A4500014;
 
 s32 func_80236F80(s32 arg0) {
+    u32 *__base_D_80251778;
     s32 var_a2;
     u32 temp_a1;
 
-    temp_a1 = (u32) (((f32) D_80251778 / (f32) arg0) + 0.5f);
-    if (temp_a1 < 0x84U) {
+    __base_D_80251778 = &D_80251778;
+    temp_a1 = (u32) (((f32) (*__base_D_80251778) / (f32) arg0) + 0.5f);
+    if (((u32) (((f32) (*__base_D_80251778) / (f32) arg0) + 0.5f)) < 0x84U) {
         return -1;
     }
     var_a2 = (temp_a1 / 66U) & 0xFF;
@@ -31,6 +33,6 @@ s32 func_80236F80(s32 arg0) {
     }
     D_A4500010 = temp_a1 - 1;
     D_A4500014 = var_a2 - 1;
-    D_A4500008 = 1;
-    return (s32) D_80251778 / (s32) temp_a1;
+    *(volatile s32 *)0xA4500008 = 1;
+    return (s32) (*__base_D_80251778) / (s32) temp_a1;
 }

@@ -39,8 +39,7 @@ void func_80209914(f32 arg0, f32 arg1, f32 arg2, f32 *arg3, f32 *arg4, f32 *arg5
         *arg3 = -1.0f;
         return;
     }
-    temp_ft4 = var_fv0 - var_fv1;
-    *arg4 = temp_ft4 / var_fv0;
+    *arg4 = (temp_ft4 = var_fv0 - var_fv1) / var_fv0;
     if (arg0 == var_fv0) {
         var_ft2 = ((var_fv0 - arg2) / temp_ft4) - ((var_fv0 - arg1) / temp_ft4);
         goto block_16;
@@ -55,7 +54,7 @@ block_16:
     *arg3 *= 60.0f;
     temp_fv0 = *arg3;
     if (temp_fv0 < 0.0f) {
-        *arg3 = temp_fv0 + 360.0f;
+        *arg3 = (*arg3) + 360.0f;
     }
     *arg3 /= 360.0f;
 }

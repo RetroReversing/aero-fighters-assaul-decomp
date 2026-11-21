@@ -21,9 +21,9 @@ s32 func_803031A4(s32 arg0) {
     s32 var_a1;
 
     var_a1 = arg0;
-    if ((arg0 != 0) || (temp_v0 = func_802C676C(0x1C4), var_a1 = temp_v0, (temp_v0 != 0))) {
+    if ((arg0 != 0) || (temp_v0 = func_802C676C(0x3C), var_a1 = temp_v0, (temp_v0 != 0))) {
         arg0 = var_a1;
-        func_80302EA0(var_a1 + 0x50, var_a1);
+        func_80302EA0(var_a1 + 0x20, var_a1);
         var_a1 = arg0;
     }
     return var_a1;

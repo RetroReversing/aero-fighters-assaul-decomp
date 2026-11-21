@@ -16,8 +16,8 @@ M2C_UNK alEvtqPostEvent(s32, s16 *, M2C_UNK);       /* extern */
 
 void func_80238AA0(s32 arg0, s8 arg1) {
     s8 sp25;
-    s8 sp24;
-    s8 sp23;
+    s32 sp24;
+    s32 sp23;
     s8 sp21;
     s8 sp20;
     s16 sp18;

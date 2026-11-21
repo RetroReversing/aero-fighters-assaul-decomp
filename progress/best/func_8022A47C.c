@@ -15,8 +15,8 @@ typedef s32 M2C_UNK32;
 s32 func_80228DE0();
 
 void func_8022A47C(s32 *arg0, void *arg1) {
-    s32 sp18;
     s32 *var_v0;
+    s32 sp18;
 
     var_v0 = arg0;
     if (arg1 == arg0) {

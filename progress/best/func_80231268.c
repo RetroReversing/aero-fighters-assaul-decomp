@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 func_8021F35C();
 s32 func_8021F4E4();
@@ -23,19 +11,19 @@ s32 func_8022337C();
 s32 func_802233EC();
 s32 func_8022342C();
 s32 func_8022970C();
-s32 func_8022A848();
+s32 func_8022A848(s32, s32, s32, s32, f32);
 extern s32 D_80280C8C;
 
 void func_80231268(void) {
     s16 spBA;
-    s32 sp74;
+    s16 temp_s6;
     s16 temp_s3;
     s16 temp_s4;
-    s16 temp_s5_2;
-    s16 temp_s6;
+    s32 temp_s5_2;
+    register s32 var_fp;
     s16 temp_s7;
     s32 temp_s5;
-    s32 var_fp;
+    s32 sp74;
     s32 var_s6;
     s32 var_s7;
 
@@ -66,7 +54,13 @@ void func_80231268(void) {
         }
         func_8021F4E4();
         temp_s3 = ((spBA % 4) * 0xF) + 0x14;
+        /*__repair_loop_weight*/do {
+        do {
+        do {
         temp_s4 = ((temp_s5 / 4) * 0xF) + 0x14;
+        } while (0);
+        } while (0);
+        } while (0);
         func_8021F35C(temp_s3, temp_s4, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
         temp_s6 = temp_s3 + 0xA;
         func_8021F35C(temp_s6, temp_s4, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
@@ -76,7 +70,7 @@ void func_80231268(void) {
         func_8021FCD0();
         temp_s7 = spBA + 1;
         spBA = temp_s7;
-    } while (temp_s7 < 0x20);
+    } while (0x20 > temp_s7);
     func_802230E4();
     func_8022337C();
 }

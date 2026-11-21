@@ -17,10 +17,10 @@ f32 func_8022AA40(f32, f32);                        /* extern */
 s32 func_80234D30(void *arg0, void *arg1) {
     f32 sp24;
     f32 sp20;
-    f32 sp1C;
     f32 temp_fa1;
     f32 temp_ft4;
     f32 temp_ft5;
+    f32 sp1C;
     f32 temp_fv0;
     f32 temp_fv1;
 

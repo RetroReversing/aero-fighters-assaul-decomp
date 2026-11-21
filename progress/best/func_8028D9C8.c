@@ -15,7 +15,7 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_8028CB5C(void *);                      /* extern */
 M2C_UNK func_8028CDB4(M2C_UNK, M2C_UNK);            /* extern */
 
-s32 func_8028D9C8(void *arg0, M2C_UNK arg1, f32 arg2) {
+s32 func_8028D9C8(void *arg0, f32 arg1, f32 arg2) {
     func_8028CDB4(arg1, arg1);
     func_8028CB5C(arg0);
     M2C_FIELD(arg0, f32 *, 0xC) = (f32) (M2C_FIELD(arg0, f32 *, 0xC) + arg2);

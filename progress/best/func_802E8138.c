@@ -16,12 +16,15 @@ M2C_UNK func_80302908(s32, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
 extern s32 D_8032AA74;
 
 s32 func_802E8138(void *arg0) {
-    s32 sp20;
+s32 __repair_operand;
+
+    
     s32 temp_a0;
 
     if ((M2C_FIELD(arg0, u8 *, 0x968) != 0) && (M2C_FIELD(arg0, u8 *, 0x7D1) == 0)) {
-        temp_a0 = D_8032AA74 + 0x8F4;
-        sp20 = temp_a0;
+        __repair_operand = D_8032AA74;
+        temp_a0 = __repair_operand + 0x8F4;
+        __repair_operand = temp_a0;
         func_80302908(temp_a0, 0x4C, 0x3D4CCCCD, 0x3F800000);
         func_80302908(temp_a0, 0x47, 0x3D4CCCCD, 0x3F800000);
         M2C_FIELD(arg0, s8 *, 0x7D0) = 0;

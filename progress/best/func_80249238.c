@@ -12,12 +12,12 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-u8 func_80249238(void *arg0) {
+int func_80249238(void *arg0) {
     u8 *temp_v1;
     u8 *temp_v1_2;
     u8 temp_v0;
     u8 temp_v0_2;
-    u8 var_a1;
+    s32 var_a1;
 
     temp_v1 = M2C_FIELD(arg0, u8 **, 8);
     temp_v0 = *temp_v1;

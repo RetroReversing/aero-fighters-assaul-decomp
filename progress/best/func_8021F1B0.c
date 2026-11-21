@@ -27,6 +27,10 @@ extern s8 D_80271B78;
 extern M2C_UNK D_80280BC0;
 
 void func_8021F1B0(void) {
+s32 __repair_operand;
+
+int __repair_constant = 0xFF;
+
     s32 temp_t6;
     s32 temp_t8;
     s32 var_a0;
@@ -39,22 +43,22 @@ void func_8021F1B0(void) {
     func_8022B780(M2C_FIELD(&D_80271B50, s32 *, 4), 0, M2C_FIELD(&D_80280BC0, u16 *, 0x24) * 0x10);
     D_80271B5C = D_8024E874;
     var_a0 = 0;
-    D_80271B58 = *(&D_80271B50 + ((s16) D_80271B5C * 4));
+    D_80271B58 = *(&D_80271B50 + (s16) D_80271B5C);
     if ((s32) M2C_FIELD(&D_80280BC0, u16 *, 0x24) > 0) {
         do {
-            temp_t6 = var_a0 * 0x10;
-            var_a0 += 1;
+            temp_t6 = var_a0 * 0x10;/*__repair_loop_weight*/do {
+            var_a0 += 1;} while (0);
             temp_v0 = M2C_FIELD(&D_80271B50, s32 *, 0) + temp_t6;
             M2C_FIELD(temp_v0, s16 *, 0) = 0;
             M2C_FIELD(temp_v0, s16 *, 2) = 0;
             M2C_FIELD(temp_v0, s16 *, 4) = 0;
-            M2C_FIELD(temp_v0, s16 *, 6) = 0xFF;
+            M2C_FIELD(temp_v0, s16 *, 6) = __repair_constant;
             M2C_FIELD(temp_v0, s16 *, 8) = 0;
             M2C_FIELD(temp_v0, s16 *, 0xA) = 0;
-            M2C_FIELD(temp_v0, s8 *, 0xC) = 0xFF;
-            M2C_FIELD(temp_v0, s8 *, 0xD) = 0xFF;
-            M2C_FIELD(temp_v0, s8 *, 0xE) = 0xFF;
-            M2C_FIELD(temp_v0, s8 *, 0xF) = 0xFF;
+            M2C_FIELD(temp_v0, s8 *, 0xC) = __repair_constant;
+            M2C_FIELD(temp_v0, s8 *, 0xD) = __repair_constant;
+            M2C_FIELD(temp_v0, s8 *, 0xE) = __repair_constant;
+            M2C_FIELD(temp_v0, s8 *, 0xF) = __repair_constant;
         } while (var_a0 < (s32) M2C_FIELD(&D_80280BC0, u16 *, 0x24));
         var_a0 = 0;
     }
@@ -62,15 +66,16 @@ void func_8021F1B0(void) {
         do {
             temp_t8 = var_a0 * 0x10;
             var_a0 += 1;
-            temp_v0_2 = M2C_FIELD(&D_80271B50, s32 *, 4) + temp_t8;
+            __repair_operand = M2C_FIELD(&D_80271B50, s32 *, 4);
+            temp_v0_2 = __repair_operand + temp_t8;
             M2C_FIELD(temp_v0_2, s16 *, 0) = 0;
             M2C_FIELD(temp_v0_2, s16 *, 2) = 0;
             M2C_FIELD(temp_v0_2, s16 *, 4) = 0;
-            M2C_FIELD(temp_v0_2, s16 *, 6) = 0xFF;
+            M2C_FIELD(temp_v0_2, s16 *, 6) = __repair_constant;
             M2C_FIELD(temp_v0_2, s16 *, 8) = 0;
             M2C_FIELD(temp_v0_2, s16 *, 0xA) = 0;
-            M2C_FIELD(temp_v0_2, s8 *, 0xC) = 0xFF;
-            M2C_FIELD(temp_v0_2, s8 *, 0xD) = 0xFF;
+            M2C_FIELD(temp_v0_2, s8 *, 0xC) = __repair_constant;
+            M2C_FIELD(temp_v0_2, s8 *, 0xD) = __repair_constant;
             M2C_FIELD(temp_v0_2, s8 *, 0xE) = 0xFF;
             M2C_FIELD(temp_v0_2, s8 *, 0xF) = 0xFF;
         } while (var_a0 < (s32) M2C_FIELD(&D_80280BC0, u16 *, 0x24));

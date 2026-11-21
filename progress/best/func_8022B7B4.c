@@ -19,8 +19,8 @@ s32 func_8022B7B4(u8 *arg0, u8 *arg1, u32 arg2) {
     u8 temp_a0;
     u8 temp_a1;
 
-    var_v0 = 0;
     if (arg2 != 0) {
+        var_v0 = 0;
         var_v1 = arg0;
         var_a3 = arg1;
 loop_2:

@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 func_8021E66C();
 s32 func_8021E708();
@@ -29,7 +17,7 @@ s32 func_8022331C();
 s32 func_8022337C();
 s32 func_802233EC();
 s32 func_8022970C();
-s32 func_8022A848();
+s32 func_8022A848(void *, s32, s32, s32, f32);
 s32 func_8023072C();
 f32 func_802AED64();
 s32 func_802CE2E0();
@@ -41,10 +29,10 @@ extern u8 D_8032AA80;
 void func_802AC678(void *arg0, u8 arg1) {
     s32 sp94;
     s32 sp48;
-    s32 sp40;
+    s32 temp_a1_2;
     s32 sp34;
     s32 temp_a1;
-    s32 temp_a1_2;
+    s32 sp40;
 
     if (D_8032AA80 == 0xC) {
         func_8022331C();
@@ -52,13 +40,13 @@ void func_802AC678(void *arg0, u8 arg1) {
         func_80221B2C(&sp48);
         func_8022970C(&sp48);
         func_8022149C(&sp48);
-        func_802233EC(0x04820000);
-        if ((M2C_FIELD(arg0, s32 *, 0x32A4) == 3) && (M2C_FIELD(arg0, u8 *, 0x35E0) == 0)) {
+        do { func_802233EC(0x04820000); } while (0);
+        if (((*(s32 *)((char *)(arg0) + 0x32A4)) == 3) && ((*(u8 *)((char *)(arg0) + 0x35E0)) == 0)) {
             func_8021E66C(7);
             func_8021E708(0, 0xFF, 0, 0x96);
-            if (M2C_FIELD(arg0, u8 *, 0x4E38) == 0) {
-                if (M2C_FIELD(arg0, s32 *, 0x4C00) & 4) {
-                    func_8023072C(&sp40, D_803265B0, (s32) (func_802AED64(arg0, D_803265B4) - M2C_FIELD(arg0, f32 *, 0x32A8)));
+            if ((*(u8 *)((char *)(arg0) + 0x4E38)) == 0) {
+                if ((*(s32 *)((char *)(arg0) + 0x4C00)) & 4) {
+                    func_8023072C(&sp40, D_803265B0, (s32) (func_802AED64(arg0) - (*(f32 *)((char *)(arg0) + 0x32A8))));
                 } else {
                     func_8023072C(&sp40, D_803265B4);
                 }

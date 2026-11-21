@@ -30,7 +30,7 @@ s32 func_8023D470(s32 arg0, s8 *arg1) {
     M2C_UNK *var_v0_2;
     s32 var_s0;
     s32 var_s1;
-    s8 var_s5;
+    u8 var_s5;
 
     var_s5 = 0;
     var_s1 = 3;
@@ -45,15 +45,17 @@ s32 func_8023D470(s32 arg0, s8 *arg1) {
         func_8023D6E4(&sp67, &sp54);
         var_v0 = &sp54;
         if ((s32) D_80285EB1 > 0) {
-loop_2:
-            if (!(M2C_FIELD(var_v0, u8 *, 2) & 4)) {
-                var_s1 -= 1;
-            } else {
-                var_s0 += 1;
-                var_v0 += 4;
-                if (var_s0 < (s32) D_80285EB1) {
-                    goto loop_2;
+            for (;;) {
+                if (!(M2C_FIELD(var_v0, u8 *, 2) & 4)) {
+                    var_s1 -= 1;
+                } else {
+                    var_s0 += 1;
+                    var_v0 += 1;
+                    if (var_s0 < (s32) D_80285EB1) {
+                        continue;
+                    }
                 }
+                break;
             }
         }
         var_s0 = 0;
@@ -68,7 +70,7 @@ loop_2:
                 var_s5 = (var_s5 | (1 << var_s0)) & 0xFF;
             }
             var_s0 += 1;
-            var_v0_2 += 4;
+            var_v0_2 += 1;
         } while (var_s0 < (s32) D_80285EB1);
     }
     func_80245B14();

@@ -18,6 +18,8 @@ extern M2C_UNK D_80280BC0;
 extern s32 D_80283950;
 
 void func_80233D90(void) {
+int __repair_constant = 0xFF;
+
     s32 temp_v0;
     s32 var_a0;
     s32 var_a1;
@@ -39,10 +41,10 @@ void func_80233D90(void) {
             M2C_FIELD(temp_v0_2, s8 *, 0) = 0;
             M2C_FIELD(temp_v0_2, s8 *, 1) = 0;
             M2C_FIELD(temp_v0_2, s8 *, 2) = 0;
-            M2C_FIELD(temp_v0_2, s8 *, 0xE) = 0xFF;
-            M2C_FIELD(temp_v0_2, s8 *, 0xF) = 0xFF;
-            M2C_FIELD(temp_v0_2, s8 *, 0x10) = 0xFF;
-            M2C_FIELD(temp_v0_2, s8 *, 0x11) = 0xFF;
+            M2C_FIELD(temp_v0_2, s8 *, 0xE) = __repair_constant;
+            M2C_FIELD(temp_v0_2, s8 *, 0xF) = __repair_constant;
+            M2C_FIELD(temp_v0_2, s8 *, 0x10) = __repair_constant;
+            M2C_FIELD(temp_v0_2, s8 *, 0x11) = __repair_constant;
             M2C_FIELD(temp_v0_2, s16 *, 0xC) = 0xFFF;
             M2C_FIELD(temp_v0_2, s32 *, 0x14) = 0;
             M2C_FIELD(temp_v0_2, s32 *, 0x5C) = 0;
