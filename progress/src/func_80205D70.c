@@ -18,8 +18,8 @@ extern s32 D_8025BEA0;
 extern char D_80280BEE[];
 
 void func_80205D70(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
-    void *sp24;
     void *temp_v1;
+    void *sp24;
 
     temp_v1 = (arg0 * 0x2D8) + D_8025BEA0;
     sp24 = temp_v1;
