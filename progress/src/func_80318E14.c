@@ -17,15 +17,17 @@ s32 func_802D2730();
 extern char D_8032BC74[];
 extern char D_8032BC88[];
 
+typedef struct { unsigned char pad[12]; int value; } __repair_field_C;
 void func_80318E14(void *arg0, u16 arg1) {
     s32 var_a3;
+s32 __repair_result_var_a3;
 
-    var_a3 = M2C_FIELD(arg0, s32 *, 0xC);
-    M2C_FIELD(arg0, u16 *, 0x10) = arg1;
-    if (var_a3 == 0) {
-        func_80231A24(D_8032BC74, D_8032BC88, arg0, var_a3);
+    __repair_result_var_a3 = ((__repair_field_C *)arg0)->value;
+    M2C_FIELD(arg0, u16 *, 0x10) = (arg1 & 0xFFFF);
+    if (__repair_result_var_a3 == 0) {
+        func_80231A24(D_8032BC74, D_8032BC88, arg0, __repair_result_var_a3);
         *(s32 *)NULL = 0x29A;
-        var_a3 = M2C_FIELD(arg0, s32 *, 0xC);
+        __repair_result_var_a3 = ((__repair_field_C *)arg0)->value;
     }
-    func_802D2730(var_a3, M2C_FIELD(arg0, u16 *, 0x10), arg0, var_a3);
+    func_802D2730(__repair_result_var_a3, M2C_FIELD(arg0, u16 *, 0x10), arg0);
 }
