@@ -12,8 +12,9 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
+typedef struct { unsigned char pad_0[4]; int field_4; unsigned char pad_8[236]; float field_F4; unsigned char pad_F8[88]; float field_150; } __repair_record_arg0;
 s32 func_802C5180(void *arg0, f32 arg1) {
-    if ((M2C_FIELD(arg0, s32 *, 4) < 0xA) && (arg1 < (M2C_FIELD(arg0, f32 *, 0xF4) + M2C_FIELD(arg0, f32 *, 0x150)))) {
+    if ((((__repair_record_arg0*)arg0)->field_4 < 0xA) && (arg1 < (((__repair_record_arg0*)arg0)->field_F4 + ((__repair_record_arg0*)arg0)->field_150))) {
         return 1;
     }
     return 0;

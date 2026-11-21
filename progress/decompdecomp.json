@@ -1,7 +1,7 @@
 {
  "format": 2,
- "saved_at": 1795227538.885349,
- "revision": 801,
+ "saved_at": 1795227545.635056,
+ "revision": 802,
  "title": "AERO FIGHTERS ASSAUL",
  "platform": "n64",
  "game": {
@@ -30795,8 +30795,8 @@
   },
   "func_802C5180": {
    "vram": 2150388096,
-   "best_score": 20,
-   "best_by": "autopilot"
+   "matched_by": "permuter-51539608351",
+   "readable": false
   },
   "func_802CE2E0": {
    "vram": 2150425312,
