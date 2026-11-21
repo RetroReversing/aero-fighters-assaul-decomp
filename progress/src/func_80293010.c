@@ -27,7 +27,7 @@ void func_80293010(void *arg0) {
     s32 temp_v0;
     s32 temp_v0_2;
 
-    func_80224CA8(5);
+    do { func_80224CA8(5); } while (0);
     M2C_FIELD(arg0, s8 *, 0x9D) = 1;
     M2C_FIELD(arg0, s8 *, 0x89) = 1;
     M2C_FIELD(arg0, s8 *, 0x88) = 0;
