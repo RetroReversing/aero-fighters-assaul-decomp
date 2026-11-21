@@ -13,18 +13,18 @@ typedef s32 M2C_UNK32;
 #endif
 
 extern M2C_UNK D_80327024;
-extern s8 D_8032706C;
+extern u8 D_8032706C;
 extern M2C_UNK D_803270B4;
 
 void func_802C9FBC(void *arg0) {
-    M2C_FIELD(arg0, s8 *, 0x18) = 0xB;
+    M2C_FIELD(arg0, u8 *, 0x18) = 0xB;
     M2C_FIELD(arg0, u8 *, 0x19) = 1U;
-    M2C_FIELD(arg0, s8 *, 0x1B) = 0;
+    M2C_FIELD(arg0, u8 *, 0x1B) = 0;
     M2C_FIELD(arg0, M2C_UNK **, 0x20) = &D_80327024;
     M2C_FIELD(arg0, s8 **, 0x28) = &D_8032706C;
     M2C_FIELD(arg0, M2C_UNK **, 0x2C) = &D_803270B4;
     D_8032706C = 1;
-    M2C_FIELD(arg0, s8 *, 0x30) = 0;
-    M2C_FIELD(arg0, s8 *, 0x34) = 1;
-    M2C_FIELD(arg0, s8 *, 0x32) = (s8) (M2C_FIELD(arg0, u8 *, 0x19) - 1);
+    M2C_FIELD(arg0, u8 *, 0x30) = 0;
+    M2C_FIELD(arg0, u8 *, 0x34) = 1;
+    M2C_FIELD(arg0, u8 *, 0x32) = (s8) (M2C_FIELD(arg0, u8 *, 0x19) - 1);
 }
