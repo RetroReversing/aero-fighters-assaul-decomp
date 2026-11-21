@@ -18333,6 +18333,23 @@
    "timeout": 20,
    "function": "func_802D1A80",
    "vram": 2150439552
+  },
+  "686436:2150461556": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_802D7074",
+   "vram": 2150461556
   }
  },
  "instructions": "",
@@ -24864,6 +24881,11 @@
   "func_802D1A80": {
    "vram": 2150439552,
    "matched_by": "permuter-51539608558",
+   "readable": false
+  },
+  "func_802D7074": {
+   "vram": 2150461556,
+   "matched_by": "autopilot",
    "readable": false
   }
  },
