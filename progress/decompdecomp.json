@@ -31288,8 +31288,8 @@
   },
   "func_802CB66C": {
    "vram": 2150413932,
-   "best_score": 100,
-   "best_by": "autopilot"
+   "matched_by": "permuter-51539608464",
+   "readable": false
   },
   "func_8022A784": {
    "vram": 2149754756,
