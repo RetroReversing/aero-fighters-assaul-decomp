@@ -20,12 +20,10 @@ extern f32 D_8034180C;
 
 s32 func_802BCF98(void *arg0) {
     f32 sp1C;
-    s32 var_v0;
 
     sp1C = func_80317458(M2C_FIELD(arg0, s32 *, 4)) * D_80341808;
-    var_v0 = 1;
     if ((func_80318490(M2C_FIELD(arg0, s32 *, 4), func_802AEE00(M2C_FIELD(arg0, s32 *, 0))) * D_8034180C) < sp1C) {
-        var_v0 = 0;
+        return 0;
     }
-    return var_v0;
+    return 1;
 }
