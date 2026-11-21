@@ -19810,6 +19810,21 @@
     "-Wab,-r4300_mul"
    ],
    "timeout": 20
+  },
+  "544084:2150319204": {
+   "vram": 2150319204,
+   "function": "func_802B4464",
+   "toolchain": "ido-5.3",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul"
+   ],
+   "timeout": 20
   }
  },
  "instructions": "",
@@ -19831,7 +19846,8 @@
   "local_source_51539610292": "common_local_source_51539610292.h",
   "local_source_51539610219": "common_local_source_51539610219.h",
   "code_802E4034": "common_code_802E4034.h",
-  "local_source_51539608247": "common_local_source_51539608247.h"
+  "local_source_51539608247": "common_local_source_51539608247.h",
+  "local_source_51539608248": "common_local_source_51539608248.h"
  },
  "functions": {
   "func_8020670C": {
@@ -26777,6 +26793,11 @@
   "func_802B4438": {
    "vram": 2150319160,
    "matched_by": "permuter-51539608247",
+   "readable": false
+  },
+  "func_802B4464": {
+   "vram": 2150319204,
+   "matched_by": "permuter-51539608248",
    "readable": false
   }
  },
