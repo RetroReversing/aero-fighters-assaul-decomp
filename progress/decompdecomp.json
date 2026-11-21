@@ -31257,8 +31257,8 @@
   },
   "func_8020664C": {
    "vram": 2149606988,
-   "best_score": 1132,
-   "best_by": "autopilot"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_80218C74": {
    "vram": 2149682292,
