@@ -14,8 +14,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_80000000();
+s32 func_80320CFC();
 
 void func_8029FD84(s32 arg0) {
-    func_80000000(arg0, 0);
+    func_80320CFC(arg0, 0);
 }
