@@ -19,20 +19,20 @@ extern char D_80252CAC[];
 extern char D_80252CDC[];
 
 void func_802116AC(s32 arg0, s32 arg1, void *arg2) {
-    void *sp1C;
     void *temp_v0;
+    void *sp1C;
 
     temp_v0 = *(s32 *)(M2C_FIELD(D_8024E710, s32 *, 0x1C) + (arg0 * 4));
     if (temp_v0 == NULL) {
-        func_80231A24(D_80252CAC, arg0, arg0);
+        func_80231A24(D_80252CAC, arg0);
         return;
     }
     if (arg1 >= (s32) M2C_FIELD(M2C_FIELD(temp_v0, void **, 8), u8 *, 4)) {
-        func_80231A24(D_80252CDC, arg1, arg0, arg0);
+        func_80231A24(D_80252CDC, arg1, arg0);
         return;
     }
     sp1C = temp_v0;
-    func_80228DE0(arg2, M2C_FIELD(temp_v0, s32 *, 0x14) + (arg1 << 6), arg0);
+    func_80228DE0(arg2, M2C_FIELD(temp_v0, s32 *, 0x14) + (arg1 << 6));
     M2C_FIELD(arg2, f32 *, 0x30) = (f32) (M2C_FIELD(arg2, f32 *, 0x30) / M2C_FIELD(temp_v0, f32 *, 0x20));
     M2C_FIELD(arg2, f32 *, 0x34) = (f32) (M2C_FIELD(arg2, f32 *, 0x34) / M2C_FIELD(temp_v0, f32 *, 0x20));
     M2C_FIELD(arg2, f32 *, 0x38) = (f32) (M2C_FIELD(arg2, f32 *, 0x38) / M2C_FIELD(temp_v0, f32 *, 0x20));
