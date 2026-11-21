@@ -16,9 +16,9 @@ s32 func_80228DE0();
 s32 func_8022970C();
 
 void func_802012BC(void *arg0) {
-    s32 sp18;
+    char sp18[0x40];
 
-    func_8022970C(&sp18, arg0);
+    func_8022970C(sp18);
     M2C_FIELD(arg0, s8 *, 0xAD) = 0x11;
     M2C_FIELD(arg0, s32 *, 0xA0) = 0;
     M2C_FIELD(arg0, s32 *, 0xA4) = 0x7FFF;
@@ -27,7 +27,7 @@ void func_802012BC(void *arg0) {
     M2C_FIELD(arg0, s8 *, 0xB0) = 0;
     M2C_FIELD(arg0, s8 *, 0xAC) = 0;
     M2C_FIELD(arg0, f32 *, 0x9C) = 1.0f;
-    func_80228DE0(arg0, &sp18);
+    func_80228DE0(arg0, sp18);
     M2C_FIELD(arg0, u8 *, 0x8C) = 0xFF;
     M2C_FIELD(arg0, s32 *, 0x88) = 0;
     M2C_FIELD(arg0, s32 *, 0x98) = 0;
