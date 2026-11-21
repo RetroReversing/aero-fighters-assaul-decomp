@@ -16,7 +16,11 @@ M2C_UNK func_80205AA0(M2C_UNK, M2C_UNK);            /* extern */
 M2C_UNK func_8021BAE0(s32);                         /* extern */
 
 void func_8030D99C(void *arg0) {
+char *__repair_addr;
+
     func_8021BAE0(M2C_FIELD(arg0, s32 *, 0x70));
     func_80205AA0(0, 3);
-    M2C_FIELD(M2C_FIELD(arg0, void **, 0x14), s32 *, 0x7168) = -1;
+__repair_addr = (char *)(M2C_FIELD(arg0, void **, 0x14));
+
+    M2C_FIELD(__repair_addr, s32 *, 0x7168) = -1;
 }
