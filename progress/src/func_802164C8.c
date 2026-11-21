@@ -18,10 +18,10 @@ s32 func_802164C8(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f3
     f32 temp_fv0;
     f32 temp_fv1;
 
-    temp_ft5 = arg7 + arg3;
     temp_fv0 = arg0 - arg4;
     temp_fv1 = arg1 - arg5;
     temp_ft4 = arg2 - arg6;
+    temp_ft5 = arg7 + arg3;
     if (((temp_fv0 * temp_fv0) + (temp_fv1 * temp_fv1) + (temp_ft4 * temp_ft4)) <= (temp_ft5 * temp_ft5)) {
         return 1;
     }
