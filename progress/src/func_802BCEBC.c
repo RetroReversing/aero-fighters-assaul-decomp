@@ -25,11 +25,11 @@ s32 func_802BCEBC(void *arg0, s32 arg1) {
     f32 sp34;
     f32 sp30;
     f32 sp2C;
+    f32 temp_fa1;
     f32 sp28;
     f32 sp18;
-    f32 temp_fa1;
-    f32 temp_fv1;
     s32 var_v0;
+    f32 temp_fv1;
 
     sp34 = func_80317500(M2C_FIELD(arg0, s32 *, 4)) * D_803417FC;
     sp30 = func_803173C4(M2C_FIELD(arg0, s32 *, 4), arg1);
@@ -43,7 +43,7 @@ s32 func_802BCEBC(void *arg0, s32 arg1) {
     sp28 = temp_fa1;
     var_v0 = 1;
     if (temp_fv1 < (func_803003A4(sp30, temp_fa1) * temp_fa1 * D_80341804)) {
-        var_v0 = 0;
+        return 0;
     }
     return var_v0;
 }
