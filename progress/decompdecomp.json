@@ -25363,6 +25363,23 @@
    "timeout": 20,
    "function": "func_8030A9B0",
    "vram": 2150672816
+  },
+  "540264:2150315384": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_802B3578",
+   "vram": 2150315384
   }
  },
  "instructions": "",
@@ -33962,6 +33979,11 @@
   },
   "func_8030A9B0": {
    "vram": 2150672816,
+   "matched_by": "autopilot",
+   "readable": false
+  },
+  "func_802B3578": {
+   "vram": 2150315384,
    "matched_by": "autopilot",
    "readable": false
   }
