@@ -13,7 +13,7 @@ typedef s32 M2C_UNK32;
 #endif
 
 M2C_UNK func_80231A24(M2C_UNK *, s32);              /* extern */
-s32 func_80308728(s32, s32);                        /* extern */
+s32 func_80308728(s32);                        /* extern */
 extern M2C_UNK D_803265E0;
 
 s32 func_802AEFA8(void *arg0) {
@@ -24,5 +24,5 @@ s32 func_802AEFA8(void *arg0) {
         func_80231A24(&D_803265E0, temp_a1);
         return 0;
     }
-    return func_80308728(temp_a1, temp_a1);
+    return func_80308728(temp_a1);
 }
