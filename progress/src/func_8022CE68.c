@@ -43,7 +43,7 @@ void func_8022CE68(void) {
     }
     D_80278729 = 0;
     if (D_8027872B != 0) {
-        if (osSpTaskYielded(*(&D_80278720 + (D_8027872E * 4)) + 0x10) != 0) {
+        if (osSpTaskYielded(*(&D_80278720 + D_8027872E) + 0x10) != 0) {
             D_8027872C = 1;
             func_8022D560(1, 0x2D);
             if (D_80278740 != 0) {
