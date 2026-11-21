@@ -16,9 +16,12 @@ M2C_UNK func_80302394(s32, s32);                    /* extern */
 extern s32 D_8032AA74;
 
 void func_80291524(s32 arg0) {
+s32 __repair_operand;
+
     s32 temp_s0;
 
-    temp_s0 = D_8032AA74 + 0x8F4;
+    __repair_operand = D_8032AA74;
+    temp_s0 = __repair_operand + 0x8F4;
     func_80302394(temp_s0, arg0 + 0x314);
     func_80302394(temp_s0, arg0 + 0x31C);
     func_80302394(temp_s0, arg0 + 0x324);
