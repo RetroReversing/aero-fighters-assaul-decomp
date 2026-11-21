@@ -15,5 +15,5 @@ typedef s32 M2C_UNK32;
 extern s32 D_A4040010;
 
 void func_80246F80(s32 arg0) {
-    D_A4040010 = arg0;
+    *(volatile s32 *)0xA4040010 = arg0;
 }
