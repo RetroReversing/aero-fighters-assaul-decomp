@@ -26,5 +26,5 @@ void func_80318194(void *arg0) {
         *(s32 *)NULL = 0x29A;
         var_a1 = M2C_FIELD(arg0, s32 *, 0xC);
     }
-    func_802D2574(var_a1, var_a1, arg0);
+    func_802D2574(var_a1);
 }
