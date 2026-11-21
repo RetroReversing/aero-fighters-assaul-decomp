@@ -22,8 +22,8 @@ extern u16 D_80280BEC;
 extern s32 D_80283950;
 
 void func_8023413C(s32 arg0) {
-    void *sp1C;
     void *temp_a2;
+    void *sp1C;
 
     if (arg0 >= (s32) D_80280BEC) {
         func_80231A24(&D_80255220, arg0);
