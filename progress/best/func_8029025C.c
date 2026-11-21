@@ -12,6 +12,6 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-void func_8029025C(void *arg0, s16 arg1) {
+void func_8029025C(void *arg0, s32 arg1) {
     M2C_FIELD(arg0, s16 *, 8) = arg1;
 }

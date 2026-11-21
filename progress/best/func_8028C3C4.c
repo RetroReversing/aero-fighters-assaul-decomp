@@ -1,3 +1,4 @@
+/* Draft from identical target func_802D2774, retargeted and judged independently. */
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -12,6 +13,6 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-void func_8028C3C4(void *arg0, s8 arg1) {
+void func_8028C3C4(void *arg0, s32 arg1) {
     M2C_FIELD(arg0, s8 *, 0x1C) = arg1;
 }

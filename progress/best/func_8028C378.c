@@ -12,6 +12,6 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-void func_8028C378(s8 *arg0, s8 arg1) {
+void func_8028C378(s8 *arg0, s32 arg1) {
     *arg0 = arg1;
 }
