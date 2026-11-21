@@ -1,7 +1,7 @@
 {
  "format": 2,
- "saved_at": 1795224329.8032892,
- "revision": 513,
+ "saved_at": 1795224331.9969652,
+ "revision": 514,
  "title": "AERO FIGHTERS ASSAUL",
  "platform": "n64",
  "game": {
@@ -18129,6 +18129,23 @@
    "timeout": 20,
    "function": "func_80289A70",
    "vram": 2150144624
+  },
+  "374244:2150149364": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_8028ACF4",
+   "vram": 2150149364
   }
  },
  "instructions": "",
@@ -24599,6 +24616,11 @@
   },
   "func_80289A70": {
    "vram": 2150144624,
+   "matched_by": "autopilot",
+   "readable": false
+  },
+  "func_8028ACF4": {
+   "vram": 2150149364,
    "matched_by": "autopilot",
    "readable": false
   }
