@@ -13,10 +13,10 @@ typedef s32 M2C_UNK32;
 #endif
 
 M2C_UNK func_8021BAE0(s32);                         /* extern */
-M2C_UNK func_80318BFC(u8);                          /* extern */
+M2C_UNK func_80318BFC(void *, u8);                          /* extern */
 
 void func_80292EC0(void *arg0, u8 arg1) {
-    func_80318BFC(arg1);
+    func_80318BFC(arg0, arg1);
     if (arg1 == 0) {
         func_8021BAE0(M2C_FIELD(arg0, s32 *, 4));
         M2C_FIELD(arg0, s32 *, 4) = 0xFFFF;
