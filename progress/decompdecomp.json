@@ -31344,8 +31344,8 @@
   },
   "func_8030A36C": {
    "vram": 2150671212,
-   "best_score": 145,
-   "best_by": "autopilot"
+   "matched_by": "permuter-51539609278",
+   "readable": false
   },
   "func_802012BC": {
    "vram": 2149585596,

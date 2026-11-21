@@ -15,9 +15,9 @@ typedef s32 M2C_UNK32;
 extern M2C_UNK D_80348B70;
 
 s32 func_8030A36C(s32 arg0) {
-    u16 temp_v0;
+    s32 temp_v0;
 
-    temp_v0 = *(&D_80348B70 + (arg0 * 2));
+    temp_v0 = *((u16 *)((s8 *)&D_80348B70 + (arg0 * 2)));
     if (temp_v0 & 0x400) {
         return 0xB;
     }
