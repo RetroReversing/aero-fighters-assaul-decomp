@@ -17,17 +17,19 @@ M2C_UNK func_80245B14();                            /* extern */
 s32 func_80247AEC(s32, u16 *);                      /* extern */
 
 s32 func_8023E330(s32 arg0) {
-    s32 sp1C;
-    u16 sp18;
+    struct {
+        u16 f18;
+        s32 f1C;
+    } __repair_frame;
 
-    sp1C = 0;
+    __repair_frame.f1C = 0;
     func_80245AD0();
-    sp1C = func_80247AEC(arg0, &sp18);
-    if ((sp1C == 0) && (sp18 & 0x8000)) {
-        sp1C = 1;
+    __repair_frame.f1C = func_80247AEC(arg0, &__repair_frame);
+    if ((__repair_frame.f1C == 0) && (__repair_frame.f18 & 0x8000)) {
+        __repair_frame.f1C = 1;
     } else {
-        sp1C = 0;
+        __repair_frame.f1C = 0;
     }
     func_80245B14();
-    return sp1C;
+    return __repair_frame.f1C;
 }
