@@ -18,10 +18,10 @@ s32 func_802021EC();
 s32 func_8020225C();
 
 void func_80302418(s32 arg0, u16 arg1, s32 arg2) {
-    s32 sp1C;
+             
 
     func_802021EC();
-    sp1C = (s32) arg1;
+    arg0 = (s32) arg1;
     func_80200144(arg1, arg2);
     func_80200354(arg1);
     func_8020225C();
