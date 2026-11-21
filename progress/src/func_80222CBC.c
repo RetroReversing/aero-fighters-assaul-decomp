@@ -17,13 +17,13 @@ s32 func_80231C58(s16, M2C_UNK *, void *);          /* extern */
 extern u16 D_8024E874;
 extern s16 D_8024E884;
 extern M2C_UNK D_802743A8;
-extern M2C_UNK D_80280BE0;
+extern u8 D_80280BE0[];
 
 void func_80222CBC(s32 arg0) {
     D_8024E884 += 1;
-    if (func_80231C58(D_8024E884, "DL_NDBMTXS", &D_80280BE0 + 2) != 0) {
+    if (func_80231C58(D_8024E884, "DL_NDBMTXS", D_80280BE0 + 2) != 0) {
         D_8024E884 -= 1;
         return;
     }
-    func_802291F8(*(&D_802743A8 + (D_8024E874 * 4)) + (D_8024E884 << 6), arg0);
+    func_802291F8(*(&D_802743A8 + D_8024E874) + (D_8024E884 << 6), arg0);
 }
