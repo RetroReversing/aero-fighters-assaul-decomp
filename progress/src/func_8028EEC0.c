@@ -17,14 +17,16 @@ M2C_UNK func_8021E87C(s32, s32, s8 *);              /* extern */
 M2C_UNK func_8021EC9C();                            /* extern */
 
 void func_8028EEC0(s32 arg0, s32 arg1, s32 arg2, s16 arg3) {
-    s8 sp1D;
-    s8 sp1C;
+    struct {
+        s8 f1C;
+        s8 f1D;
+    } __repair_frame;
 
     if (arg3 != 0) {
-        sp1C = (s8) arg3;
-        sp1D = 0;
+        __repair_frame.f1C = (s8) arg3;
+        __repair_frame.f1D = 0;
         func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
-        func_8021E87C(arg1, arg2, &sp1C);
+        func_8021E87C(arg1, arg2, &__repair_frame);
         func_8021EC9C();
     }
 }

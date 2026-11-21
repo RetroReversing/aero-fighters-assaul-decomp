@@ -11278,9 +11278,11 @@
    "vram": 2150147272
   },
   "391088:2150166208": {
+   "vram": 2150166208,
+   "function": "func_8028EEC0",
    "toolchain": "ido-7.1",
    "flags": [
-    "-O2",
+    "-O1",
     "-mips2",
     "-G",
     "0",
@@ -11290,9 +11292,7 @@
     "-woff",
     "649,838,712"
    ],
-   "timeout": 20,
-   "function": "func_8028EEC0",
-   "vram": 2150166208
+   "timeout": 20
   },
   "894392:2150669512": {
    "toolchain": "ido-7.1",
@@ -25878,7 +25878,8 @@
   "local_source_51539609918": "common_local_source_51539609918.h",
   "local_source_51539609527": "common_local_source_51539609527.h",
   "local_source_51539609561": "common_local_source_51539609561.h",
-  "local_source_51539609962": "common_local_source_51539609962.h"
+  "local_source_51539609962": "common_local_source_51539609962.h",
+  "local_source_51539607690": "common_local_source_51539607690.h"
  },
  "functions": {
   "func_8020670C": {
@@ -30318,8 +30319,8 @@
   },
   "func_8028EEC0": {
    "vram": 2150166208,
-   "best_score": 121,
-   "best_by": "autopilot"
+   "matched_by": "permuter-51539607690",
+   "readable": false
   },
   "func_80309CC8": {
    "vram": 2150669512,
