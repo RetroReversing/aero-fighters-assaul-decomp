@@ -18,7 +18,7 @@ M2C_UNK func_802344F4(s32, M2C_UNK, M2C_UNK, M2C_UNK, s32, s32, s32); /* extern 
 M2C_UNK func_802FA5F0(s32, s32);                    /* extern */
 M2C_UNK func_802FBF74(s32, s32);                    /* extern */
 
-s32 func_802CD1F4(void *arg0, s8 arg1) {
+s32 func_802CD1F4(void *arg0, s32 arg1) {
     s32 temp_a0;
     s32 temp_a0_2;
     s32 temp_v0;
