@@ -55279,6 +55279,92 @@
    "vram": 2150393756,
    "unit": "code_802BBCB4",
    "mode": "rom"
+  },
+  "func_802B4490": {
+   "format": 1,
+   "verdict": "exact",
+   "abi": {
+    "arch": "mips",
+    "big_endian": true,
+    "gp": 0,
+    "platform": "n64",
+    "rom_sha1": "6742f67d7d2639072e186d240237be1c662cb25a"
+   },
+   "symbols_sha256": "842e18d6dae88fc9a5c1023664125b0512b537355e3c32b7a49016123b20ba10",
+   "recorded_at": 1795223293.926471,
+   "attempt_id": 51539608560,
+   "source_sha256": "1094ae21ea3a10ccfaef3ebc989ce7f81ff90e1e2316786807fd6aebff6ae88b",
+   "header_sha256": "40e7ce6c378ce2bcd5b850d28bc79e6ed5f4617a33787e453d6e1e52d36a92e8",
+   "context_version": 6,
+   "compiler": {
+    "toolchain": "ido-5.3",
+    "flags": [
+     "-O2",
+     "-mips2",
+     "-G",
+     "0",
+     "-non_shared",
+     "-Xcpluscomm",
+     "-Wab,-r4300_mul"
+    ],
+    "timeout": 20
+   },
+   "compiler_identity": {
+    "toolchain": "ido-5.3",
+    "registry_sha256": "79ea33d79e403bf34ff9a3690dd6060a9d295e43a9fd3878e32f510f2052ae9c",
+    "install_sha256": "19b691268844ec8dfa0e02521c7e01b1897a55378aae02e78993d1d730dd2f83",
+    "executables": {}
+   },
+   "settings": {
+    "mode": "rom",
+    "platform": "n64",
+    "compiler": {
+     "toolchain": "ido-5.3",
+     "flags": [
+      "-O2",
+      "-mips2",
+      "-G",
+      "0",
+      "-non_shared",
+      "-Xcpluscomm",
+      "-Wab,-r4300_mul"
+     ],
+     "timeout": 20
+    },
+    "settings_source": "compile invocation snapshot",
+    "gp": 0,
+    "big_endian": true,
+    "rom": {
+     "sha1": "6742f67d7d2639072e186d240237be1c662cb25a",
+     "game_code": "NERE",
+     "region": "North America",
+     "byte_order": "z64"
+    },
+    "effective_command": [
+     "/Users/a/Library/Application Support/decompnet/toolchains/ido-5.3/cc",
+     "-c",
+     "-O2",
+     "-mips2",
+     "-G",
+     "0",
+     "-non_shared",
+     "-Xcpluscomm",
+     "-Wab,-r4300_mul",
+     "-I{include}",
+     "{src}",
+     "-o",
+     "{obj}"
+    ],
+    "language": "c",
+    "context_unit": "local_source_51539608249",
+    "scoring_revision": "15e8fb22810d7914188643b45b306dd8c980e892c87fc3b92ab66645816d394d",
+    "context_sha256": "40e7ce6c378ce2bcd5b850d28bc79e6ed5f4617a33787e453d6e1e52d36a92e8"
+   },
+   "target_sha256": "2aac19ada7457b7b9b8aa61c6408df01fa3c707a44f4ad1a3ad8de85e241dc14",
+   "relocations_sha256": "fb6e4a3d309695972da8d33a44891019ae5e197882c2fdc9aec3970ec3acfb70",
+   "vram": 2150319248,
+   "unit": "local_source_51539608249",
+   "mode": "rom"
   }
  },
  "sources": {
@@ -55882,7 +55968,8 @@
   "f40943b03d17e5d0bb658844657ec5b81c5ac96bbd0befa09abf11dd67352e46": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802333A0(M2C_UNK);                     /* extern */\nM2C_UNK func_802CFEC0(M2C_UNK);                     /* extern */\n\nvoid func_8029DEDC(s32 arg0) {\n    func_802CFEC0(0);\n    func_802333A0(1);\n}\n",
   "917f5d537cee9836c6635079199484dfefaf62fa03c02b18bb20ef8d70403996": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802D5074(s32, s32);                    /* extern */\n\nvoid func_802B4438(s32 arg0, s32 arg1) {\nint *__repair_home1 = &arg1;\n\n    func_802D5074(arg0 + 0x1A4, (*__repair_home1) & 0xFF);\n}\n",
   "b76af6c4247e4069912696cfa43068cfd6e351b8d5985bcf745555cf3c027aa2": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802D5080(s32, s32);                    /* extern */\n\nvoid func_802B4464(s32 arg0, s32 arg1) {\nint *__repair_home1 = &arg1;\n\n    func_802D5080(arg0 + 0x1A4, (*__repair_home1) & 0xFF);\n}\n",
-  "8937986dff0a0e4943ad3317849695e26fc245c51c12fd1ad2d2c693f8259a9f": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802C66AC(M2C_UNK *, s32);              /* extern */\nextern M2C_UNK D_803481D0;\n\nvoid func_802C679C(s32 arg0) {\n    if (arg0 != 0) {\n        func_802C66AC(&D_803481D0, arg0);\n    }\n}\n"
+  "8937986dff0a0e4943ad3317849695e26fc245c51c12fd1ad2d2c693f8259a9f": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802C66AC(M2C_UNK *, s32);              /* extern */\nextern M2C_UNK D_803481D0;\n\nvoid func_802C679C(s32 arg0) {\n    if (arg0 != 0) {\n        func_802C66AC(&D_803481D0, arg0);\n    }\n}\n",
+  "1094ae21ea3a10ccfaef3ebc989ce7f81ff90e1e2316786807fd6aebff6ae88b": "/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_802D508C(s32, s32);                    /* extern */\n\nvoid func_802B4490(s32 arg0, s32 arg1) {\nint *__repair_home1 = &arg1;\n\n    func_802D508C(arg0 + 0x1A4, (*__repair_home1) & 0xFF);\n}\n"
  },
  "headers": {
   "40e7ce6c378ce2bcd5b850d28bc79e6ed5f4617a33787e453d6e1e52d36a92e8": "/* context.h for AERO FIGHTERS ASSAUL: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n"
