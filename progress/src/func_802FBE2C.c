@@ -21,10 +21,10 @@ void func_802FBE2C(s32 arg0, s32 arg1, s32 arg2) {
     s32 temp_v1;
     void *temp_v0;
 
+    temp_v0 = (void *)(arg0); temp_v0 = (void *)((char *)temp_v0 + (s32)((arg2 * 4)));
     temp_v1 = arg1 * 4;
-    temp_v0 = arg0 + (arg2 * 4);
-    M2C_FIELD(temp_v0, s32 *, 0xB8) = (s32) *(&D_80329044 + temp_v1);
-    M2C_FIELD((arg0 + (arg2 * 2)), s16 *, 0xE8) = (s16) *(&D_80329074 + (arg1 * 2));
-    M2C_FIELD(temp_v0, s32 *, 0x100) = (s32) *(&D_8032908C + temp_v1);
-    M2C_FIELD(temp_v0, s32 *, 0x130) = (s32) *(&D_803290BC + temp_v1);
+    M2C_FIELD(temp_v0, s32 *, 0xB8) = (s32) *((M2C_UNK *)((s8 *)&D_80329044 + temp_v1));
+    M2C_FIELD((arg0 + (arg2 * 2)), s16 *, 0xE8) = (s16) *((s16 *)((s8 *)&D_80329074 + (arg1 * 2)));
+    M2C_FIELD(temp_v0, s32 *, 0x100) = (s32) *((M2C_UNK *)((s8 *)&D_8032908C + temp_v1));
+    M2C_FIELD(temp_v0, s32 *, 0x130) = (s32) *((M2C_UNK *)((s8 *)&D_803290BC + temp_v1));
 }
