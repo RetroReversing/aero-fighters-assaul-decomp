@@ -19,8 +19,8 @@ extern s16 D_80271B66;
 extern M2C_UNK D_80280BE4;
 
 s16 func_8021F35C(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7, s32 arg8) {
-    void *sp1C;
     void *temp_v1;
+    void *sp1C;
 
     temp_v1 = (D_80271B5E * 0x10) + D_80271B58;
     sp1C = temp_v1;
