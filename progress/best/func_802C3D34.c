@@ -19,8 +19,8 @@ void func_802C3D34(void *arg0, f32 arg1) {
     if (func_802AD4E8((*(s32 *)((char *)(arg0) + 0)), arg0, spA8, &spA0, &sp98, 2, (*(f32 *)((char *)(arg0) + 0x154)), (*(f32 *)((char *)(arg0) + 0x15C)), (*(f32 *)((char *)(arg0) + 0x160)), (*(f32 *)((char *)(arg0) + 0x164))) > 0) {
         func_802C5150(arg0, sp54);
         func_8022A0D0(sp54,  0);
-        sp48[2] = sp84[0];
         sp48[0] = sp84[2];
+        sp48[2] = sp84[0];
         sp48[1] = sp84[1];
         func_8022970C(sp54);
         sp84[2] = sp48[0];

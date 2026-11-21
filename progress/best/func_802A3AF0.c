@@ -21,8 +21,8 @@ s32 func_802A3AF0(s32 arg0, u8 *arg1, u8 arg2, u8 *arg3, s32 arg4) {
 
     temp_t1 = *arg1;
     temp_t6 = arg2 & 0xFF;
-    var_t2 = 0;
     var_t0 = 0;
+    var_t2 = 0;
     if ((s32) (*arg1) > 0) {
 loop_1:
         temp_v1 = *(s32 *)(arg0 + ((u32)var_t0 * 4));

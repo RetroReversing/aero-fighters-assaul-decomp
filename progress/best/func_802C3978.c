@@ -27,8 +27,8 @@ void func_802C3978(void *arg0, f32 arg1) {
         sp4C[1] = sp8C[1];
         sp4C[0] = sp8C[2];
         func_8022970C(sp5C);
-        sp8C[1] = sp4C[1];
         sp8C[2] = sp4C[0];
+        sp8C[1] = sp4C[1];
         func_802C47B8(arg0);
         func_802D0154(sp5C, spA8 + (*(f32 *)((char *)(arg0) + 0x104)), 0x7A);
         func_802D0154(sp5C, spA0 + (*(f32 *)((char *)(arg0) + 0x108)), 0x78);

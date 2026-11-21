@@ -11,7 +11,9 @@ extern char D_80252558[];
 extern char D_8025258C[];
 extern s32 D_8025B988;
 
-void func_80203654(s8 arg0) {
+extern char D_80252584[];
+extern char D_8025256C[];
+void func_80203654(s32 arg0) {
     u8 temp_a2;
     void *temp_a0;
 
@@ -22,7 +24,7 @@ void func_80203654(s8 arg0) {
         temp_a0 = D_8024E5B4;
         func_80234E90(D_8024E5B4, *(s32 *)(D_8025B988 + ((u8) arg0 * 2)), (u8) arg0);
         if ((*(s32 *)((char *)(temp_a0) + 0x3C)) == -1) {
-            func_80231C9C("sndp -> target != -1", "_aobj.c");
+            func_80231C9C(D_80252584, D_8025256C);
         }
         if (alSndpGetState(temp_a0) == 1) {
             alSndpSetVol(D_8024E5B4, 0);

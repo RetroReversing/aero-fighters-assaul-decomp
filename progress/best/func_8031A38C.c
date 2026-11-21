@@ -44,11 +44,11 @@ s32 func_8031A38C(void *arg0, u8 arg1) {
         __shared_return_1:
     return 1;
     }
-    if (temp_v0 == 1) {
-        M2C_FIELD(arg0, s16 *, 0x68) = 2;
-    } else {
+    if (temp_v0 != 1) {
         M2C_FIELD(arg0, s16 *, 0x68) = 1;
         return 1;
+    } else {
+        M2C_FIELD(arg0, s16 *, 0x68) = 2;
     }
     return 1;
 }

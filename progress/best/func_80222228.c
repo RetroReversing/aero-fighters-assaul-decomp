@@ -21,7 +21,7 @@ void func_80222228(u8 arg0, s32 arg1, u8 arg2) {
     unsigned long temp_t9;
 
     temp_v1 = D_80273B90;
-    D_80273B90 = temp_v1 + 8;
+    D_80273B90 = (s8 *) temp_v1 + 8;
     (*(s32 *)((char *)(temp_v1) + 0)) = 0xE7000000;
     (*(s32 *)((char *)(temp_v1) + 4)) = 0;
     temp_v1_2 = D_80273B90;
@@ -29,7 +29,7 @@ void func_80222228(u8 arg0, s32 arg1, u8 arg2) {
     (*(s32 *)((char *)(temp_v1_2) + 0)) = 0xBA001402;
     (*(s32 *)((char *)(temp_v1_2) + 4)) = 0x300000;
     temp_v1_3 = D_80273B90;
-    D_80273B90 = temp_v1_3 + 8;
+    D_80273B90 = (s8 *) temp_v1_3 + 8;
     (*(s32 *)((char *)(temp_v1_3) + 0)) = 0xFF10013F;
     sp1C = temp_v1_3;
     (*(s32 *)((char *)(sp1C) + 4)) = osVirtualToPhysical(D_8024E858);

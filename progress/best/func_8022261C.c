@@ -6,12 +6,12 @@ extern s32 *D_80273B90;
 extern s32 D_80274388;
 
 void func_8022261C(void) {
-    s32 *temp_v1_9;
     register s32 *sp1C;
+    s32 *temp_v1_9;
     
-    s32 *temp_v1_10;
-    s32 *temp_v1_11;
-    s32 *temp_v1_12;
+    
+    
+    
     s32 *temp_v1_13;
     s32 *temp_v1_14;
     s32 *temp_v1_15;
@@ -19,10 +19,10 @@ void func_8022261C(void) {
     s32 *temp_v1_2;
     s32 *temp_v1_3;
     register s32 *temp_v1_4;
+    register s32 *temp_v1_6;
     s32 *sp2C;
-    s32 *temp_v1_6;
-    s32 *temp_v1_7;
-    s32 *temp_v1_8;
+    register s32 *temp_v1_7;
+    register s32 *temp_v1_8;
     s32 *temp_v1_5;
 
     temp_v1_9 = D_80273B90;
@@ -63,18 +63,18 @@ void func_8022261C(void) {
     sp2C = temp_v1_9;
 temp_v1_9 = 0;
     (*(s32 *)((char *)(sp2C) + 4)) = osVirtualToPhysical(D_80274388, &D_80273B90, 0xE7000000);
-    temp_v1_10 = D_80273B90;
-    D_80273B90 = (s8 *) temp_v1_10 + 8;
-    (*(s32 *)((char *)(temp_v1_10) + 0)) = 0xE7000000;
-    (*(s32 *)((char *)(temp_v1_10) + 4)) = 0;
-    temp_v1_11 = D_80273B90;
-    D_80273B90 = temp_v1_11 + 8;
-    (*(s32 *)((char *)(temp_v1_11) + 0)) = 0xF64FC3BC;
-    (*(s32 *)((char *)(temp_v1_11) + 4)) = 0;
-    temp_v1_12 = D_80273B90;
-    D_80273B90 = temp_v1_12 + 8;
-    (*(s32 *)((char *)(temp_v1_12) + 0)) = 0xE7000000;
-    (*(s32 *)((char *)(temp_v1_12) + 4)) = 0;
+    temp_v1_9 = D_80273B90;
+    D_80273B90 = (s8 *) temp_v1_9 + 8;
+    (*(s32 *)((char *)(temp_v1_9) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_9) + 4)) = 0;
+    temp_v1_9 = D_80273B90;
+    D_80273B90 = temp_v1_9 + 8;
+    (*(s32 *)((char *)(temp_v1_9) + 0)) = 0xF64FC3BC;
+    (*(s32 *)((char *)(temp_v1_9) + 4)) = 0;
+    temp_v1_9 = D_80273B90;
+    D_80273B90 = temp_v1_9 + 8;
+    (*(s32 *)((char *)(temp_v1_9) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_9) + 4)) = 0;
     temp_v1_13 = D_80273B90;
     D_80273B90 = temp_v1_13 + 8;
     (*(s32 *)((char *)(temp_v1_13) + 0)) = 0xFF10013F;
@@ -86,8 +86,8 @@ temp_v1_9 = 0;
     (*(s32 *)((char *)(temp_v1_14) + 0)) = 0xE7000000;
     temp_v1_15 = D_80273B90;
     D_80273B90 = temp_v1_15 + 8;
-    (*(s32 *)((char *)(temp_v1_15) + 4)) = 0x100000;
     (*(s32 *)((char *)(temp_v1_15) + 0)) = 0xBA001402;
+    (*(s32 *)((char *)(temp_v1_15) + 4)) = 0x100000;
     temp_v1_16 = D_80273B90;
     D_80273B90 = temp_v1_16 + 8;
     (*(s32 *)((char *)(temp_v1_16) + 4)) = 0;

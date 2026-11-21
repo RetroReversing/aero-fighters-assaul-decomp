@@ -17,16 +17,16 @@ extern u16 D_80280BC8;
 
 void func_80205528(s32 arg0) {
     s32 sp34;
-    s32 temp_v0;
-    s32 sp3C;
-    long sp2C;
+    int temp_v0;
+    int sp3C;
+    unsigned int sp38;
     unsigned int temp_a0;
     void *sp30;
-    s32 temp_a1;
-    s32 sp38;
-    void *temp_v0_2;
+    u32 temp_a1;
+    register int sp2C;
+    register void *temp_v0_2;
 
-    if ((arg0 >= (s32) D_80280BC8) || (temp_a0 = *(s32 *)(D_80275240 + ((unsigned)arg0 * 4)), (temp_a0 == 0))) {
+    if ((arg0 >= (s32) D_80280BC8) || (temp_a0 = *(s32 *)(D_80275240 + ((unsigned)arg0 * 4)), (!temp_a0))) {
         func_80231A24(D_80252934, arg0, D_80280BC8);
         return;
     }

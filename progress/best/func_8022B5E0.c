@@ -44,7 +44,7 @@ s32 __repair_result_temp_t7;
             sp38[1] = temp_t3 | (u32) temp_ret_2 | temp_t4;
         }
         if (arg1 >= 5U) {
-s32 __repair_branch_temp_t7_0 = temp_t7;
+s32 __repair_branch_temp_t7_0 = temp_t7;temp_t7=0;
 
             temp_ret_3 = __ll_lshift(sp38[0], (u8) sp38[1], 0, 0x20);
             temp_t5 = (*(u8 *)((char *)(arg0) + 7));

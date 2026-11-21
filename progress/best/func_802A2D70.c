@@ -7,20 +7,24 @@ extern char D_80324DF0[];
 extern char D_80324E10[];
 
 s32 func_802A2D70(s32 arg0, u8 *arg1, u8 arg2, u8 *arg3, s32 arg4) {
-    s32 temp_a0;
+int __repair_literal;
+
+    register s32 temp_a0;
     s32 sp38;
-    s32 *temp_a1;
-    s32 *sp2C;
-    u8 sp37;
+    unsigned long var_s0;
     u8 sp36;
-    
     s32 temp_t0;
-    u8 var_s0;
+    u8 sp37;
+    
+    register s32 *temp_a1;
+    s32 *sp2C;
 
     sp38 = 0;
     sp36 = 0;
     var_s0 = 0;
-    if ((s32) *arg1 > 0) {
+__repair_literal = 0;
+
+    if ((s32) *arg1 > __repair_literal) {
 loop_1:
         temp_a0 = *(s32 *)(arg0 + (var_s0 * 4));
         if ((temp_a0) && (func_80320CE0(temp_a0) == 0)) {
@@ -41,8 +45,8 @@ loop_1:
         *arg3 += 1;
     } else {
         sp2C = temp_a1;
-        func_802A53BC(temp_a1);
         temp_a1 = arg0 + (var_s0 * 4);
+        func_802A53BC(temp_a1);
         temp_a0 = *temp_a1;
         sp38 = (s32)temp_a0;
         if (temp_a0 == 0) {

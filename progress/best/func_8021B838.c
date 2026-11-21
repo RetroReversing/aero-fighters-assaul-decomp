@@ -57,17 +57,17 @@ loop_5:
                         do {
                             var_v1 += 1;
                             __repair_operand = D_8025C3F0;
-                            temp_v0 = (void *)(__repair_operand); temp_v0 = (void *)((char *)temp_v0 + (s32)(var_a0_2));
+                            temp_v0 = (void *) ((var_a0_2) + (s32) __repair_operand);
                             var_a0_2 += 2;
                             var_t0 = (u16)((*(u16 *)((char *)(temp_v0) + 2)));
                             (*(u16 *)((char *)(temp_v0) + 0)) = var_t0;
                             var_a1 = D_8025C3FA;
                         } while (var_v1 < (s32) var_a1);
                     }
-                    temp_t4 = var_a1 - 1;
-                    var_a1 = temp_t4 & 0xFFFF;
+                    var_a0_2 = (u16)(var_a1 - 1);
+                    var_a1 = var_a0_2 & 0xFFFF;
                     var_a0 = var_a1;
-                    D_8025C3FA = temp_t4;
+                    D_8025C3FA = var_a0_2;
                 }
                 ++var_t0_2;
                 var_t1 += 2;

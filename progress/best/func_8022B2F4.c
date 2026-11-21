@@ -8,10 +8,13 @@ s32 func_8022B2F4(u32 arg0, s32 arg1) {
     s32 var_v1;
     u32 temp_a1;
     u32 temp_v0;
+    s32 *__base_D_80275E70;
 
-    temp_v0 = arg0 + arg1;
-    var_v1 = 0;
-    if (D_80275E70 > 0) {
+    __base_D_80275E70 = &D_80275E70;
+
+    temp_v0 = arg0;/*__repair_loop_weight*/do { temp_v0 += arg1;} while (0);
+    if ((*__base_D_80275E70) > 0) {
+        var_v1 = 0;
         var_a3 = &D_80275E80;
 loop_2:
         temp_a1 = (*(u32 *)((char *)(var_a3) + 0));
@@ -23,7 +26,7 @@ loop_2:
             return 0;
         }
         var_a3 += 2;
-        if (var_v1 >= D_80275E70) {
+        if (var_v1 >= (*__base_D_80275E70)) {
             /* Duplicate return node #9. Try simplifying control flow for better match */
             goto __shared_return_1;
         }

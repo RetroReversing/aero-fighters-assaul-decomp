@@ -8,11 +8,11 @@ s32 __repair_operand;
 
     s32 sp60[2];
     register void *sp50;
-    s32 sp44;
+    void *temp_t1;
     s32 temp_t1_2;
     register s32 temp_t6;
     s32 temp_t7;
-    void *temp_t1;
+    s32 sp44;
     s32 var_s6;
     register s32 temp_v0;
     u8 var_v1;

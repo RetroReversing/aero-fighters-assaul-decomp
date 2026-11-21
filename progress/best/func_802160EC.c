@@ -9,7 +9,7 @@ char *__repair_addr;
 
     f32 sp44;
     f32 sp40;
-    u8 sp27;
+    s32 var_v0;
     register f32 sp20;
     register f32 sp1C;
     f32 temp_fa0;
@@ -17,14 +17,14 @@ char *__repair_addr;
     s32 var_a2;
     f32 temp_fv0;
     f32 temp_fv0_2;
-    f32 temp_fv1;
-    f32 var_ft0;
     f32 var_ft2;
+    f32 var_ft0;
+    f32 temp_fv1;
     s32 temp_lo;
     s32 temp_lo_2;
     s32 temp_t9;
     f32 temp_ft4;
-    s32 var_v0;
+    u8 sp27;
     
     
     u8 temp_a1;
@@ -36,7 +36,9 @@ char *__repair_addr;
     sp44 = (*(f32 *)((char *)(arg0) + 0x1C));
     sp40 = (*(f32 *)((char *)(arg0) + 0x20));
     temp_ft4 = (*(f32 *)((char *)(arg0) + 0));
-    temp_lo = (s32) (arg1 - temp_ft4) / (s32) sp44;
+    /*__repair_loop_weight*/
+    temp_lo = (s32) (arg1 - temp_ft4) / (s32) ((*(f32 *)((char *)(arg0) + 0x1C)));
+    
     var_a2 = temp_lo & 0xFFFF;
     if (arg9 & 1) {
         var_a2 = (temp_lo - 1) & 0xFFFF;
@@ -53,17 +55,17 @@ char *__repair_addr;
     }
     var_ft0 = (f32) var_a2;
     *arg7 = var_a2 + (var_v0 * temp_a1);
-    temp_fa0 = sp44 * 0.5f;
+    temp_fa0 = ((*(f32 *)((char *)(arg0) + 0x1C))) * 0.5f;
     if (var_a2 < 0) {
         var_ft0 += 4294967296.0f;
     }
-    *arg4 = ((arg1 - (var_ft0 * sp44)) - temp_ft4) - temp_fa0;
+    *arg4 = ((arg1 - (var_ft0 * ((*(f32 *)((char *)(arg0) + 0x1C))))) - temp_ft4) - temp_fa0;
     var_ft2 = (f32) var_v0;
     temp_fa1 = sp40 * 0.5f;
     if (var_v0 < 0) {
         var_ft2 += 4294967296.0f;
     }
-    *arg5 = ((arg2 - (var_ft2 * sp40)) - temp_fv0) - temp_fa1;
+    *arg5 = ((arg2 - (var_ft2 * ((*(f32 *)((char *)(arg0) + 0x20))))) - temp_fv0) - temp_fa1;
     temp_fv1 = *arg4;
     if (temp_fv1 < -temp_fa0) {
         var_v0_2 = 1;
@@ -74,10 +76,10 @@ char *__repair_addr;
         if (temp_fv0_2 < -temp_fa1) {
             var_v0_2 = 1;
         } else {
-            var_v0_2 = 0;
+            
             if (temp_fa1 <= temp_fv0_2) {
                 var_v0_2 = 1;
-            }
+            } else { var_v0_2=0; }
         }
     }
     sp1C = temp_fa1;
@@ -89,7 +91,7 @@ __repair_addr = (char *)(((*(s32 *)((char *)(arg0) + 0x28)) + (*arg7 * 0x4C)));
     if (var_v0_2 != 0) {
         *arg8 = 0;
     } else {
-        var_v0 = (s32) (((*arg4 + temp_fa0) * 4.0f) / sp44) & 0xFFFF;
+        var_v0 = (s32) (((*arg4 + temp_fa0) * 4.0f) / ((*(f32 *)((char *)(arg0) + 0x1C)))) & 0xFFFF;
         temp_t9 = (s32) (((*arg5 + temp_fa1) * 4.0f) / sp40) & 0xFFFF;
         if (var_v0 == 4) {
             var_v0 = __repair_constant;

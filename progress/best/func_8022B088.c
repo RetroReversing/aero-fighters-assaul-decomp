@@ -21,29 +21,30 @@ void func_8022B088(void) {
     u32 *__base_D_80275F84;
     s32 *var_v1_6;
     u32 var_a1;
-    u32 var_v1;
-    u32 var_v1_2;
+u32 __repair_phase_var_a1;
+    
+    
     u32 var_v1_3;
-    u32 var_v1_4;
+    
     u32 var_v1_5;
     void *temp_v0;
 
     __base_D_80275F84 = &D_80275F84;
     if ((u32) (*__base_D_80275F84) < 0x800DA801U) {
-        var_v1 = (*__base_D_80275F84);
+        __repair_phase_var_a1 = (*__base_D_80275F84);
         if ((u32) (*__base_D_80275F84) < 0x800DA800U) {
             do {
-                var_v1 += 4;
-                M2C_FIELD(var_v1, s32 *, -4) = 0;
-            } while (var_v1 < 0x800DA800U);
+                __repair_phase_var_a1 += 4;
+                M2C_FIELD(__repair_phase_var_a1, s32 *, -4) = 0;
+            } while (__repair_phase_var_a1 < 0x800DA800U);
         }
     } else {
-        var_v1_2 = func_80204530() + 0x80000400;
-        if (var_v1_2 < 0x800DA800U) {
+        __repair_phase_var_a1 = func_80204530() + 0x80000400;
+        if (__repair_phase_var_a1 < 0x800DA800U) {
             do {
-                var_v1_2 += 4;
-                M2C_FIELD(var_v1_2, s32 *, -4) = 0;
-            } while (var_v1_2 < 0x800DA800U);
+                __repair_phase_var_a1 += 4;
+                M2C_FIELD(__repair_phase_var_a1, s32 *, -4) = 0;
+            } while (__repair_phase_var_a1 < 0x800DA800U);
         }
     }
     var_a1 = (*__base_D_80275F84);
@@ -54,16 +55,15 @@ void func_8022B088(void) {
                 var_v1_3 += 4;
                 M2C_FIELD(var_v1_3, s32 *, -4) = 0;
             } while (var_v1_3 < (u32) &func_802000A0);
-            goto block_16;
+            var_a1 = (*__base_D_80275F84);
         }
     } else {
         if (&func_802000A0 != NULL) {
-            var_v1_4 = 0x80125800;
+            __repair_phase_var_a1 = 0x80125800;
             do {
-                var_v1_4 += 4;
-                M2C_FIELD(var_v1_4, s32 *, -4) = 0;
-            } while (var_v1_4 < (u32) &func_802000A0);
-block_16:
+                __repair_phase_var_a1 += 4;
+                M2C_FIELD(__repair_phase_var_a1, s32 *, -4) = 0;
+            } while (__repair_phase_var_a1 < (u32) &func_802000A0);
             var_a1 = (*__base_D_80275F84);
         }
     }

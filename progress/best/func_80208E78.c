@@ -5,24 +5,24 @@ extern void *D_8024E710;
 s32 func_80208E78(s32 arg0, s32 arg1, s8 arg2, s32 arg3) {
 int *__repair_home1 = &arg1;
 
-    register s16 *temp_t1;
+    u8 *temp_t6_4;
     s16 *temp_t1_2;
     s16 *temp_t6;
     s16 *temp_t6_2;
-    s32 temp_v0;
-    s32 temp_v0_2;
-    s32 temp_v0_3;
-    s32 temp_v0_4;
     s32 temp_v0_5;
+    s32 temp_v0_2;
+    register long temp_v0_3;
+    s32 temp_v0_4;
+    unsigned temp_v0;
     s32 temp_v0_6;
     s32 temp_v0_7;
-    s32 temp_v0_8;
+    register s32 temp_v0_8;
     s32 var_v0;
-    s8 *var_v0_2;
+    register s8 *var_v0_2;
     u8 *temp_t1_3;
     u8 *temp_t1_4;
     u8 *temp_t6_3;
-    u8 *temp_t6_4;
+    register s16 *temp_t1;
     void *var_v1;
 
     var_v0_2 = &arg2;
@@ -55,8 +55,8 @@ int *__repair_home1 = &arg1;
         *temp_t6_2 = (*(s16 *)((char *)(var_v1) + 8));
     }
     if ((*__repair_home1) & 0x10) {
-        temp_v0_5 = (s32) (var_v0_2 + 3) & ~3;
         temp_t1_2 = *(s32 *)temp_v0_5;
+        temp_v0_5 = (s32) (var_v0_2 + 3) & ~3;
         var_v0_2 = temp_v0_5 + 4;
         *temp_t1_2 = (*(s16 *)((char *)(var_v1) + 0xA));
     }

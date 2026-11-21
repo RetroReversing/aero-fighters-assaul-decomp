@@ -33,5 +33,5 @@ void func_8022A0D0(void *arg0, f32 arg1, f32 arg2, f32 arg3) {
     sp18[13] = M2C_FIELD(arg0, f32 *, 0x34) + ((arg1 * M2C_FIELD(arg0, f32 *, 4)) + (arg2 * M2C_FIELD(arg0, f32 *, 0x14)) + (arg3 * M2C_FIELD(arg0, f32 *, 0x24)));
     sp18[14] = M2C_FIELD(arg0, f32 *, 0x38) + ((arg1 * M2C_FIELD(arg0, f32 *, 8)) + (arg2 * M2C_FIELD(arg0, f32 *, 0x18)) + (arg3 * M2C_FIELD(arg0, f32 *, 0x28)));
     sp18[15] = M2C_FIELD(arg0, f32 *, 0x3C) + ((arg1 * M2C_FIELD(arg0, f32 *, 0xC)) + (arg2 * M2C_FIELD(arg0, f32 *, 0x1C)) + (arg3 * M2C_FIELD(arg0, f32 *, 0x2C)));
-    do { func_80228DE0(arg1, arg2); } while (0);
+    do { func_80228DE0(arg0, arg0); } while (0);
 }

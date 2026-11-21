@@ -12,7 +12,7 @@ void func_8020D790(s32 arg0, s32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f
     u8 temp_t8;
     f32 sp98;
     f32 sp94;
-    s32 var_s1;
+    register s32 var_s1;
     s32 temp_t7;
     f32 temp_fv0;
     f32 temp_fv1;
@@ -42,7 +42,7 @@ void func_8020D790(s32 arg0, s32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f
             temp_s0 = (var_s1 * 0x10) + arg0;
             temp_t7 = (*(u8 *)((char *)(temp_s0) + 0xC));
             var_ft1 = (f32) temp_t7;
-            if ((s32) temp_t7 < 0) {
+            if (temp_t7 < 0) {
                 var_ft1 += 4294967296.0f;
             }
             temp_t8 = (*(u8 *)((char *)(temp_s0) + 0xD));
@@ -58,8 +58,8 @@ void func_8020D790(s32 arg0, s32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f
             func_80209914(var_ft1 / 255.0f, var_ft4 / 255.0f, var_ft2 / 255.0f, &spBC, &spB8, &spB4);
             if ((*(u16 *)((char *)(temp_s0) + 6)) != 0) {
                 var_fa1 = (arg6 * spB8) + arg3;
-                var_fa0 = (arg5 * spBC) + temp_fv0;
                 var_fv0 = (arg7 * spB4) + arg4;
+                var_fa0 = (arg5 * spBC) + temp_fv0;
             } else {
                 var_fa0 = (arg5 * spBC) + sp98;
                 var_fa1 = (arg6 * spB8) + sp90;

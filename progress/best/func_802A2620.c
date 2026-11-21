@@ -6,21 +6,22 @@ extern char D_80324C40[];
 extern char D_80324C60[];
 
 s32 func_802A2620(s32 arg0, u8 *arg1, u8 arg2, u8 *arg3, s32 arg4) {
-    s32 *sp24;
-    u8 sp2F;
     s32 sp30;
+    register s32 *sp24;
+    u8 sp2F;
     s32 *temp_a0;
     
-    s32 temp_t6;
+    unsigned long temp_t6;
+s32 __repair_phase_temp_t6;
     
     s32 var_t2;
-    s32 var_t3;
+    unsigned long var_t3;
     register u8 temp_t1;
     u8 var_t0;
     void *temp_v1;
 
     temp_t1 = *arg1;
-    temp_t6 = (u32)arg2 & 0xFF;
+    __repair_phase_temp_t6 = (u32)arg2 & 0xFF;
     var_t2 = 0;
     var_t0 = 0;
     if ((s32) (*arg1) > 0) {
@@ -39,9 +40,9 @@ s32 func_802A2620(s32 arg0, u8 *arg1, u8 arg2, u8 *arg3, s32 arg4) {
             break;
         }
     }
-    if (var_t2 != 0) {
+    if (var_t2) {
         var_t3 = *(s32 *)(arg0 + (sp2F * 4));
-    } else if ((s32) var_t0 >= temp_t6) {
+    } else if ((s32) var_t0 >= __repair_phase_temp_t6) {
         sp30 = 0;
         var_t3 = 0;
         func_80231A24(D_80324C40, arg4, temp_t1 + 1);
@@ -54,8 +55,8 @@ s32 func_802A2620(s32 arg0, u8 *arg1, u8 arg2, u8 *arg3, s32 arg4) {
         var_t3 = temp_t6;
         if (temp_t6 == 0) {
             sp30 = temp_t6;temp_t6=0;
-            func_80231A24(D_80324C60, 4, arg4);
             var_t3 = sp30;
+            func_80231A24(D_80324C60, 4, arg4);
         } else {
             *arg1 += 1;
         }

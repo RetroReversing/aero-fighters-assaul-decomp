@@ -25,6 +25,11 @@ void func_802C3344(void *arg0, f32 arg1) {
     if ((var_v1 > 0) && ((((__repair_record_arg0*)arg0)->field_F0 + ((__repair_record_arg0*)arg0)->field_168) <= arg1)) {
         temp_v0 = ((__repair_record_arg0*)arg0)->field_4;
         switch (temp_v0) {                          /* irregular */
+        case 12:
+            func_802C57C4(arg0, 6);
+            func_802C22F4(arg0, arg1, 0);
+            var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+            break;
         case 10:
             func_802C57C4(arg0, 1);
             func_802C2148(arg0, arg1, 3, 0x3F800000, 5.0f, 70.0f);
@@ -35,10 +40,7 @@ void func_802C3344(void *arg0, f32 arg1) {
             func_802C2148(arg0, arg1, 0, 0x3F400000, 4.0f, 87.5f);
             var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
             break;
-        case 12:
-            func_802C57C4(arg0, 6);
-            func_802C22F4(arg0, arg1, 0);
-            var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+        case 13:
             break;
         }
         ((__repair_record_arg0*)arg0)->field_E4 = (s32) (var_v1 - 1);

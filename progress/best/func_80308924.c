@@ -3,23 +3,23 @@
 s32 func_80309D6C(u8, u8, u8, s16);             /* extern */
 
 void func_80308924(void *arg0) {
-    register f32 var_ft2;
     f32 var_ft5;
-    s32 var_v0;
+    register unsigned temp_t9;
     f32 var_fv0;
-    s32 temp_t7;
-    unsigned temp_t9;
+    unsigned long var_v0;
+    register unsigned int temp_t7;
+    f32 var_ft2;
 
     var_v0 = 1;
     if ((*(u8 *)((char *)(arg0) + 0)) != 0) {
         if ((*(f32 *)((char *)(arg0) + 0x10)) > 0.0f) {
+            temp_t7 = (*(u8 *)((char *)(arg0) + 6));
             var_fv0 = (*(f32 *)((char *)(arg0) + 8));
             var_ft2 = (f32) temp_t7;
-            temp_t7 = (*(u8 *)((char *)(arg0) + 6));
-            if ((s32) temp_t7 < 0) {
+            if (temp_t7 < 0) {
                 var_ft2 += 4294967296.0f;
             }
-            if (var_ft2 <= var_fv0) {
+            if (var_fv0 >= var_ft2) {
                 if ((*(u8 *)((char *)(arg0) + 1)) == 0) {
                     (*(u8 *)((char *)(arg0) + 0)) = 0U;
                     return;
@@ -29,10 +29,10 @@ void func_80308924(void *arg0) {
             }
             goto block_13;
         }
-        temp_t9 = (*(u8 *)((char *)(arg0) + 6));
         var_fv0 = (*(f32 *)((char *)(arg0) + 8));
+        temp_t9 = (*(u8 *)((char *)(arg0) + 6));
         var_ft5 = (f32) temp_t9;
-        if (temp_t9 < 0) {
+        if (0 > temp_t9) {
             var_ft5 += 4294967296.0f;
         }
         if (var_fv0 <= var_ft5) {
@@ -43,7 +43,7 @@ void func_80308924(void *arg0) {
             }
         }
 block_13:
-        if (var_v0) {
+        if (var_v0 != 0) {
             var_fv0 = (*(f32 *)((char *)(arg0) + 8));
             (*(f32 *)((char *)(arg0) + 8)) = (f32) (var_fv0 + (*(f32 *)((char *)(arg0) + 0xC)));
         }

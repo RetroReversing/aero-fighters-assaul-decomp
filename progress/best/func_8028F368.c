@@ -19,6 +19,8 @@ s32 func_80223468();
 f32 func_802AED5C();
 
 void func_8028F368(void *arg0) {
+    f32 __repair_fzero = 0.0f;
+
     s32 sp78;
     f32 sp74;
     f32 sp70;
@@ -86,9 +88,9 @@ void func_8028F368(void *arg0) {
     sp40 = temp_ft5;
     sp54 = temp_ft2;
     func_8021F35C(temp_fa0, 0x41C00000, temp_ft2, temp_ft5, 0, 0, 0);
-    temp_fv1_2 = temp_fv0_2 + 24.0f;
-    temp_ft1 = (s32) temp_fv1_2;
-    sp48 = temp_fv1_2;
+    temp_fv0_2 = temp_fv0_2 + 24.0f;
+    temp_ft1 = (s32) temp_fv0_2;
+    sp48 = temp_fv0_2;
     sp44 = temp_ft1;
     func_8021F35C(M2C_BITWISE(f32, temp_ft1), temp_ft5, 0, 0, 0, 0xFF, 0, 0, sp78);
     temp_fv0_3 = sp50 + 24.0f;
@@ -132,15 +134,15 @@ void func_8028F368(void *arg0) {
     func_8021FCD0();
     temp_fv0_4 = M2C_FIELD(arg0, f32 *, 0x30C);
     temp_fv1_3 = 16.0f * temp_fv0_4;
-    temp_ft3_2 = 255.0f * temp_fv0_4;
+    temp_fv0_4 = 255.0f * temp_fv0_4;
     sp74 = temp_fv1_3;
     sp70 = temp_fv1_3;
-    sp6C = temp_ft3_2;
+    sp6C = temp_fv0_4;
     func_80223468(0x5B);
     func_8021F4E4();
     temp_ft0_2 = (s32) sp74;
     temp_ft2_3 = (s32) sp70;
-    temp_ft5_3 = (s32) temp_ft3_2;
+    temp_ft5_3 = (s32) temp_fv0_4;
     temp_a0 = 0x82 - temp_ft0_2;
     temp_a1 = 0x58 - temp_ft2_3;
     sp48 = temp_a1;
@@ -148,18 +150,18 @@ void func_8028F368(void *arg0) {
     sp58 = temp_ft2_3;
     sp54 = temp_ft5_3;
     func_8021F35C(M2C_BITWISE(f32, temp_a0), temp_a1, 0, -0x400, -0x400, 0xFF, 0, 0, temp_ft5_3);
-    temp_a0_2 = temp_ft0_2 + 0x82;
-    sp4C = temp_a0_2;
-    func_8021F35C(M2C_BITWISE(f32, temp_a0_2), temp_a1, 0, 0x400, -0x400, 0xFF, 0, 0, sp54);
+    temp_ft0_2 = temp_ft0_2 + 0x82;
+    sp4C = temp_ft0_2;
+    func_8021F35C(M2C_BITWISE(f32, temp_ft0_2), temp_a1, 0, 0x400, -0x400, 0xFF, 0, 0, sp54);
     temp_s0 = sp58 + 0x58;
-    func_8021F35C(M2C_BITWISE(f32, temp_a0_2), temp_s0, 0, 0x400, 0x400, 0xFF, 0, 0, sp54);
+    func_8021F35C(M2C_BITWISE(f32, temp_ft0_2), temp_s0, 0, 0x400, 0x400, 0xFF, 0, 0, sp54);
     func_8021F35C(M2C_BITWISE(f32, temp_a0), temp_s0, 0, -0x400, 0x400, 0xFF, 0, 0, sp54);
     func_8021FCD0();
     func_80223468(0xFFF);
     temp_fv0_5 = func_802AED5C(M2C_FIELD(arg0, s32 *, 0));
     M2C_FIELD(arg0, f32 *, 0x30C) += temp_fv0_5;
     if (M2C_FIELD(arg0, f32 *, 0x30C) > 1.0f) {
-        M2C_FIELD(arg0, f32 *, 0x30C) = 0.0f;
+        M2C_FIELD(arg0, f32 *, 0x30C) = __repair_fzero;
     }
     M2C_FIELD(arg0, f32 *, 0x310) += temp_fv0_5;
 }

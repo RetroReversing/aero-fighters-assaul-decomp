@@ -1,5 +1,7 @@
 /* Draft from identical target func_8023E1F0, retargeted and judged independently. */
 /* Draft from identical target func_8023E0B0, retargeted and judged independently. */
+/* Draft from identical target func_8023E0B0, retargeted and judged independently. */
+/* Draft from identical target func_8023E0B0, retargeted and judged independently. */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -25,7 +27,9 @@ extern char D_80285EB8[];
 extern char D_80285ED8[];
 extern char D_80285EF0[];
 
-s32 func_8023E0B0(s32 arg0, u8 arg1, s32 arg2, s32 arg3) {
+s32 func_8023E0B0(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+int *__repair_home0 = &arg0;
+
 int *__repair_home2 = &arg2;
 
     s32 sp3C;
@@ -42,26 +46,25 @@ int *__repair_home2 = &arg2;
     }
     if (arg3 > 0) {
 loop_3:
-        sp3C = func_80247830(arg0);
+        sp3C = func_80247830((*__repair_home0));
         if (sp3C != 0) {
             return sp3C;
         }
         arg3 -= 8;
         arg1 += 1;
         (*__repair_home2) += 8;
-        temp_ret = __ll_mul(0);
+        temp_ret = __ll_mul(0, 0x2EE0, D_80251680);
         sp28 = temp_ret;
         sp2C = (u32) (u64) temp_ret;
         temp_ret_2 = __ull_div(sp28);
         sp30 = temp_ret_2;
         sp34 = (u32) (u64) temp_ret_2;
-        osSetTimer(D_80285EB8, 0, 0, D_80285ED8);
+        osSetTimer(D_80285EB8);
         osRecvMesg(D_80285ED8, 0, 1);
         if (arg3 <= 0) {
-            goto block_6;
+            return sp3C;
         }
         goto loop_3;
     }
-block_6:
     return sp3C;
 }

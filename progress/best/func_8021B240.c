@@ -56,6 +56,7 @@ loop_5:
     temp_a1 = M2C_FIELD(temp_s0, s16 *, 2);
     temp_s0_2 = temp_s0 + 4;
     switch (temp_a1) {
+    case 0:
     default:
         func_80231A24(D_8025326C, (s32) temp_a1);
         break;

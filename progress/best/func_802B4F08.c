@@ -21,7 +21,7 @@ s32 func_802CE2E0();
 s32 func_802CEE34();
 extern char D_80326808[];
 extern char D_8032680C[];
-extern u8 D_8032AA80;
+extern u8 D_8032AA80[];
 
 void func_802B4F08(void *arg0, f32 arg1) {
     s32 sp44;
@@ -29,16 +29,16 @@ void func_802B4F08(void *arg0, f32 arg1) {
     s32 var_v1;
     u8 *__base_D_8032AA80;
 
-    __base_D_8032AA80 = &D_8032AA80;
+    __base_D_8032AA80 = D_8032AA80;
 
     if (M2C_FIELD(arg0, s32 *, 0x78) & 0x8000) {
         
-        if ((*__base_D_8032AA80) == 0xC) {
+        if ((*D_8032AA80) == 0xC) {
             var_v1 = 1;
         } else { var_v1=0; }
         if (var_v1 == 0) {
-            sp44 = (s32) (*__base_D_8032AA80);
-            if ((*__base_D_8032AA80) != 0xE) {
+            sp44 = (s32) (*D_8032AA80);
+            if ((*D_8032AA80) != 0xE) {
                 func_802CEE34(0x89, 0xD1, 0xB7, 0xDD, 0, 0, 0, 0x96);
             }
             func_8021E66C(7);

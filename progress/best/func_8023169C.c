@@ -31,9 +31,11 @@ extern s32 func_80231584;
 extern s32 func_80231630;
 
 void func_8023169C(s32 arg0) {
-    osCreatePiManager(0x96, D_80280CB0, D_80280C90);
-    osCreateMesgQueue(D_80280C30, D_80280C28, 1);
-    osCreateThread(D_80280EB8, 0, &func_80231584, 0, D_8027AB60, 0xFA);
+    s32 *__base_func_80231584;
+    osCreatePiManager(0x96, D_80280CB0, D_80280C90, 8);
+    osCreateMesgQueue(D_80280C30, D_80280C28);
+    __base_func_80231584 = &func_80231584;
+    osCreateThread(D_80280EB8, 0, __base_func_80231584, 0, D_8027AB60, 0xFA);
     osStartThread(D_80280EB8);
     func_80230FF8();
     osCreateThread(D_80280D08, 6, &func_80231630, arg0, D_80280B60, 0xA);

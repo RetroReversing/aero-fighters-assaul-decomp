@@ -15,8 +15,8 @@ extern s32 *D_80274388;
 
 void func_802206A0(void) {
     s32 *temp_v0;
-    s32 *temp_v0_2;
-    s32 *temp_v0_3;
+    register s32 *temp_v0_2;
+    register s32 *temp_v0_3;
     s32 *sp1C;
     s32 *temp_v0_5;
     s32 *temp_v0_4;
@@ -28,12 +28,12 @@ void func_802206A0(void) {
         (*(s32 *)((char *)(temp_v0) + 0)) = 0xB7000000;
     } else {
         temp_v0_2 = D_80273B90;
-        D_80273B90 = temp_v0_2 + 8;
-        (*(s32 *)((char *)(temp_v0_2) + 4)) = 0x2205;
+        D_80273B90 = (s8 *) temp_v0_2 + 8;
         (*(s32 *)((char *)(temp_v0_2) + 0)) = 0xB7000000;
+        (*(s32 *)((char *)(temp_v0_2) + 4)) = 0x2205;
     }
     temp_v0_3 = D_80273B90;
-    D_80273B90 = temp_v0_3 + 8;
+    D_80273B90 = (s8 *) temp_v0_3 + 8;
     (*(s32 *)((char *)(temp_v0_3) + 0)) = 0x06000000;
     (*(s32 **)((char *)(temp_v0_3) + 4)) = &D_8024E7A0;
     temp_v0_4 = D_80273B90;
@@ -41,7 +41,7 @@ void func_802206A0(void) {
     (*(s32 *)((char *)(temp_v0_4) + 0)) = 0xFE000000;
     (*(s32 **)((char *)(temp_v0_4) + 4)) = (s32 *) D_80274388;
     temp_v0_5 = D_80273B90;
-    D_80273B90 = temp_v0_5 + 8;
+    D_80273B90 = (s8 *) temp_v0_5 + 8;
     sp1C = temp_v0_5;
     (*(s32 *)((char *)(temp_v0_5) + 0)) = 0xFE000000;
     (*(s32 *)((char *)(sp1C) + 4)) = osVirtualToPhysical(D_80274388);

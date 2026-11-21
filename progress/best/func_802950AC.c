@@ -28,10 +28,10 @@ void func_802950AC(void *arg0) {
     case 2:
         temp_a0 = M2C_FIELD(arg0, s32 *, 4);
         if (temp_a0 != 0xFFFF) {
-            func_8021BAE0(temp_a0, 0);
+            func_8021BAE0(temp_a0);
             M2C_FIELD(arg0, s32 *, 4) = 0xFFFF;
         }
         break;
     }
-    func_80320CFC(arg0, 0, arg0);
+    func_80320CFC(arg0, 0);
 }

@@ -21,7 +21,7 @@ void func_802CD738(void *arg0, s32 arg1) {
 
     temp_v0 = M2C_FIELD(arg0, u8 *, 0x18);
     if ((temp_v0 != 0) && (temp_v0 != 8)) {
-        func_80221F44(0);
+        func_80221F44(arg0);
         func_8021FB54(0, 0, 0x140, 0xF0);
         func_8023413C(M2C_FIELD(arg0, s32 *, 0x14));
     }

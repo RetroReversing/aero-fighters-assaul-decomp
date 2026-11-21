@@ -16,14 +16,14 @@ extern s32 D_80280C8C;
 
 void func_80231268(void) {
     s16 spBA;
-    s16 temp_s6;
+    s32 sp74;
     s16 temp_s3;
     s16 temp_s4;
     s32 temp_s5_2;
-    register s32 var_fp;
-    s16 temp_s7;
+    s32 temp_s6;
     s32 temp_s5;
-    s32 sp74;
+    s16 temp_s7;
+    s32 var_fp;
     s32 var_s6;
     s32 var_s7;
 
@@ -65,12 +65,12 @@ void func_80231268(void) {
         temp_s6 = temp_s3 + 0xA;
         func_8021F35C(temp_s6, temp_s4, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
         temp_s5_2 = temp_s4 + 0xA;
-        func_8021F35C(temp_s6, temp_s5_2, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
         func_8021F35C(temp_s3, temp_s5_2, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
+        func_8021F35C(temp_s6, temp_s5_2, 0, 0, 0, var_fp, var_s7, var_s6, 0xFF);
         func_8021FCD0();
         temp_s7 = spBA + 1;
         spBA = temp_s7;
-    } while (0x20 > temp_s7);
+    } while (temp_s7 < 0x20);
     func_802230E4();
     func_8022337C();
 }

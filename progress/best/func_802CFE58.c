@@ -20,7 +20,7 @@ extern char D_80327814[];
 extern s32 D_80327818;
 extern s32 D_8032AA74;
 
-void func_802CFE58(s32 arg0, s32 arg1, s32 arg2, s32 arg3, u8 arg4) {
+void func_802CFE58(u16 arg0, u16 arg1, s32 arg2, s32 arg3, u8 arg4) {
     s32 temp_v0;
 
     temp_v0 = arg3 * 2;

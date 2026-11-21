@@ -34,9 +34,10 @@ int __repair_literal;
 
     s32 sp24;
     s32 sp20;
-    s32 sp1C;
+    
     
 s32 __repair_phase_temp_a0;
+s32 __repair_phase___repair_phase_temp_a0;
     s32 temp_v1;
 __repair_literal = 4;
 
@@ -49,8 +50,8 @@ __repair_literal = 4;
         }
         if ((D_80278729 != 0x67) && ((D_8027872C != 0) || (D_8027872A != 0x67))) {
             sp24 = temp_v1;
-            temp_v1 = func_8023DAE0();
-            if (func_8023DB20() == temp_v1) {
+            __repair_phase_temp_a0 = func_8023DAE0();
+            if (func_8023DB20() == __repair_phase_temp_a0) {
                 D_80278729 = 0x67;
                 if (D_8027872C == 0) {
                     D_80278734 += 1;
@@ -60,10 +61,10 @@ __repair_literal = 4;
                 D_8027872B = 0;
                 D_8027872C = 0;
                 osWritebackDCacheAll();
-                __repair_phase_temp_a0 = sp24 + 0x10;
-                sp1C = __repair_phase_temp_a0;
-                func_8023D92C(__repair_phase_temp_a0);
-                osSpTaskStartGo(__repair_phase_temp_a0);
+                __repair_phase___repair_phase_temp_a0 = sp24 + 0x10;
+                sp24 = __repair_phase___repair_phase_temp_a0;
+                func_8023D92C(__repair_phase___repair_phase_temp_a0);
+                osSpTaskStartGo(__repair_phase___repair_phase_temp_a0);
             }
         }
     }

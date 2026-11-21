@@ -4,10 +4,10 @@ f32 func_8022AA40(f32, f32);                        /* extern */
 f32 func_8023499C();                                /* extern */
 
 void func_802DA584(void *arg0, f32 *arg1, f32 *arg2) {
+    register f32 temp_ft1;
     f32 temp_fa1;
-    f32 sp20;
-    f32 var_fv1;
-    f32 temp_ft1;
+    register f32 var_fv1;
+    register f32 sp20;
     f32 sp24;
     f32 sp1C;
 

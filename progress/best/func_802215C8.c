@@ -6,6 +6,7 @@ extern f64 D_80253940;
 void func_802215C8(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, f32 arg8, f32 arg9) {
     f32 sp58;
     f32 sp2C;
+f32 __repair_sp2C_1;
     f32 temp_fv0_4;
     f32 sp4C;
     f32 sp48;
@@ -63,11 +64,11 @@ void func_802215C8(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5,
     } else {
         var_fv1 = -255.0f;
     }
-    temp_fs0 = temp_ft5 * var_fv1;
+    temp_ft5 = temp_ft5 * var_fv1;
     temp_ft2 = sp30 * var_fv1;
     temp_ft0 = sp2C * var_fv1;
     sp24 = arg8;
-    sp58 = temp_fs0;
+    sp58 = temp_ft5;
     sp20 = temp_ft2;
     sp54 = (s32)temp_ft2;
     temp_ft3 = sp20;
@@ -75,9 +76,9 @@ void func_802215C8(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5,
     sp20 = temp_ft0;
     temp_fv0_3 = (arg8 * temp_ft0) - (arg9 * temp_ft3);
     sp4C = temp_fv0_3;
-    temp_fa1 = (arg9 * temp_fs0) - (arg7 * temp_ft0);
+    temp_fa1 = (arg9 * temp_ft5) - (arg7 * temp_ft0);
     sp48 = temp_fa1;
-    temp_ft4 = (arg7 * temp_ft3) - (sp24 * temp_fs0);
+    temp_ft4 = (arg7 * temp_ft3) - (sp24 * temp_ft5);
     sp44 = temp_ft4;
     temp_fv0_4 = func_8023CE00((temp_fv0_3 * temp_fv0_3) + (temp_fa1 * temp_fa1) + (temp_ft4 * temp_ft4));
     if (temp_fv0_4 != 0.0f) {
@@ -94,10 +95,10 @@ void func_802215C8(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5,
     temp_ft4_2 = (sp54 * temp_ft1) - (sp50 * temp_fs0_2);
     sp44 = temp_ft1;
     sp34 = temp_ft4_2;
-    temp_ft5_2 = (sp50 * temp_fa1_2) - (sp58 * temp_ft1);
+    temp_ft5_2 = (sp50 * temp_fa1_2) - (temp_ft5 * temp_ft1);
     sp30 = temp_ft5_2;
     temp_fv0_5 = (sp58 * temp_fs0_2) - (sp24 * temp_fa1_2);
-    sp2C = ((sp58 * temp_fs0_2) - (sp24 * temp_fa1_2));
+    __repair_sp2C_1 = ((sp58 * temp_fs0_2) - (sp24 * temp_fa1_2));
     temp_fv0_6 = func_8023CE00((temp_ft4_2 * temp_ft4_2) + (temp_ft5_2 * temp_ft5_2) + (temp_fv0_5 * temp_fv0_5));
     if (temp_fv0_6 != 0.0f) {
         var_fv1_3 = 1.0f / temp_fv0_6;
@@ -107,7 +108,7 @@ void func_802215C8(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5,
     arg7 = temp_ft4_2 * var_fv1_3;
     arg8 = temp_ft5_2 * var_fv1_3;
     temp_fa1_3 = (f64) sp4C * 128.0;
-    arg9 = sp2C * var_fv1_3;
+    arg9 = __repair_sp2C_1 * var_fv1_3;
     if (D_80253940 > temp_fa1_3) {
         var_fv0 = temp_fa1_3;
     } else {

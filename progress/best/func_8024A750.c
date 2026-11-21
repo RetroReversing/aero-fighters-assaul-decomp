@@ -17,9 +17,9 @@ extern s32 D_A460002C;
 extern s32 D_A4600030;
 
 s32 **func_8024A750(void) {
-    s32 **__base_D_802516BC;
-    long temp_v0;
     register long sp1C;
+    long temp_v0;
+    s32 **__base_D_802516BC;
 
     __base_D_802516BC = &D_802516BC;
 
@@ -29,9 +29,9 @@ s32 **func_8024A750(void) {
     (*(u8 *)&D_80287178) = 6;
     (*(u8 *)((char *)(&D_80287176) + 0)) = 2U;
     (*(u8 *)((char *)(&D_80287176) + 0)) = 6U;
-    D_A4600024 = 3;
+    *(volatile s32 *)0xA4600024 = 3;
     *(volatile s32 *)0xA4600028 = (s32) (*(u8 *)&D_80287178);
-    D_A460002C = (s32) (*(u8 *)((char *)(&D_80287176) + 0));
+    *(volatile s32 *)0xA460002C = (s32) (*(u8 *)((char *)(&D_80287176) + 0));
     D_A4600030 = (s32) (*(u8 *)((char *)(&D_80287176) + 1));
     func_802481C0(&D_80287170 + 0x14, 0x60);
     temp_v0 = func_80241760();

@@ -6,6 +6,10 @@ extern char D_80324AD8[];
 extern char D_80324AF8[];
 
 s32 func_802A2030(s32 arg0, u8 *arg1, s32 arg2, u8 *arg3, s32 arg4) {
+int __repair_literal;
+
+int *__repair_home2 = &arg2;
+
     register s32 *sp24;
     u8 sp2F;
     s32 sp30;
@@ -15,15 +19,17 @@ s32 func_802A2030(s32 arg0, u8 *arg1, s32 arg2, u8 *arg3, s32 arg4) {
     
     s32 var_t2;
     
-    u8 temp_t1;
+    s32 temp_t1;
     u8 var_t0;
     void *temp_v1;
 
     temp_t1 = *arg1;
-    temp_t6 = arg2 & 0xFF;
+    temp_t6 = (*__repair_home2) & 0xFF;
     var_t2 = 0;
     var_t0 = 0;
-    if ((s32) temp_t1 > 0) {
+__repair_literal = 0;
+
+    if ((s32) temp_t1 > __repair_literal) {
 loop_1:
         temp_v1 = *(s32 *)(arg0 + (var_t0 * 4));
         if ((temp_v1 != NULL) && ((*(u8 *)((char *)(temp_v1) + 0x1591)) == 0)) {
@@ -32,7 +38,7 @@ loop_1:
         } else {
             sp30 = (var_t0 + 1) & 0xFF;
             var_t0 = (u8) sp30;
-            if (sp30 < temp_t1) {
+            if (sp30 < (*arg1)) {
                 goto loop_1;
             }
         }

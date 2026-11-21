@@ -1,22 +1,13 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
-M2C_UNK func_803025AC(f32, f32, s32, s32, f32, s32); /* extern */
-M2C_UNK func_803025E4(s32, s32, f32);               /* extern */
+s32 func_803025AC(f32, f32, s32, s32, f32, s32); /* extern */
+s32 func_803025E4(s32, s32, f32);               /* extern */
 extern f32 D_80346990;
 
 void func_8030DD50(s32 arg0, s32 arg1, f32 arg2, f32 arg3, f32 arg4) {
+int *__repair_home1 = &arg1;
+
+    f32 __repair_arg4_var_fa0;
 int *__repair_home0 = &arg0;
 
     f32 sp20;
@@ -30,12 +21,13 @@ f32 __repair_var_ft4_1;
     f32 var_fv1;
     s32 temp_a0;
 
-    var_fa0 = arg2;
     temp_fv0 = var_fa0 * 2.0f;
-    temp_fa1 = arg3 + (arg4 * var_fa0);
+    __repair_arg4_var_fa0 = arg4 * var_fa0;
+    var_fa0 = arg2;
+    temp_fa1 = arg3 + __repair_arg4_var_fa0;
     var_fv1 = temp_fv0;
     temp_a0 = (*__repair_home0) + 0x8F4;
-    var_ft4 = temp_fa1;
+    var_ft4 = (arg3 + __repair_arg4_var_fa0);
     if (temp_fv0 < 0.0f) {
         var_fv1 = 0.0f;
     } else {
@@ -44,13 +36,13 @@ f32 __repair_var_ft4_1;
             var_fv1 = 1.0f;
         }
     }
-    if (temp_fa1 < D_80346990) {
+    if ((arg3 + __repair_arg4_var_fa0) < D_80346990) {
         __repair_var_ft4_1 = D_80346990;
-    } else if (temp_fa1 > 2.0f) {
+    } else if ((arg3 + __repair_arg4_var_fa0) > 2.0f) {
         var_ft4 = 2.0f;
     }
-    sp1C = temp_a0;
+    sp1C = (s32)temp_a0;
     sp20 = var_ft4;
-    func_803025AC(__repair_var_fa0_1, temp_fa1, temp_a0, arg1, var_fv1, (*__repair_home0));
-    func_803025E4(temp_a0, arg1, var_ft4);
+    do { func_803025AC(__repair_var_fa0_1, (arg3 + __repair_arg4_var_fa0), temp_a0, (*__repair_home1), var_fv1, (*__repair_home0)); } while (0);
+    func_803025E4(temp_a0, (*__repair_home1), var_ft4);
 }

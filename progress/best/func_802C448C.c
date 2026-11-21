@@ -10,17 +10,17 @@ s32 func_802D0C40(s32, s32);                    /* extern */
 extern f32 D_80341B20;
 
 void func_802C448C(void *arg0, f32 arg1) {
-    f32 spA0[3];
     char sp70[0x30];
+    f32 spA0[3];
     s32 sp60;
-    s32 sp64;
     s32 sp68;
+    s32 sp64;
     f32 sp48[4];
-    s32 temp_v0;
+    register unsigned long temp_v0;
 
     if (func_802AD4E8((*(s32 *)((char *)(arg0) + 0)), arg0, &sp68, &sp64, &sp60, 1, (*(f32 *)((char *)(arg0) + 0x154)), (*(f32 *)((char *)(arg0) + 0x15C)), (*(f32 *)((char *)(arg0) + 0x160)), (*(f32 *)((char *)(arg0) + 0x164))) > 0) {
         temp_v0 = (*(s32 *)((char *)(arg0) + 0x8C));
-        if ((temp_v0 == 1) || (temp_v0 == 5)) {
+        if (((int)temp_v0 == 1) || ((u32)temp_v0 == 5)) {
             sp48[3] = 200.0f;
         } else {
             sp48[3] = 800.0f;

@@ -8,8 +8,8 @@ extern s16 D_802743A2;
 void func_802228FC(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
     s16 temp_v0;
     s16 temp_v0_2;
-    s16 temp_v0_3;
     s16 temp_v0_4;
+    s16 temp_v0_3;
     s16 temp_v0_5;
     s16 temp_v1;
     s32 temp_a2;
@@ -20,13 +20,13 @@ void func_802228FC(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
     (*(s16 *)((char *)(arg0) + 0xA)) = arg2;
     (*(s16 *)((char *)(arg0) + 0xC)) = arg3;
     (*(s16 *)((char *)(arg0) + 0xE)) = (s16) arg4;
-    if (temp_v0 < 0) {
+    if (((*(s16 *)((char *)(arg0) + 8))) < 0) {
         (*(s16 *)((char *)(arg0) + 8)) = 0;
-    } else if ((s32)temp_v0 >= 0x141) {
+    } else if ((s32)((*(s16 *)((char *)(arg0) + 8))) >= 0x141) {
         (*(s16 *)((char *)(arg0) + 8)) = 0x140;
     }
     temp_v0_2 = (*(s16 *)((char *)(arg0) + 0xA));
-    if (temp_v0_2 < 0) {
+    if (0 > temp_v0_2) {
         (*(s16 *)((char *)(arg0) + 0xA)) = 0;
     } else if (0x141 <= temp_v0_2) {
         (*(s16 *)((char *)(arg0) + 0xA)) = 0x140;
@@ -64,15 +64,15 @@ void func_802228FC(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
     (*(s16 *)((char *)(arg0) + 0x14)) = 0x1FF;
     temp_a2 = (*(s16 *)((char *)(arg0) + 2)) - temp_v0_4;
     (*(s16 *)((char *)(arg0) + 0x10)) = (s16) (temp_a2 * 2);
-    temp_a3 = (*(s16 *)((char *)(arg0) + 6)) - temp_v1;
+    temp_a3 = (*(s16 *)((char *)(arg0) + 6)) - ((*(s16 *)((char *)(arg0) + 4)));
     (*(s16 *)((char *)(arg0) + 0x18)) = (s16) ((temp_v0_4 + (temp_a2 >> 1)) * 4);
-    (*(s16 *)((char *)(arg0) + 0x12)) = (s16) (temp_a3 * 2);
     (*(s16 *)((char *)(arg0) + 0x16)) = 0;
+    (*(s16 *)((char *)(arg0) + 0x12)) = (s16) (temp_a3 * 2);
     (*(s16 *)((char *)(arg0) + 0x1E)) = 0;
-    (*(s16 *)((char *)(arg0) + 0x1A)) = (s16) (((0xF0 - temp_v1) - (temp_a3 >> 1)) * 4);
     (*(s16 *)((char *)(arg0) + 0x1C)) = 0x1FF;
-    D_8027439C = (*(s16 *)((char *)(arg0) + 8));
-    D_8027439E = (*(s16 *)((char *)(arg0) + 0xA));
-    D_802743A0 = (*(s16 *)((char *)(arg0) + 0xC));
-    D_802743A2 = (*(s16 *)((char *)(arg0) + 0xE));
+    (*(s16 *)((char *)(arg0) + 0x1A)) = (s16) (((0xF0 - temp_v1) - (temp_a3 >> 1)) * 4);
+    (*(u16 *)&D_8027439C) = (*(s16 *)((char *)(arg0) + 8));
+    (*(u16 *)&D_8027439E) = (*(s16 *)((char *)(arg0) + 0xA));
+    (*(u16 *)&D_802743A0) = (*(s16 *)((char *)(arg0) + 0xC));
+    (*(u16 *)&D_802743A2) = (*(s16 *)((char *)(arg0) + 0xE));
 }

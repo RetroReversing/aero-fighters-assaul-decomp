@@ -17,11 +17,13 @@ M2C_UNK func_80231C9C(M2C_UNK *, M2C_UNK *, M2C_UNK, s32); /* extern */
 extern u8 D_80256DE4[];
 extern u16 D_80280BFA;
 
+extern char D_80251D34[];
+extern char D_80251D4C[];
 void func_8020164C(u8 arg0, s32 arg1) {
     s32 temp_v1;
     s32 sp1C;
     s32 var_a3;
-    u16 temp_v0;
+    s32 temp_v0;
 
     temp_v0 = D_80280BFA;
     var_a3 = arg0 & 0xFF;
@@ -29,7 +31,7 @@ void func_8020164C(u8 arg0, s32 arg1) {
     if (var_a3 >= (s32) temp_v0) {
         sp1C = temp_v1;
         arg0 = (u8) var_a3;
-        func_80231C9C("emitId < AUD_NEMITTERS", "_aobj.c", 0x13F, var_a3);
+        func_80231C9C(D_80251D34, D_80251D4C, 0x13F, var_a3);
         var_a3 = (s32) arg0;
     }
     if (temp_v1 < (s32) D_80280BFA) {

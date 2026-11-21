@@ -28,8 +28,8 @@ u16 *func_80226790(s32 arg0) {
     u16 sp52;
     u16 *sp4C;
     u16 *sp48;
-    u16 sp44;
-    u16 sp40;
+    s32 sp44;
+    s32 sp40;
     s32 temp_t0;
     
     
@@ -111,16 +111,19 @@ u16 *func_80226790(s32 arg0) {
         temp_t0 = 0;
         if ((s32) temp_a0 > 0) {
             var_v0 = M2C_FIELD(D_802751E0, u16 **, 8);
-loop_13:
-            sp6C += 1;
-            var_v0 += 2;
-            if (var_a1 == *(u16 *)var_v0) {
-                var_a1 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 4) + temp_t0);
-            } else {
-                temp_t0 += 2;
-                if (sp6C < (s32) temp_a0) {
-                    goto loop_13;
+            for (;;) {/*__repair_loop_weight*/__repair_rows: {
+                sp6C += 1;}
+if (0) goto __repair_rows;
+                var_v0 += 2;
+                if (var_a1 == *(u16 *)var_v0) {
+                    var_a1 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 4) + temp_t0);
+                } else {
+                    temp_t0 += 2;
+                    if (sp6C < (s32) temp_a0) {
+                        continue;
+                    }
                 }
+                break;
             }
         }
     }

@@ -13,7 +13,7 @@ typedef s32 M2C_UNK32;
 #endif
 
 s32 func_8022A0D0();
-s32 func_802D0154(f32, f32);
+s32 func_802D0154(f32, f32, s32);
 extern f32 D_803435C8;
 extern f32 D_803435CC;
 extern f32 D_803435D0;
@@ -25,6 +25,6 @@ void func_802D916C(void *arg0, f32 arg1, f32 arg2) {
     temp_fv0 = M2C_FIELD(arg0, f32 *, 0x20);
     sp1C = temp_fv0 * temp_fv0;
     func_8022A0D0(arg2, arg1, 0.0f);
-    func_802D0154(arg1, sp1C * D_803435C8);
+    func_802D0154(arg1, sp1C * D_803435C8, 0x7A);
     func_8022A0D0(arg1, 0.0f, sp1C * D_803435CC, sp1C * D_803435D0);
 }

@@ -6,7 +6,7 @@ s32 func_802AD4E8(s32, void *, s32 *, f32 *, f32 *, s32, f32, f32, f32, f32); /*
 s32 func_802C47B8(void *);                      /* extern */
 s32 func_802C5150(void *, s32 *);           /* extern */
 s32 func_802D0154(s32 *, f32, s32);     /* extern */
-s32 func_802E93A0(s32,f32, s32, s32, f32, f32, f32); /* extern */
+s32 func_802E93A0(s32,f32,f32,f32, f32, f32, f32); /* extern */
 s32 func_802E97AC(s32, s32);                /* extern */
 
 void func_802C35B8(void *arg0, f32 arg1) {
@@ -34,7 +34,7 @@ void func_802C35B8(void *arg0, f32 arg1) {
         temp_v0 = func_802AAE40((*(s32 *)((char *)(arg0) + 0)), sp4C, 0x447A0000, 0x40400000, 12.0f, 1.0f, (*(s32 *)((char *)(arg0) + 0x8C)), 0x10, 1);
         if (temp_v0) {
             
-            func_802E93A0(temp_v0,1.0f, 0x3F800000, 0x3F800000, 1.0f, 0.0f, 0.0f);
+            func_802E93A0(temp_v0,1.0f,1.0f,1.0f, 1.0f, 0.0f, 0.0f);
             func_802E97AC(temp_v0, 0x3EA8F5C3);
         }
         (*(f32 *)((char *)(arg0) + 0xF4)) = arg1;

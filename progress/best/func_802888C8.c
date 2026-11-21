@@ -25,14 +25,14 @@ s32 func_8031E0D0();
 
 void func_802888C8(s32 arg0, s32 arg1) {
     if (arg0 != 0) {
-        func_8031DCE0(arg0 + 0x14A0, 2);
+        do { func_8031DCE0(arg0 + 0x14A0, 2); } while (0);
         func_8031DA84(arg0 + 0x13B0);
         func_8031D958(arg0 + 0x12C0, 2);
-        func_8031D824(arg0 + 0x11D0);
+        func_8031D824(arg0 + 0x11D0, 2);
         func_8031E0D0(arg0 + 0xC30, 2);
         func_8031DBB0(arg0 + 0xB40, 2);
         func_8031DF84(arg0 + 0x5A0, 2);
-        func_8031DE2C(arg0, 2);
+        func_8031DE2C(arg0, 0);
         if (arg1 & 1) {
             func_802C679C(arg0);
         }

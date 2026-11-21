@@ -6,11 +6,11 @@ s32 func_80234D30(f32 *, f32 *);                    /* extern */
 void func_8022A614(void *arg0, void *arg1, void *arg2) {
     f32 sp44[3];
     register f32 sp3C;
-    register f32 sp40;
+    f32 sp40;
     f32 sp38;
     register f32 sp30;
-    register f32 sp34;
     f32 sp2C;
+    f32 sp34;
 
     sp44[0] = (*(f32 *)((char *)(arg1) + 0x30)) - (*(f32 *)((char *)(arg2) + 0x30));
     sp44[1] = (*(f32 *)((char *)(arg1) + 0x34)) - (*(f32 *)((char *)(arg2) + 0x34));
@@ -38,8 +38,8 @@ void func_8022A614(void *arg0, void *arg1, void *arg2) {
         (*(f32 *)((char *)(arg0) + 0x24)) = sp3C;
         (*(f32 *)((char *)(arg0) + 0x30)) = (f32) (*(f32 *)((char *)(arg2) + 0x30));
         (*(f32 *)((char *)(arg0) + 0xC)) = 0.0f;
-        (*(f32 *)((char *)(arg0) + 0x28)) = sp40;
         (*(f32 *)((char *)(arg0) + 0x34)) = (f32) (*(f32 *)((char *)(arg2) + 0x34));
+        (*(f32 *)((char *)(arg0) + 0x28)) = sp40;
         (*(f32 *)((char *)(arg0) + 0x1C)) = 0.0f;
         (*(f32 *)((char *)(arg0) + 0x3C)) = 1.0f;
         (*(f32 *)((char *)(arg0) + 0x2C)) = 0.0f;
