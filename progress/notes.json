@@ -1008,5 +1008,14 @@
   "created_at": 1795218557.36309,
   "score_before": null,
   "score_after": null
+ },
+ {
+  "function": "func_803181E8",
+  "text": "Autopilot matched from saved near miss",
+  "by": "autopilot",
+  "created_at": 1795224753.1765,
+  "score_before": 120,
+  "score_after": 0,
+  "handoff_inputs": "bffc1b1acd2d3c07df921e31fb90e945c37a26203aa1924df8fa8954089645e2:c8e377fb691cb04e92ce1744edbb1ef4b7d00367f2012b634f1f3ed8e2fdec23:aa4fe1c89a72d7719413dc401a016468712dd05fc0e686d51c4b401b49e3e6d2"
  }
 ]

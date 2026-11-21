@@ -1,3 +1,4 @@
+/* identical to func_80318194 (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -26,5 +27,5 @@ void func_803181E8(void *arg0) {
         *(s32 *)NULL = 0x29A;
         var_a1 = M2C_FIELD(arg0, s32 *, 0xC);
     }
-    func_802D257C(var_a1, var_a1, arg0);
+    func_802D257C(var_a1);
 }
