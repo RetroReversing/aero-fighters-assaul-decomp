@@ -19,9 +19,9 @@ s32 func_80234880(s32 arg0, s32 arg1) {
     s32 var_a0;
     s32 sp28;
     s32 sp24;
-    s32 temp_v0;
+    unsigned temp_v0;
 
-    sp30 = *(s32 *)(D_80275238 + (arg0 * 4));
+    sp30 = *(s32 *)(D_80275238 + ((u32)arg0 * 4));
     func_802235C8();
     if (arg0 >= (s32) D_80280BC4) {
         func_80231A24(D_80255390);
