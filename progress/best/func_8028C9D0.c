@@ -35,7 +35,7 @@ void func_8028C9D0(s32 arg0, s32 arg1, s32 arg2) {
     func_8021E66C(0);
     sp3C = func_8021E83C(arg1);
     temp_t5 = (s32) (0x140 - (sp3C + func_8021E83C(arg2))) / 2;
+    do { func_8021E87C(temp_t5, 0xCE, arg1); } while (0);
     sp30 = temp_t5;
-    func_8021E87C(temp_t5, 0xCE, arg1);
     func_8021E87C(sp30 + sp3C, 0xCE, arg2);
 }

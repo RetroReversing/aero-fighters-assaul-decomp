@@ -18,7 +18,7 @@ extern u8 D_8032AA88;
 
 void func_8030A92C(void) {
     u8 sp1F;
-    u8 sp1E;
+    
     u8 temp_v1;
 
     if (D_8032AA88 == 0) {
@@ -29,7 +29,7 @@ void func_8030A92C(void) {
     sp1F = func_8030A814(0xA);
     temp_v1 = func_8030A814(0xB) & 0xFF;
     if (sp1F != 0) {
-        sp1E = temp_v1;
+        sp1F = temp_v1;
         func_80224CA8(0x2C);
     }
     if (temp_v1 != 0) {

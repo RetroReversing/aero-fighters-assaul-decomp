@@ -17,8 +17,8 @@ s32 func_8022970C();
 extern char D_80256D70[];
 
 void func_802000DC(u16 arg0) {
-    s32 sp20;
     void *sp18;
+    s32 sp20;
     void *temp_a0;
 
     func_8022970C(&sp20);

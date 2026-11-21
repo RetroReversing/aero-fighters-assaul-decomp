@@ -31,7 +31,7 @@ loop_2:
             M2C_FIELD(arg0, f32 *, 0x60) = (f32) (D_8032BCD4 + arg1);
             return;
         }
-        var_v1 += 4;
+        var_v1 += 1;
         if (var_v0 >= D_80348BC2) {
             goto block_5;
         }

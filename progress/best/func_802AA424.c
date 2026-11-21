@@ -30,14 +30,14 @@ s32 func_802AA424(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
         var_s1 = temp_v0;
         if (temp_v0 != 0) {
             func_8028C1F4(temp_v0, arg1, arg2);
-            func_8028C378(var_s1, 1);
+            func_8028C378(temp_v0, 1);
         }
         break;
     case 2:
-        temp_v0_2 = func_802A29C0(arg0 + 0x6F04, arg0 + 0x6F90, 0x23, arg0 + 0x6F91, &D_80326098);
-        var_s1 = temp_v0_2;
-        if (temp_v0_2 != 0) {
-            func_8028C1F4(temp_v0_2, arg1, arg2);
+        temp_v0 = func_802A29C0(arg0 + 0x6F04, arg0 + 0x6F90, 0x23, arg0 + 0x6F91, &D_80326098);
+        var_s1 = temp_v0;
+        if (temp_v0 != 0) {
+            func_8028C1F4(temp_v0, arg1, arg2);
             func_8028C378(var_s1, 1);
         }
         break;

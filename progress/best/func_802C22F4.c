@@ -19,11 +19,11 @@ M2C_UNK func_802E9710(s32, M2C_UNK);                /* extern */
 
 void func_802C22F4(void *arg0, f32 arg1, M2C_UNK arg2) {
     f32 sp84;
-    M2C_UNK sp44;
+    char sp44[0x40];
     f32 var_fv0;
     s32 temp_v0;
     s32 temp_v0_2;
-    s32 temp_v0_3;
+    
 
     temp_v0 = M2C_FIELD(arg0, s32 *, 0xF8);
     if ((temp_v0 % 2) == 1) {
@@ -33,12 +33,12 @@ void func_802C22F4(void *arg0, f32 arg1, M2C_UNK arg2) {
     }
     M2C_FIELD(arg0, s32 *, 0xF8) = (s32) (temp_v0 + 1);
     sp84 = var_fv0;
-    func_802C5150(arg0, &sp44);
-    func_8022A0D0(&sp44, sp84, 0xC1700000, 0);
-    temp_v0_2 = func_802AAE40(M2C_FIELD(arg0, s32 *, 0), &sp44, 0x44480000, 0x40C00000, 90.0f, 1.0f, M2C_FIELD(arg0, s32 *, 0x8C), 2, 3);
+    func_802C5150(arg0, sp44);
+    func_8022A0D0(sp44, sp84, 0xC1700000, 0);
+    temp_v0_2 = func_802AAE40(M2C_FIELD(arg0, s32 *, 0), sp44, 0x44480000, 0x40C00000, 90.0f, 1.0f, M2C_FIELD(arg0, s32 *, 0x8C), 2, 3);
     if (temp_v0_2 != 0) {
-        temp_v0_3 = M2C_FIELD(arg0, s32 *, 0x8C);
-        if ((temp_v0_3 == 1) || (temp_v0_3 == 3)) {
+        temp_v0 = M2C_FIELD(arg0, s32 *, 0x8C);
+        if ((temp_v0 == 1) || (temp_v0 == 3)) {
             func_802E9710(temp_v0_2, 0x60);
         } else {
             func_802E9710(temp_v0_2, 0x5A);

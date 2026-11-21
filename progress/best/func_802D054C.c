@@ -16,23 +16,11 @@ f32 func_802D054C(f32 arg0, f32 arg1, f32 arg2) {
     f32 temp_ft4;
     f32 var_fa0;
     f32 var_fa1;
-    f32 var_fv0;
-    f32 var_fv0_2;
     f32 var_fv0_3;
     f32 var_fv1;
 
-    if (arg0 > 0.0f) {
-        var_fv0 = arg0;
-    } else {
-        var_fv0 = -arg0;
-    }
-    var_fv1 = var_fv0;
-    if (arg1 > 0.0f) {
-        var_fv0_2 = arg1;
-    } else {
-        var_fv0_2 = -arg1;
-    }
-    var_fa0 = var_fv0_2;
+    var_fv1 = (arg0 > 0.0f) ? (f32) (arg0) : (f32) (-arg0);
+    var_fa0 = (arg1 > 0.0f) ? (f32) (arg1) : (f32) (-arg1);
     if (arg2 > 0.0f) {
         var_fv0_3 = arg2;
     } else {

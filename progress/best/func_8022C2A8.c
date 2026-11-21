@@ -22,7 +22,7 @@ void func_8022C2A8(s32 arg0) {
     void *sp1C;
     void *temp_a1;
 
-    if (*(D_80276130 + (arg0 * 2)) == 2) {
+    if (*(s16 *)(D_80276130 + (arg0 * 2)) == 2) {
         temp_a1 = (arg0 * 0x68) + D_80275F90;
         sp1C = temp_a1;
         func_8024AA84(D_80280C58, temp_a1, arg0);

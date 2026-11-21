@@ -48,6 +48,6 @@ void func_80231A40(s32 arg0, s32 arg1, u32 arg2) {
         osWritebackDCache(arg0, var_s0, arg1);
         osPiStartDma(&D_80280C10, 0, 0, arg1, arg0, var_s0, &D_80280C30);
         osInvalDCache(arg0, var_s0);
-        func_80230F68(0);
+        do { func_80230F68(0); } while (0);
     }
 }

@@ -17,7 +17,7 @@ void func_802C6840(u32 arg0, s32 arg1, s32 arg2, M2C_UNK (*arg3)(u32, M2C_UNK)) 
     u32 var_s0;
 
     var_s0 = arg0;
-    temp_s1 = arg0 + (arg1 * arg2);
+    temp_s1 = arg0; temp_s1 += (arg1 * arg2);
     if (arg0 < temp_s1) {
         do {
             arg3(var_s0, 2);
