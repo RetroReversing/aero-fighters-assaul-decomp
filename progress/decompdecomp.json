@@ -279,6 +279,23 @@
    "timeout": 20,
    "function": "func_802B44BC",
    "vram": 2150319292
+  },
+  "579460:2150354580": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_802BCE94",
+   "vram": 2150354580
   }
  },
  "instructions": "",
@@ -291,7 +308,8 @@
  "headers": {
   "": "common.h",
   "code_80287430": "common_code_80287430.h",
-  "code_802AECD8": "common_code_802AECD8.h"
+  "code_802AECD8": "common_code_802AECD8.h",
+  "code_802BBCB4": "common_code_802BBCB4.h"
  },
  "functions": {
   "func_8020670C": {
@@ -1566,6 +1584,11 @@
   },
   "func_802B44BC": {
    "vram": 2150319292,
+   "matched_by": "autopilot",
+   "readable": false
+  },
+  "func_802BCE94": {
+   "vram": 2150354580,
    "matched_by": "autopilot",
    "readable": false
   }
