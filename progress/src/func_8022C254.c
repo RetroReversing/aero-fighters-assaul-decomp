@@ -17,7 +17,7 @@ extern char D_80275F90[];
 extern char D_80276130[];
 
 void func_8022C254(s32 arg0) {
-    if (*(D_80276130 + (arg0 * 2)) == 2) {
+    if (*(s16 *)(D_80276130 + (arg0 * 2)) == 2) {
         func_8024AC1C((arg0 * 0x68) + D_80275F90);
     }
 }
