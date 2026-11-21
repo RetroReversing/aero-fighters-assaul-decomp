@@ -26,7 +26,7 @@ void func_80228818(s32 arg0) {
         return;
     }
     temp_v0 = arg0 << 5;
-    *(s32 *)(D_80275A44 + temp_v0) = 0;
+    *(s8 *)(D_80275A44 + temp_v0) = 0;
     M2C_FIELD((D_80275A44 + temp_v0), s8 *, 1) = 0;
     D_80275A30 -= 1;
 }
