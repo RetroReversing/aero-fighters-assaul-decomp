@@ -27,7 +27,7 @@ loop_1:
         return var_v1;
     }
     var_v1 += 1;
-    var_v0 += 0x354;
+    var_v0 += 213;
     if (var_v1 == 2) {
         func_80231A24(&D_8032A884);
         return -1;
