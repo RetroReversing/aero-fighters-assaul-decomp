@@ -23,7 +23,7 @@ int *__repair_home1 = &arg1;
     s32 temp_t6;
 
     temp_t6 = (*__repair_home1) & 0xFF;
-    sp1C = temp_t6;
+    sp1C = ((*__repair_home1) & 0xFF);
     if (temp_t6 == 1) {
         func_80302900(M2C_FIELD(arg0, s32 *, 0x14) + 0x8F4);
         func_80302908(M2C_FIELD(arg0, s32 *, 0x14) + 0x8F4, 0x87, 0x3D4CCCCD, 0x3F800000);

@@ -13,11 +13,11 @@ typedef s32 M2C_UNK32;
 #endif
 
 M2C_UNK func_8021BAE0(s32);                         /* extern */
-M2C_UNK func_80320CFC(u8);                          /* extern */
+M2C_UNK func_80320CFC(void *, u8);                          /* extern */
 
 void func_802E9330(void *arg0, u8 arg1) {
-    func_80320CFC(arg1);
-    switch (arg1) {                                 /* irregular */
+    func_80320CFC(arg0, arg1);
+    switch ((u32)arg1) {                                 /* irregular */
     case 0:
         if (M2C_FIELD(arg0, s16 *, 0x80) == 3) {
             func_8021BAE0(M2C_FIELD(arg0, s32 *, 4));

@@ -25,12 +25,12 @@ void func_803027C4(s32 arg0, void *arg1, f32 arg2) {
         var_fv1 = 0.0f;
         var_fv0 = M2C_FIELD(temp_v0, f32 *, 0x10) * arg2;
         if (var_fv0 < 0.0f) {
-            goto block_4;
-        }
-        var_fv1 = 1.0f;
-        if (var_fv0 > 1.0f) {
-block_4:
             var_fv0 = var_fv1;
+        } else {
+            var_fv1 = 1.0f;
+            if (var_fv0 > 1.0f) {
+                var_fv0 = var_fv1;
+            }
         }
         M2C_FIELD(temp_v0, f32 *, 0x10) = var_fv0;
         func_8020178C(M2C_FIELD(arg1, u8 *, 4), var_fv0, arg1);

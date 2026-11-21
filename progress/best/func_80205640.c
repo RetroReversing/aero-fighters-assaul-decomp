@@ -16,7 +16,7 @@ M2C_UNK alCSeqNew(M2C_UNK *, s32);                  /* extern */
 M2C_UNK func_802057FC();                            /* extern */
 M2C_UNK func_8022B460(s32, s32, s32);               /* extern */
 M2C_UNK func_80237F20(s32, s32);                    /* extern */
-s32 func_80237F60(s32, s32);                        /* extern */
+s32 func_80237F60(s32 arg0, s32, s32);                        /* extern */
 M2C_UNK func_80238A30(s32, M2C_UNK *);              /* extern */
 extern s32 D_8024E5B0;
 extern s32 D_8025B980;
@@ -34,12 +34,10 @@ void func_80205640(s32 arg0) {
     temp_v1 = arg0 * 8;
     temp_v0 = M2C_FIELD((D_8025B98C + temp_v1), s32 *, 8);
     var_a2 = temp_v0;
-    if (temp_v0 & 1) {
-        var_a2 = temp_v0 + 1;
+    if (temp_v0 & 1) {{ s32 __repair_value; __repair_value = temp_v0 + 1; var_a2 = __repair_value; }
     }
-    sp1C = temp_v1;
-    sp20 = var_a2;
-    if (func_80237F60(D_8024E5B0, var_a2) != 0) {
+sp20 = var_a2; sp1C = temp_v1;
+    if (func_80237F60(arg0, D_8024E5B0, var_a2) != 0) {
         sp1C = temp_v1;
         sp20 = var_a2;
         func_802057FC();

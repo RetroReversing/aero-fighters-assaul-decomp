@@ -19,11 +19,11 @@ void func_802233EC(s32 arg0) {
     s32 sp28;
     s16 sp24;
     s32 sp1C;
-    s32 temp_v1;
+    
 
-    temp_v1 = arg0 | D_80274348;
-    if (temp_v1 != D_80274348) {
-        sp1C = temp_v1;
+    sp28 = arg0 | D_80274348;
+    if (sp28 != D_80274348) {
+        sp1C = sp28;
         sp24 = 0xFFFF;
         sp28 = 0;
         func_80220C44(&sp1C);

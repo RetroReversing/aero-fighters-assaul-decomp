@@ -16,22 +16,24 @@ M2C_UNK func_80231C9C(M2C_UNK *, M2C_UNK *, M2C_UNK); /* extern */
 extern s32 D_80256DE4;
 extern u16 D_80280BFA;
 
-void func_80201C00(u8 arg0, s32 arg1) {
+void func_80201C00(s32 arg0, s32 arg1) {
+int *__repair_home0 = &arg0;
+
     s32 sp1C;
-    u16 temp_v0;
+    s32 temp_v0;
 
     temp_v0 = D_80280BFA;
-    if ((s32) arg0 >= (s32) temp_v0) {
-        sp1C = (s32) arg0;
+    if ((s32) ((*__repair_home0) & 0xFF) >= (s32) D_80280BFA) {
+        sp1C = (s32) ((*__repair_home0) & 0xFF);
         func_80231C9C("emitId < AUD_NEMITTERS", "_aobj.c", 0x1C0);
     }
-    if ((s32) arg0 < (s32) temp_v0) {
+    if ((s32) ((*__repair_home0) & 0xFF) < (s32) D_80280BFA) {
         if (arg1 < 0) {
             func_80231C9C("priority >= 0", "_aobj.c", 0x1C2);
         }
         if (arg1 >= 0x8000) {
             func_80231C9C("priority <= 32767", "_aobj.c", 0x1C3);
         }
-        M2C_FIELD((D_80256DE4 + (arg0 * 0xB4)), s32 *, 0x88) = arg1;
+        M2C_FIELD((D_80256DE4 + (((*__repair_home0) & 0xFF) * 0xB4)), s32 *, 0x88) = arg1;
     }
 }

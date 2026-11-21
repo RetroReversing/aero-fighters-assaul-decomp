@@ -15,7 +15,7 @@ typedef s32 M2C_UNK32;
 extern f32 D_80344814;
 extern f32 D_80344818;
 
-void func_802FA4D0(void *arg0, s32 arg1) {
+void func_802FA4D0(void *arg0, u8 arg1) {
     s32 temp_v0;
 
     temp_v0 = arg1 & 0xFF;

@@ -15,5 +15,5 @@ typedef s32 M2C_UNK32;
 s32 func_802D4F90();
 
 void func_802B43FC(s32 arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4) {
-    func_802D4F90(arg2, arg3, arg0 + 0x1A4, arg2, arg3, arg4);
+    func_802D4F90(arg2, arg3, arg0 + 0x1A4);
 }

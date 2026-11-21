@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-u8 func_8030361C(u8);                               /* extern */
+u8 func_8030361C(s32, u8);                               /* extern */
 M2C_UNK func_8030363C(s32, s32);                    /* extern */
 M2C_UNK func_80303894(s32, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
 extern s32 D_8032AA8C;
@@ -21,7 +21,7 @@ u8 func_8030382C(s32 arg0, u8 arg1, s32 arg2) {
     u8 sp1F;
     u8 temp_v0;
 
-    temp_v0 = func_8030361C(arg1);
+    temp_v0 = func_8030361C(arg0, arg1);
     sp1F = temp_v0;
     if (temp_v0 != 0) {
         D_8032AA8C = (s32) arg1;

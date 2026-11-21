@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80228DE0(s32, s32, s32);               /* extern */
-M2C_UNK func_802297A8(s32, s32, s32);               /* extern */
+M2C_UNK func_80228DE0(s32, s32);               /* extern */
+M2C_UNK func_802297A8(s32, s32);               /* extern */
 M2C_UNK func_80231A24(M2C_UNK *, s32);              /* extern */
 extern s32 D_802508C0;
 extern M2C_UNK D_80253E00;
@@ -31,9 +31,9 @@ void func_80228D0C(s32 arg0) {
         return;
     }
     if (temp_v0 == 0) {
-        func_80228DE0(D_80275E60 + (temp_v0 << 6), arg0, arg0);
+        func_80228DE0(D_80275E60 + (temp_v0 << 6), arg0);
         return;
     }
     temp_a0 = D_80275E60 + (temp_v0 << 6);
-    func_802297A8(temp_a0, temp_a0 - 0x40, arg0);
+    func_802297A8(temp_a0, temp_a0 - 0x40);
 }

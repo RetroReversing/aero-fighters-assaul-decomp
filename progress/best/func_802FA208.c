@@ -15,6 +15,8 @@ typedef s32 M2C_UNK32;
 s32 func_802F91C4();
 
 s32 func_802FA208(s32 *arg0) {
+short __repair_constant = 4;
+
     char *var_s1;
     s32 temp_a0;
     s32 var_s0;
@@ -25,12 +27,12 @@ s32 func_802FA208(s32 *arg0) {
     var_s1 = arg0;
 loop_1:
     temp_a0 = *(s32 *)var_s1;
-    if (temp_a0 != 0) {
-        var_s0 += 4;
+    if (temp_a0 != 0) {/*__repair_loop_weight*/do {
+        var_s0 += __repair_constant;} while (0);
         if (func_802F91C4(temp_a0) != 0) {
             var_s3 = 1;
         }
-        var_s1 += 4;
+        var_s1 += __repair_constant;
         if (var_s0 != 8) {
             goto loop_1;
         }

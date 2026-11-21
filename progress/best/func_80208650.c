@@ -40,9 +40,10 @@ loop_2:
         var_v0 = temp_t9;
         if (temp_t9 == 0xB8) {
             /* Duplicate return node #7. Try simplifying control flow for better match */
-            return 0;
+            goto __shared_return_0;
         }
         goto loop_2;
     }
+    __shared_return_0:
     return 0;
 }

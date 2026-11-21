@@ -15,7 +15,11 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_8021BAE0(s32, void *);                 /* extern */
 
 void func_802C78E0(void *arg0) {
-    M2C_FIELD(M2C_FIELD(arg0, void **, 0x14), s32 *, 0x7168) = -1;
+char *__repair_addr;
+
+__repair_addr = (char *)(M2C_FIELD(arg0, void **, 0x14));
+
+    M2C_FIELD(__repair_addr, s32 *, 0x7168) = -1;
     if (M2C_FIELD(arg0, s32 *, 0x94CC) != 0xFFFF) {
         func_8021BAE0(M2C_FIELD(arg0, s32 *, 0x94D0), arg0);
         M2C_FIELD(arg0, s32 *, 0x94D0) = 0xFFFF;

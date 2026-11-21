@@ -24,12 +24,12 @@ void func_803025E4(void *arg1, f32 arg2) {
     if (func_80301E20(arg2) != 0) {
         var_fv0 = D_80345810;
         if (var_fa0 < var_fv0) {
-            goto block_4;
-        }
-        var_fv0 = 2.0f;
-        if (var_fa0 > 2.0f) {
-block_4:
             var_fa0 = var_fv0;
+        } else {
+            var_fv0 = 2.0f;
+            if (var_fa0 > 2.0f) {
+                var_fa0 = var_fv0;
+            }
         }
         func_80201A18(var_fa0, M2C_FIELD(arg1, u8 *, 4), var_fa0);
     }

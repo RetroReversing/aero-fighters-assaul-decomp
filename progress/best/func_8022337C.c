@@ -19,19 +19,21 @@ extern M2C_UNK D_80274430;
 extern u8 D_802744B0;
 
 void func_8022337C(void) {
+    M2C_UNK *__base_D_8025391C;
     s32 sp28;
     s16 sp24;
+    s32 temp_t6;
     s32 sp1C;
-    u8 temp_t6;
 
     temp_t6 = D_802744B0 - 1;
     if (D_802744B0 == 0) {
-        func_80231A24(&D_8025391C, &D_802744B0);
+        __base_D_8025391C = &D_8025391C;
+        func_80231A24(__base_D_8025391C, &D_802744B0);
         return;
     }
     D_802744B0 = temp_t6;
     sp24 = 0xFFFF;
     sp28 = 0;
-    sp1C = *(&D_80274430 + ((temp_t6 & 0xFF) * 4));
+    sp1C = *((M2C_UNK *)((s8 *)&D_80274430 + ((temp_t6 & 0xFF) * 4)));
     func_80220C44(&sp1C, &D_802744B0);
 }

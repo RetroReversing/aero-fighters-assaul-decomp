@@ -1,3 +1,4 @@
+/* Draft from identical target func_802B43FC, retargeted and judged independently. */
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -15,5 +16,5 @@ typedef s32 M2C_UNK32;
 s32 func_802D4F90();
 
 void func_802B21A4(s32 arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4) {
-    func_802D4F90(arg2, arg3, arg0 + 0x1A4, arg2, arg3, arg4);
+    func_802D4F90(arg2, arg3, arg0 + 0x1A4);
 }
