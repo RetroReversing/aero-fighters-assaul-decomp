@@ -25,8 +25,8 @@ s32 func_802C0E04(void *arg0, s32 arg1) {
     s32 var_v1;
 
     temp_v0 = M2C_FIELD(arg0, s32 *, 4);
-    temp_a2 = arg1 & 0xFFFFFF;
     var_v1 = 0;
+    temp_a2 = arg1 & 0xFFFFFF;
     if (temp_v0 == temp_a2) {
         var_v1 = 1;
         M2C_FIELD(arg0, s32 *, 0xE08) = temp_v0;
