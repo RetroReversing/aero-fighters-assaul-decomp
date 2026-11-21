@@ -17,8 +17,8 @@ extern void *D_8032AA74;
 extern M2C_UNK D_80348B50;
 
 s32 func_8030BF18(void) {
-    void *sp1C;
     void *temp_a0;
+    void *sp1C;
 
     temp_a0 = D_8032AA74;
     sp1C = temp_a0;
