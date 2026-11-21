@@ -15,13 +15,14 @@ typedef s32 M2C_UNK32;
 extern f32 D_8032BCD4;
 
 void func_8031AD8C(void *arg0, s16 arg1, f32 arg2) {
-    if (arg1 != 1) {
-        if (arg1 != 3) {
-            M2C_FIELD(arg0, f32 *, 0x60) = arg2;
+    switch (arg1) {
+        case 3:
+            M2C_FIELD(arg0, f32 *, 0x64) = arg2;
             return;
-        }
-        M2C_FIELD(arg0, f32 *, 0x64) = arg2;
-        return;
+        case 1:
+            M2C_FIELD(arg0, f32 *, 0x60) = (f32) (D_8032BCD4 - arg2);
+            break;
     }
-    M2C_FIELD(arg0, f32 *, 0x60) = (f32) (D_8032BCD4 - arg2);
+    M2C_FIELD(arg0, f32 *, 0x60) = arg2;
+    return;
 }

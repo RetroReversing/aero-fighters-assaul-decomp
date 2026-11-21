@@ -25,13 +25,13 @@ M2C_UNK func_8031E0D0(s32, M2C_UNK);                /* extern */
 
 void func_803074D8(s32 arg0, s32 arg1) {
     if (arg0 != 0) {
-        func_8031DCE0(arg0 + 0x14A0, 2);
-        func_8031DA84(arg0 + 0x13B0, 2);
-        func_8031D958(arg0 + 0x12C0, 2);
-        func_8031D824(arg0 + 0x11D0, 2);
-        func_8031E0D0(arg0 + 0xC30, 2);
-        func_8031DBB0(arg0 + 0xB40, 2);
-        func_8031DF84(arg0 + 0x5A0, 2);
+        func_8031DCE0(arg0 + 0xC78, 2);
+        func_8031DA84(arg0 + 0xAE4, 2);
+        func_8031D958(arg0 + 0x950, 2);
+        func_8031D824(arg0 + 0x7BC, 2);
+        func_8031E0D0(arg0 + 0x628, 2);
+        func_8031DBB0(arg0 + 0x494, 2);
+        func_8031DF84(arg0 + 0x1A4, 2);
         func_8031DE2C(arg0, 2);
         if (arg1 & 1) {
             func_802C679C(arg0);

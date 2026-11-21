@@ -1,4 +1,3 @@
-/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,11 +10,12 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
 
-M2C_UNK func_80287CC0(s32, M2C_UNK);                /* extern */
-M2C_UNK func_80287D7C(s32, M2C_UNK);                /* extern */
-M2C_UNK func_80287DF8(s32, M2C_UNK);                /* extern */
-s32 func_802AA268(s32, M2C_UNK, M2C_UNK);           /* extern */
+s32 func_80287CC0();
+s32 func_80287D7C();
+s32 func_80287DF8();
+s32 func_802AA268();
 extern s32 D_8033E63C;
 
 void func_802D0600(s32 arg0) {
@@ -27,6 +27,6 @@ void func_802D0600(s32 arg0) {
         temp_v0 = sp1C;
         func_80287DF8(sp1C, 0x41200000);
         func_80287D7C(temp_v0, 0x40A00000);
-        func_80287CC0(temp_v0, 0);
+        func_80287CC0(temp_v0);
     }
 }

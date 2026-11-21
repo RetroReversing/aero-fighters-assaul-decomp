@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 func_802070D4();
 s32 func_8022C620();
@@ -48,9 +36,12 @@ extern char D_80281258[];
 extern char D_80281290[];
 
 void func_8022CB48(void) {
+    void *var_s0;
+    char *__base_D_80278720;
     void *sp34;
     s32 temp_v0;
-    void *var_s0;
+
+    __base_D_80278720 = D_80278720;
 
     sp34 = NULL;
     func_802070D4();
@@ -67,7 +58,7 @@ void func_8022CB48(void) {
             D_8027872F = 0;
         }
         if ((s32) D_80278730 >= 0x33) {
-            func_80231A24(D_802544AC, D_80278729, D_80278729, D_8027872A);
+            func_80231A24(D_802544AC, D_80278729, D_80278729);
             func_8022C7C8();
             return;
         }
@@ -84,7 +75,7 @@ void func_8022CB48(void) {
         }
         if (D_80278728 != 0) {
             D_80278728 = 0;
-            func_8022D4EC(D_802544D4, D_80278729, D_80278729, D_8027872A);
+            func_8022D4EC();
             D_8027872E ^= 1;
         }
         if (osRecvMesg(D_80281290, &sp34, 0) != -1) {
@@ -92,9 +83,9 @@ loop_17:
             if (sp34 == NULL) {
                 func_80231A24(D_80254528);
             } else {
-                temp_v0 = M2C_FIELD(sp34, s32 *, 0x10);
+                temp_v0 = (*(s32 *)((char *)(sp34) + 0x10));
                 if (temp_v0 == 1) {
-                    *(D_80278720 + (D_8027872D * 4)) = sp34;
+                    *(s32 *)(__base_D_80278720 + (D_8027872D * 4)) = sp34;
                     D_8027872D ^= 1;
                 } else if (temp_v0 == 2) {
                     D_80278718 = sp34;
@@ -124,15 +115,15 @@ loop_17:
             func_8022C620();
             goto block_35;
         }
-        if (*(D_80278720 + (D_8027872E * 4)) != 0) {
+        if (*(s32 *)(__base_D_80278720 + (D_8027872E * 4)) != 0) {
             func_8022C6A4();
         }
 block_35:
-        var_s0 = M2C_FIELD(D_80281218, void **, 0x260);
+        var_s0 = (*(void **)((char *)(D_80281218) + 0x260));
         if (var_s0 != NULL) {
             do {
-                osSendMesg(M2C_FIELD(var_s0, s32 **, 4), D_80281218, 0);
-                var_s0 = M2C_FIELD(var_s0, void **, 0);
+                osSendMesg((*(s32 **)((char *)(var_s0) + 4)), D_80281218, 0);
+                var_s0 = (*(void **)((char *)(var_s0) + 0));
             } while (var_s0 != NULL);
         }
     }

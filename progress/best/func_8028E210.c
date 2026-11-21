@@ -21,7 +21,7 @@ M2C_UNK func_802297A8(M2C_UNK *, M2C_UNK *, M2C_UNK *); /* extern */
 M2C_UNK func_802D0154(M2C_UNK *, s32, M2C_UNK);     /* extern */
 M2C_UNK func_802FA298(s32, M2C_UNK *);              /* extern */
 extern M2C_UNK D_80323614;
-extern M2C_UNK D_8032363C;
+extern f32 D_8032363C;
 extern u8 D_8032AA80;
 extern f32 D_8033EF6C;
 extern f32 D_8033EF70;
@@ -29,10 +29,9 @@ extern f32 D_8033EF74;
 extern f32 D_8033EF78;
 
 void func_8028E210(void *arg0) {
+    M2C_UNK *__base_D_80323614;
     M2C_UNK spE8;
-    f32 spE0;
-    f32 spDC;
-    f32 spD8;
+    f32 spD8[3];
     M2C_UNK spA8;
     M2C_UNK sp68;
     M2C_UNK sp28;
@@ -41,13 +40,14 @@ void func_8028E210(void *arg0) {
     if (D_8032AA80 == 0x10) {
         M2C_FIELD(arg0, f32 *, 0xCC) = 0.0f;
         M2C_FIELD(arg0, f32 *, 0xD0) = 0.0f;
-        M2C_FIELD(arg0, f32 *, 0xD4) = (f32) *(&D_80323614 + (D_8032AA80 * 4));
-        M2C_FIELD(arg0, f32 *, 0xD8) = (f32) *(&D_8032363C + (D_8032AA80 * 4));
+        __base_D_80323614 = &D_80323614;
+        M2C_FIELD(arg0, f32 *, 0xD4) = (f32) *(__base_D_80323614 + (D_8032AA80 * 4));
+        M2C_FIELD(arg0, f32 *, 0xD8) = (f32) *(&D_8032363C + D_8032AA80);
     } else {
         M2C_FIELD(arg0, f32 *, 0xCC) = 0.0f;
         M2C_FIELD(arg0, f32 *, 0xD0) = 0.0f;
-        M2C_FIELD(arg0, f32 *, 0xD4) = (f32) *(&D_80323614 + (D_8032AA80 * 4));
-        M2C_FIELD(arg0, f32 *, 0xD8) = (f32) *(&D_8032363C + (D_8032AA80 * 4));
+        M2C_FIELD(arg0, f32 *, 0xD4) = (f32) *(__base_D_80323614 + (D_8032AA80 * 4));
+        M2C_FIELD(arg0, f32 *, 0xD8) = (f32) *(&D_8032363C + D_8032AA80);
     }
     M2C_FIELD(arg0, s8 *, 0xC4) = 0;
     M2C_FIELD(arg0, s8 *, 0x129) = 0;
@@ -58,9 +58,9 @@ void func_8028E210(void *arg0) {
     func_8021B838(M2C_FIELD(arg0, s32 *, 0xC8), 0);
     func_8022970C(&spA8);
     func_8022970C(&sp28);
-    spD8 = 0.0f;
-    spE0 = 0.0f;
-    spDC = D_8033EF6C;
+    spD8[0] = 0.0f;
+    spD8[2] = 0.0f;
+    spD8[1] = D_8033EF6C;
     func_802FA298(M2C_FIELD(arg0, s32 *, 0) + 0x10, &spA8);
     func_8022970C(&spE8);
     func_802D0154(&spE8, M2C_FIELD(arg0, s32 *, 0x108), 0x7A);

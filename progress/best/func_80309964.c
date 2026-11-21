@@ -24,10 +24,11 @@ extern f32 D_803465C8;
 extern u8 D_80348B9A;
 
 void func_80309964(void) {
+    f32 *__base_D_8032AA74;
     f32 sp40;
     s32 sp30;
-    f32 sp24;
     f32 sp1C;
+    f32 sp24;
     f32 temp_fa1;
     f32 var_fv1;
     u8 var_v0;
@@ -39,10 +40,13 @@ void func_80309964(void) {
     temp_fa1 = (f32) (D_80348B9A - 1) * 0.5f;
     sp1C = (f32) (var_v0 - 1) * D_803465C0;
     if ((s32) D_8032AA80 < 0xF) {
+s32 __repair_branch_sp30_0;
+
         sp40 = temp_fa1;
-        sp30 = func_802AEDD4(temp_fa1, D_8032AA74, 1);
-        sp24 = func_80318348(func_802AEDD4(D_8032AA74, 1e-45f));
-        var_fv1 = ((func_80318340(sp30) / sp24) - D_803465C4) * D_803465C8;
+        __base_D_8032AA74 = &D_8032AA74;
+        __repair_branch_sp30_0 = func_802AEDD4(temp_fa1, (*__base_D_8032AA74), 1);
+        sp24 = func_80318348(func_802AEDD4((*(s32 *)__base_D_8032AA74), 1e-45f));
+        var_fv1 = ((func_80318340(__repair_branch_sp30_0) / sp24) - D_803465C4) * D_803465C8;
     } else {
         var_fv1 = 1.0f;
     }

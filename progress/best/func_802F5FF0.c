@@ -30,19 +30,22 @@ extern f64 D_80344448;
 extern s32 D_80348230;
 extern s32 D_80348234;
 
+typedef struct { unsigned char pad_0[464]; int field_1D0; int field_1D4; } __repair_record_arg0;
 void func_802F5FF0(void *arg0) {
+int __repair_constant = 0x457;
+
     M2C_UNK sp24;
     s32 temp_v0;
-    s32 temp_v0_2;
+    
     s32 var_a2;
-    s32 var_a2_2;
+    
 
     func_802EDD04();
     func_802EDFD0(arg0);
     func_8021E66C(7);
-    D_80328870 += 0x457;
-    var_a2 = D_80328870;
-    temp_v0 = M2C_FIELD(arg0, s32 *, 0x1D0);
+    D_80328870 += __repair_constant;
+    var_a2 = (s32)&D_80328870;
+    temp_v0 = ((__repair_record_arg0*)arg0)->field_1D0;
     if (temp_v0 < var_a2) {
         D_80328870 = temp_v0;
         var_a2 = temp_v0;
@@ -59,16 +62,16 @@ void func_802F5FF0(void *arg0) {
     func_8021E708(0, 0, 0, 0xFF);
     if (D_80348230 == 0) {
         D_80348230 = 1;
-        D_80348234 = M2C_FIELD(arg0, s32 *, 0x1D4);
+        D_80348234 = ((__repair_record_arg0*)arg0)->field_1D4;
     }
-    D_80348234 += 0x457;
-    var_a2_2 = D_80348234;
-    temp_v0_2 = M2C_FIELD(arg0, s32 *, 0x1D4) + M2C_FIELD(arg0, s32 *, 0x1D0);
-    if (temp_v0_2 < var_a2_2) {
-        D_80348234 = temp_v0_2;
-        var_a2_2 = temp_v0_2;
+    D_80348234 += __repair_constant;
+    var_a2 = D_80348234;
+    temp_v0 = ((__repair_record_arg0*)arg0)->field_1D4 + ((__repair_record_arg0*)arg0)->field_1D0;
+    if (temp_v0 < var_a2) {
+        D_80348234 = temp_v0;
+        var_a2 = temp_v0;
     }
-    func_8023072C(&sp24, &D_8032888C, var_a2_2);
+    func_8023072C(&sp24, &D_8032888C, var_a2);
     func_8021E87C(0x28, 0x35, &D_80328894);
     func_8021E87C(0xA8, 0x35, &D_8032889C);
     func_8021E87C(0xC8, 0x35, &sp24);

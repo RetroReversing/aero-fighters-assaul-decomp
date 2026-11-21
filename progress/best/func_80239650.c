@@ -18,7 +18,7 @@ s32 func_802456A0(void *);                          /* extern */
 s32 func_80245710(s32, s32, s32, M2C_UNK *);        /* extern */
 s32 func_80246660(s32, s32, s32, M2C_UNK *, s32);   /* extern */
 
-s32 func_80239650(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, M2C_UNK *arg5) {
+s32 func_80239650(void *arg0, s32 arg1, u8 arg2, s32 arg3, s32 arg4, M2C_UNK *arg5) {
     union {
         unsigned char bytes[376];
         struct { unsigned char pad[340]; M2C_UNK value; } view_sp154;
@@ -84,7 +84,10 @@ s32 func_80239650(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, M2C_UNK *a
     }
     if (((s32) m2c_initial_frame.view_sp15A.value >= M2C_FIELD(arg0, s32 *, 0x60)) && ((s32) (u8) m2c_initial_frame.view_sp15A.value < (s32) M2C_FIELD(arg0, u8 *, 0x64))) {
         if (((s32) m2c_initial_frame.view_unksp15B.value <= 0) || ((s32) m2c_initial_frame.view_unksp15B.value >= 0x80)) {
-            goto block_25;
+            if (m2c_initial_frame.view_sp15A.value == 1) {
+                return 5;
+            }
+            return 3;
         }
         m2c_initial_frame.view_sp3C.value = temp_s0;
         if (temp_s0 == 0) {
@@ -136,7 +139,7 @@ loop_37:
             } else {
                 var_v0 = func_80246660(M2C_FIELD(arg0, s32 *, 4), M2C_FIELD(arg0, s32 *, 8), temp_t4, var_s1, 0);
             }
-            var_s1 += 0x20;
+            var_s1 += 8;
             if (var_v0 != 0) {
                 return var_v0;
             }
@@ -164,11 +167,11 @@ block_50:
             }
 block_56:
             /* Duplicate return node #57. Try simplifying control flow for better match */
-            return 0;
+            goto __shared_return_0;
         }
-        return 0;
+        __shared_return_0:
+    return 0;
     }
-block_25:
     if (m2c_initial_frame.view_sp15A.value == 1) {
         return 5;
     }

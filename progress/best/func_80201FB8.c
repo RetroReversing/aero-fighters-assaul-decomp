@@ -20,7 +20,9 @@ extern M2C_UNK D_80251FB8;
 extern s32 D_80256DE4;
 extern u16 D_80280BFA;
 
-void func_80201FB8(u8 arg0) {
+void func_80201FB8(s32 arg0) {
+char *__repair_addr;
+
     s32 sp1C;
     s32 sp18;
     s32 temp_t6;
@@ -30,24 +32,26 @@ void func_80201FB8(u8 arg0) {
     void *var_v1;
 
     temp_v0 = D_80280BFA;
-    if ((s32) arg0 >= (s32) temp_v0) {
-        sp1C = (s32) arg0;
-        func_80231C9C("emitId < AUD_NEMITTERS", "_aobj.c", 0x21C, arg0);
+    if ((s32) (arg0 & 0xFF) >= (s32) temp_v0) {
+        sp1C = (s32) (arg0 & 0xFF);
+        func_80231C9C("emitId < AUD_NEMITTERS", "_aobj.c", 0x21C, (arg0 & 0xFF));
     }
-    if ((s32) arg0 < (s32) temp_v0) {
-        func_802011D0(&D_80251FB8, (s32) arg0);
-        temp_t6 = arg0 * 0xB4;
+    if ((s32) (arg0 & 0xFF) < (s32) temp_v0) {
+        func_802011D0(&D_80251FB8, (s32) (arg0 & 0xFF));
+        temp_t6 = (arg0 & 0xFF) * 0xB4;
         var_v1 = D_80256DE4 + temp_t6;
         temp_a0 = M2C_FIELD(var_v1, u8 *, 0xAD);
         var_v0 = temp_t6;
         if (temp_a0 != 0x11) {
             sp18 = temp_t6;
-            func_80203654(temp_a0, &D_80256DE4);
-            var_v0 = sp18;
+            do { func_80203654(temp_a0, &D_80256DE4); } while (0);
+            var_v0 = sp18;sp18=0;
             var_v1 = D_80256DE4 + var_v0;
         }
         M2C_FIELD(var_v1, s32 *, 0xA8) = 0;
-        M2C_FIELD((D_80256DE4 + var_v0), s8 *, 0xAD) = 0x11;
+__repair_addr = (char *)((D_80256DE4 + var_v0));
+
+        M2C_FIELD(__repair_addr, s8 *, 0xAD) = 0x11;
         M2C_FIELD((D_80256DE4 + var_v0), s32 *, 0xA0) = 0;
         M2C_FIELD((D_80256DE4 + var_v0), s8 *, 0xB0) = 0;
         if (M2C_FIELD((D_80256DE4 + var_v0), s32 *, 0x98) & 0x20) {

@@ -1,26 +1,16 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
-s32 func_80216464();
-f32 func_8022AA40();
+unsigned char func_80216464(f32, f32, f32);
+f32 func_8022AA40(f32, f32);
 
 s32 func_80219210(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, f32 arg8, f32 arg9, f32 *arg10) {
+    f32 __repair_fzero = 0.0f;
+
     f32 sp6C;
     f32 sp68;
     f32 sp64;
     s32 sp44;
-    f32 sp30;
+    f32 temp_fv1_3;
     f32 sp2C;
     f32 temp_fa0;
     f32 temp_fa0_2;
@@ -38,27 +28,27 @@ s32 func_80219210(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f3
     f32 temp_fv0_5;
     f32 temp_fv1;
     f32 temp_fv1_2;
-    f32 temp_fv1_3;
-    f32 temp_fv1_4;
+    f32 sp30;
+    register f32 temp_fv1_4;
     f32 temp_fv1_5;
     s32 temp_v0;
-    s32 var_v0;
+    unsigned var_v0;
     s32 var_v0_2;
     s32 var_v0_3;
     s32 var_v1;
 
-    temp_ft4 = arg3 - arg0;
     temp_ft5 = arg4 - arg1;
+    temp_ft4 = arg3 - arg0;
     temp_fv1 = arg5 - arg2;
     sp30 = temp_fv1;
     temp_fv0 = (temp_ft4 * temp_ft4) + (temp_ft5 * temp_ft5) + (temp_fv1 * temp_fv1);
     sp6C = temp_fv0;
     if (temp_fv0 == 0.0f) {
-        temp_v0 = func_80216464(arg0, arg2, arg6, arg7, arg8, arg9);
-        if (temp_v0 != 0) {
-            *arg10 = 0.0f;
+        var_v0_2 = func_80216464(arg0, arg2, arg6);
+        if (var_v0_2 != 0) {
+            *arg10 = __repair_fzero;
         }
-        return temp_v0 & 0xFF;
+        return var_v0_2 & 0xFF;
     }
     temp_fv0_2 = arg0 - arg6;
     temp_fv1_2 = arg1 - arg7;
@@ -71,14 +61,14 @@ s32 func_80219210(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f3
     sp64 = temp_fa0_2 - (arg9 * arg9);
     var_v0_2 = sp44;
     temp_fv0_3 = arg3 - arg6;
-    if (func_8022AA40(temp_fa0_2, temp_fa1, arg6) < arg9) {
+    if (func_8022AA40(temp_fa0_2, temp_fa1) < arg9) {
         var_v0_2 = 1;
     }
     temp_fv1_3 = arg4 - arg7;
     sp44 = var_v0_2;
     temp_fa1_2 = arg5 - arg8;
     if ((func_8022AA40((temp_fv0_3 * temp_fv0_3) + (temp_fv1_3 * temp_fv1_3) + (temp_fa1_2 * temp_fa1_2), temp_fa1_2) < arg9) && (var_v0_2 != 0)) {
-        *arg10 = 0.0f;
+        *arg10 = __repair_fzero;
         return 1;
     }
     temp_fv0_4 = sp68 * sp68;

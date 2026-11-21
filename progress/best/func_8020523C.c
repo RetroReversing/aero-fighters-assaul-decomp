@@ -21,8 +21,8 @@ extern u32 D_8025B8C0;
 extern M2C_UNK D_8025B8D8;
 
 void func_8020523C(void) {
-    s32 sp40;
     s32 var_s0;
+    s32 sp40;
     void *temp_v0;
     void *var_s0_2;
 

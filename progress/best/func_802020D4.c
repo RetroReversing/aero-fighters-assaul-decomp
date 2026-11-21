@@ -20,7 +20,11 @@ extern s32 D_80256DE0;
 extern s32 D_80256DE4;
 extern u16 D_80280BFA;
 
+extern char D_80251FEC[];
+extern char D_80251FF8[];
 void func_802020D4(s32 arg0) {
+int *__repair_home0 = &arg0;
+
     s32 *var_a2;
     s32 temp_s5;
     s32 temp_t2;
@@ -28,7 +32,7 @@ void func_802020D4(s32 arg0) {
     s32 var_s1;
     void *temp_v0;
 
-    temp_s5 = arg0 & 0xFF;
+    temp_s5 = (*__repair_home0) & 0xFF;
     var_s0 = 0;
     var_s1 = 0;
     if ((s32) D_80280BFA > 0) {
@@ -47,9 +51,9 @@ void func_802020D4(s32 arg0) {
     }
     if (var_s1 > 0) {
         if (temp_s5 != 0) {
-            var_a2 = "released";
+            var_a2 = D_80251FEC;
         } else {
-            var_a2 = "still in use";
+            var_a2 = D_80251FF8;
         }
         func_80231A24(D_80251FD4, var_s1, var_a2);
     }

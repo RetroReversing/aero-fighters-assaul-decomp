@@ -19,17 +19,17 @@ extern s32 D_80275F74;
 extern s32 D_80275F78;
 
 void func_8022BA94(s32 arg0) {
-    if (arg0 != 0x800DA800) {
-        if (arg0 != 0x80100000) {
-            if (arg0 == 0x803DA800) {
-                D_80275F70 = 0;
-                return;
-            }
-            func_80231A24(&D_8025410C, arg0);
+    switch (arg0) {
+        case 0x803da800:
+            D_80275F70 = 0;
             return;
-        }
-        D_80275F78 = 0;
-        return;
+        case 0x800da800:
+            D_80275F74 = 0;
+            break;
+        case 0x80100000:
+            D_80275F78 = 0;
+            return;
     }
-    D_80275F74 = 0;
+    func_80231A24(&D_8025410C, arg0);
+    return;
 }

@@ -17,6 +17,8 @@ extern M2C_UNK D_80253EB8;
 extern M2C_UNK D_80253ECC;
 extern M2C_UNK D_80253ED0;
 
+extern char D_80253EBC[];
+extern char D_80253EC4[];
 void func_80229BE8(s32 arg0) {
     s32 var_s0;
     s32 var_s4;
@@ -24,10 +26,10 @@ void func_80229BE8(s32 arg0) {
     func_80231A24(&D_80253EB8);
     var_s4 = 0;
     do {
-        func_80231A24("  { ");
-        var_s0 = 0;
+        func_80231A24(D_80253EBC);
+        
 loop_2:
-        func_80231A24(" %f, ");
+        func_80231A24((var_s0 = 0, D_80253EC4));
         var_s0 += 4;
         if (var_s0 != 0x10) {
             goto loop_2;

@@ -44,16 +44,16 @@ void func_8021178C(u32 arg0, s32 arg1, s32 arg2, s32 arg3) {
         var_s0 = &arg1;
         temp_s2 = *(s32 *)(M2C_FIELD(D_8024E710, s32 *, 0x1C) + (arg0 * 4));
         if (temp_s2 == NULL) {
-            func_80231A24(D_80252D1C, arg0);
+            func_80231A24(D_80252D1C);
             return;
         }
 loop_4:
-        temp_s0 = (s32) (var_s0 + 3) & ~3;
+        temp_s0 = (s32) ((s8 *) var_s0 + 3) & ~3;
         temp_a1 = *(u32 *)temp_s0;
         var_s0 = temp_s0 + 4;
         switch (temp_a1) {
         case 2:
-            temp_s0_2 = (s32) (var_s0 + 3) & ~3;
+            temp_s0_2 = (s32) ((s8 *) var_s0 + 3) & ~3;
             temp_t6 = *(s32 *)temp_s0_2;
             var_s0 = temp_s0_2 + 4;
             *temp_t6 = (s32) M2C_FIELD(temp_s2, u8 *, 0x10);
@@ -100,6 +100,7 @@ loop_4:
             var_s0 = temp_s0_9 + 4;
             *temp_t2 = (s32) M2C_FIELD((M2C_FIELD(M2C_FIELD(temp_s2, void **, 8), s32 ***, 0) + temp_lo), u8 *, 6);
             goto loop_4;
+        case 0:
         default:
             func_80231A24(D_80252D50, temp_a1);
             goto loop_4;

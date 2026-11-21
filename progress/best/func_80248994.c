@@ -15,29 +15,35 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_80248A7C();                            /* extern */
 extern s32 D_8025168C;
 extern s32 D_802871E4;
-extern s32 D_A4600010;
+extern u8 D_A4600010[];
 extern s32 D_A5000510;
 
 void func_80248994(void) {
+    s32 *__base_D_A4600010;
     void *sp1C;
     s32 sp18;
+s32 __repair_phase_sp18;
+    s32 *__base_D_A5000510;
+
+    __base_D_A5000510 = &D_A5000510;
 
     sp1C = D_802871E4 + 0x14;
-    sp18 = D_A4600010;
+    __base_D_A4600010 = D_A4600010;
+    sp18 = (*D_A4600010);
     if (sp18 & 2) {
         do {
-            sp18 = D_A4600010;
+            sp18 = (*__base_D_A4600010);
         } while (sp18 & 2);
     }
-    D_A5000510 = M2C_FIELD(sp1C, s32 *, 0x10) | 0x10000000;
-    sp18 = D_A4600010;
+    (*__base_D_A5000510) = M2C_FIELD(sp1C, s32 *, 0x10) | 0x10000000;
+    sp18 = (*__base_D_A4600010);
     if (sp18 & 2) {
         do {
-            sp18 = D_A4600010;
-        } while (sp18 & 2);
+            __repair_phase_sp18 = (*__base_D_A4600010);
+        } while (__repair_phase_sp18 & 2);
     }
-    D_A5000510 = M2C_FIELD(sp1C, s32 *, 0x10);
+    (*__base_D_A5000510) = M2C_FIELD(sp1C, s32 *, 0x10);
     func_80248A7C();
-    D_A4600010 = 2;
+    (*__base_D_A4600010) = 2;
     D_8025168C |= 0x100401;
 }

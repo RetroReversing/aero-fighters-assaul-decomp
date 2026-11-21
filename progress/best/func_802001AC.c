@@ -17,9 +17,10 @@ s32 func_80231C9C();
 extern char D_80251BA8[];
 extern char D_80256D70[];
 
-void func_802001AC(u16 arg0, s32 arg1, s32 arg2, s32 arg3) {
+void func_802001AC(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+int *__repair_home0 = &arg0;
+
     s32 *var_a0;
-    s32 *var_a0_2;
     s32 *var_a0_3;
     s32 *var_v0;
     s32 *var_v1;
@@ -31,10 +32,10 @@ void func_802001AC(u16 arg0, s32 arg1, s32 arg2, s32 arg3) {
     u32 temp_a1;
     void *temp_a2;
 
-    if ((s32) arg0 > 0) {
+    if ((s32) (*__repair_home0) > 0) {
         func_80231C9C("earId < AUD_NEARS", "_aear.c", 0x52);
     }
-    temp_a2 = (arg0 * 0x50) + D_80256D70;
+    temp_a2 = ((*__repair_home0) * 0x50) + D_80256D70;
     var_v0 = &arg1;
 loop_3:
     temp_v0 = (s32) (var_v0 + 3) & ~3;
@@ -64,12 +65,11 @@ loop_3:
         } else {
             if (temp_v0_2 & 2) {
                 var_v0 = temp_v0_2 + 0xA;
-                var_a0_2 = var_v0 - 0x28;
+                var_v1_2 = var_v0 - 0x28;
             } else {
                 var_v0 = ((temp_v0_2 + 7) & ~7) + 8;
-                var_a0_2 = var_v0;
+                var_v1_2 = var_v0;
             }
-            var_v1_2 = var_a0_2;
         }
         M2C_FIELD(temp_a2, f32 *, 0x44) = (f32) M2C_FIELD(var_v1_2, f64 *, -8);
         goto loop_3;
@@ -94,6 +94,7 @@ loop_3:
         var_v0 = temp_v0_3 + 4;
         M2C_FIELD(temp_a2, s32 *, 0x4C) = (s32) *(s32 *)temp_v0_3;
         goto loop_3;
+    case 0:
     default:
         func_80231A24(D_80251BA8, temp_a1, temp_a2, -8);
         break;

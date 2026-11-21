@@ -14,7 +14,7 @@ typedef s32 M2C_UNK32;
 
 void func_8031D634(void *arg0) {
     M2C_FIELD(arg0, s16 *, 0) = 0x11;
-    M2C_FIELD(arg0, s16 *, 0xA4) = 1;
+    M2C_FIELD(arg0, u16 *, 0xA4) = 1;
     M2C_FIELD(arg0, s16 *, 0xA6) = 0xC;
     M2C_FIELD(arg0, s16 *, 0x9C) = 0x18D;
     M2C_FIELD(arg0, s16 *, 0x98) = 0x20;

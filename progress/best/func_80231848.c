@@ -31,7 +31,7 @@ s32 func_80231848(void *arg0, s32 arg1) {
     if (D_80278740 != 0) {
         return 0;
     }
-    if (func_8023EDC0(D_80280C58, arg0) & ~4) {
+    if (func_8023EDC0(D_80280C58) & ~4) {
         temp_t8 = M2C_FIELD(arg0, s32 *, 0x10);
         M2C_FIELD(arg0, s32 *, 0x10) = 0;
         M2C_FIELD(arg0, f32 *, 4) = 0.0f;

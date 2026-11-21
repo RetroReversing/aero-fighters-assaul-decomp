@@ -41,7 +41,7 @@ f32 func_8023499C(void) {
     D_80250908 = temp_t6;
     var_v0 = temp_t6;
     if (temp_t6 < 0) {
-        var_v0 = temp_t6 + 0x7FFFFF07;
+        var_v0 = ((m2c_initial_frame.view_sp24.value * 0x9EF4) - (m2c_initial_frame.view_sp20.value * 0xECF)) + 0x7FFFFF07;
         D_80250908 = var_v0;
     }
     var_v1 = D_80250904 - var_v0;

@@ -13,11 +13,11 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_80303034(s32);                             /* extern */
+s32 func_80302FBC(s32);                             /* extern */
 s32 func_80303130(s32);                             /* extern */
 
 s32 func_8030325C(s32 arg0) {
-    if (func_80303034(arg0 + 0x20) == 2) {
+    if (func_80302FBC(arg0 + 0x20) == 2) {
         return func_80303130(arg0);
     }
     return 0;

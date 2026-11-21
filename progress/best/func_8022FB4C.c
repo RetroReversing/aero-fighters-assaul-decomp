@@ -24,18 +24,17 @@ s32 func_8022FB4C(s32 arg0) {
     u32 temp_t6;
     void *temp_v0;
 
-    temp_t6 = (u32) (arg0 & 0xFFF000) >> 0xC;
-    temp_v0 = *(s32 *)(M2C_FIELD(D_8024E710, s32 *, 0x24) + (temp_t6 * 4));
+    temp_v0 = *(s32 *)(M2C_FIELD(D_8024E710, s32 *, 0x24) + ((temp_t6 = (u32) (arg0 & 0xFFF000) >> 0xC) * 4));
     if (temp_v0 == NULL) {
-        func_80231A24(D_80254AAC, temp_t6, temp_t6);
+        func_80231A24(D_80254AAC, temp_t6);
         return 0;
     }
     temp_a1 = arg0 & 0xFFF;
-    temp_v1 = M2C_FIELD(temp_v0, s32 *, 0x10) + (temp_a1 << 5);
-    var_v0 = temp_v1;
-    if (temp_v1 == 0) {
+    var_v0 = M2C_FIELD(temp_v0, s32 *, 0x10) + (temp_a1 << 5);
+    arg0 = var_v0;
+    if (var_v0 == 0) {
         func_80231A24(D_80254AD0, temp_a1, temp_t6);
-        var_v0 = 0;
+        arg0 = 0;
     }
-    return var_v0;
+    return arg0;
 }

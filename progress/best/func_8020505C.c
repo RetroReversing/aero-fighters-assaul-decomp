@@ -30,24 +30,24 @@ s32 func_8020505C(u32 arg0, s32 arg1, s32 arg2) {
     s32 temp_t3;
     s32 temp_v0_3;
     u32 temp_v0;
-    void *temp_s0;
     void *temp_v0_2;
-    void *var_s0;
+    void *temp_s0;
+    
     void *var_s1;
 
-    var_s0 = M2C_FIELD(D_8025B8B0, void **, 4);
+    temp_s0 = M2C_FIELD(D_8025B8B0, void **, 4);
     var_s1 = NULL;
-    if (var_s0 != NULL) {
+    if (temp_s0 != NULL) {
 loop_1:
-        temp_v0 = M2C_FIELD(var_s0, u32 *, 8);
+        temp_v0 = M2C_FIELD(temp_s0, u32 *, 8);
         if (arg0 >= temp_v0) {
-            var_s1 = var_s0;
+            var_s1 = temp_s0;
             if ((temp_v0 + 0x800) >= (arg0 + arg1)) {
-                M2C_FIELD(var_s0, s32 *, 0xC) = (s32) D_8025B8C0;
-                return osVirtualToPhysical((M2C_FIELD(var_s0, s32 *, 0x10) + arg0) - temp_v0, arg0);
+                M2C_FIELD(temp_s0, s32 *, 0xC) = (s32) D_8025B8C0;
+                return osVirtualToPhysical((M2C_FIELD(temp_s0, s32 *, 0x10) + arg0) - temp_v0);
             }
-            var_s0 = M2C_FIELD(var_s0, void **, 0);
-            if (var_s0 == NULL) {
+            temp_s0 = M2C_FIELD(temp_s0, void **, 0);
+            if (temp_s0 == NULL) {
                 goto block_5;
             }
             goto loop_1;
@@ -57,7 +57,7 @@ loop_1:
 block_5:
     temp_s0 = M2C_FIELD(D_8025B8B0, void **, 8);
     if (temp_s0 == NULL) {
-        func_80231C9C("dmaPtr", "_audiomgr.c", 0x21A, arg0);
+        func_80231C9C("dmaPtr", "_audiomgr.c", 0x21A);
     }
     M2C_FIELD(D_8025B8B0, void **, 8) = (void *) M2C_FIELD(temp_s0, void **, 0);
     alUnlink(temp_s0);
@@ -82,8 +82,8 @@ block_5:
     temp_a3 = arg0 - temp_v0_3;
     M2C_FIELD(temp_s0, s32 *, 8) = temp_a3;
     M2C_FIELD(temp_s0, s32 *, 0xC) = (s32) D_8025B8C0;
-    temp_t3 = D_8024E5A0 * 0x18;
+    temp_v0_3 = D_8024E5A0 * 0x18;
     D_8024E5A0 += 1;
-    osPiStartDma(temp_t3 + D_8025B8D0, 1, 0, temp_a3, temp_s1, 0x800, D_8025B8D8);
+    osPiStartDma(temp_v0_3 + D_8025B8D0, 1, 0, temp_a3, temp_s1, 0x800, D_8025B8D8);
     return osVirtualToPhysical(temp_s1) + sp30;
 }

@@ -19,10 +19,10 @@ M2C_UNK func_80231A24(M2C_UNK *, u16);              /* extern */
 extern M2C_UNK D_80253C5C;
 
 s32 func_80226C48(s32 arg0) {
-    u16 sp32;
+    char sp32[0x6];
     u16 sp30;
     u16 sp2C;
-    u16 sp28;
+    char sp28[0x4];
     s32 temp_v0;
 
     func_80225424(&sp30, &arg0, 2);
@@ -30,11 +30,11 @@ s32 func_80226C48(s32 arg0) {
         func_80231A24(&D_80253C5C, sp30);
         sp30 = 0x1000;
     }
-    func_80225424(&sp32, &arg0, 2);
+    func_80225424(sp32, &arg0, 2);
     func_80225424(&sp2C, &arg0, 4);
-    func_80225424(&sp28, &arg0, 4);
+    func_80225424(sp28, &arg0, 4);
     func_80225424(&sp2C, &arg0, 4);
-    func_80225424(&sp28, &arg0, 4);
+    func_80225424(sp28, &arg0, 4);
     temp_v0 = func_8022B948(sp30, 8);
     func_8022B460(temp_v0, arg0, sp30);
     return temp_v0;

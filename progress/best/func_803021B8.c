@@ -29,6 +29,8 @@ extern u8 D_8032AA80;
 extern f64 D_80345808;
 
 s32 func_803021B8(s32 arg0, void *arg1, s32 arg2, s32 arg3, s32 arg4) {
+char *__repair_addr;
+
     u8 temp_s0;
     u8 temp_s0_2;
     u8 temp_s0_3;
@@ -45,15 +47,16 @@ s32 func_803021B8(s32 arg0, void *arg1, s32 arg2, s32 arg3, s32 arg4) {
             func_80231A24(D_8032A2B0);
             return 0;
         }
-        goto block_9;
+    } else {
+__repair_addr = (char *)((arg0 + (M2C_FIELD(arg1, u8 *, 4) << 5)));
+
+        if (M2C_FIELD(__repair_addr, u8 *, 0x1F) == 0) {
+            return 0;
+        }
+        if (func_80302D78(arg0) != 0) {
+            return 0;
+        }
     }
-    if (M2C_FIELD((arg0 + (M2C_FIELD(arg1, u8 *, 4) << 5)), u8 *, 0x1F) == 0) {
-        return 0;
-    }
-    if (func_80302D78(arg0, arg2) != 0) {
-        return 0;
-    }
-block_9:
     if (arg2 >= 0xFF) {
         func_80231A24(D_8032A2D4, arg2);
         return 0;

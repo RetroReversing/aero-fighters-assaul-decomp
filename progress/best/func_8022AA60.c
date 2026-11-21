@@ -19,6 +19,8 @@ extern f64 D_80253F48;
 extern f32 D_80253F54;
 
 f32 func_8022AA60(f32 arg0) {
+f64 __repair_operand;
+
     f64 temp_fa0;
     f64 temp_fa0_2;
     f64 temp_fa1;
@@ -50,7 +52,8 @@ f32 func_8022AA60(f32 arg0) {
         temp_fv0_2 = (f64) var_v0;
         temp_fv1 = (temp_fv1_3 - (temp_fv0_2 * D_80253F40)) - (temp_fv0_2 * D_80253F48);
         temp_fa0 = temp_fv1 * temp_fv1;
-        temp_fa1 = M2C_FIELD(&D_80253F10, f64 *, 8) + (((((M2C_FIELD(&D_80253F10, f64 *, 0x20) * temp_fa0) + M2C_FIELD(&D_80253F10, f64 *, 0x18)) * temp_fa0) + M2C_FIELD(&D_80253F10, f64 *, 0x10)) * temp_fa0);
+        __repair_operand = M2C_FIELD(&D_80253F10, f64 *, 8);
+        temp_fa1 = __repair_operand + (((((M2C_FIELD(&D_80253F10, f64 *, 0x20) * temp_fa0) + M2C_FIELD(&D_80253F10, f64 *, 0x18)) * temp_fa0) + M2C_FIELD(&D_80253F10, f64 *, 0x10)) * temp_fa0);
         if (!(var_v0 & 1)) {
             return (f32) ((temp_fv1 * temp_fa0 * temp_fa1) + temp_fv1);
         }

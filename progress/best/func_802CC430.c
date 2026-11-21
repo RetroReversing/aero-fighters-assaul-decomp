@@ -25,7 +25,7 @@ extern u8 D_8032AA90;
 
 u8 func_802CC430(void *arg0) {
     u8 sp27;
-    u8 var_v0;
+    s32 var_v0;
 
     sp27 = 1;
     func_802CB998(arg0, 1);

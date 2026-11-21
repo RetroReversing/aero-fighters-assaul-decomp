@@ -28,12 +28,14 @@ extern char D_80252688[];
 extern s32 D_80256DE4;
 
 void func_802037EC(s32 arg0) {
+int *__repair_home0 = &arg0;
+
     u8 temp_a1;
     void *temp_s0;
 
-    temp_a1 = arg0 & 0xFF;
+    temp_a1 = (*__repair_home0) & 0xFF;
     temp_s0 = (temp_a1 * 0xB4) + D_80256DE4;
-    func_802011D0(D_802525A8, temp_a1);
+    func_802011D0(D_802525A8);
     func_802011D0(D_802525C0, M2C_FIELD(temp_s0, u8 *, 0xAD));
     func_802011D0(D_802525D4, (u8) M2C_FIELD(temp_s0, s32 *, 0xA0));
     func_802011D0(D_802525E8, M2C_FIELD(temp_s0, u8 *, 0xB0));

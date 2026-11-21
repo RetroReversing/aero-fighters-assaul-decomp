@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 func_8021F6F8();
 s32 func_80221F44();
@@ -21,7 +9,7 @@ s32 func_80223468();
 extern u8 D_8032AA80;
 
 void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, f32 arg6, f32 arg7, s32 arg8, s32 arg9, f32 arg10, f32 arg11, s32 arg12, s32 arg13, u8 arg14) {
-    s32 sp54;
+    int sp54;
     s32 sp50;
     s32 sp4C;
     s32 sp48;
@@ -36,7 +24,7 @@ void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
     s32 temp_a3;
     s32 temp_t2;
     s32 temp_t9;
-    s32 temp_v0;
+    
     s32 var_a0;
     s32 var_a0_2;
     s32 var_a1;
@@ -55,10 +43,14 @@ void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
             var_v0 = 1;
         }
         if (var_v0 != 0) {
-            temp_v0 = arg2 / 2;
-            var_a0 = temp_v0;
-            sp4C = temp_v0 + (arg4 / 2);
-            if (M2C_FIELD(arg0, s32 *, 0xC) == 0) {
+            /*__repair_loop_weight*/do {
+            do {
+            var_v0 = arg2 / 2;
+            } while (0);
+            } while (0);
+            var_a0 = var_v0;
+            sp4C = var_v0; sp4C += (arg4 / 2);
+            if ((*(s32 *)((char *)(arg0) + 0xC)) == 0) {
                 temp_t2 = arg3 / 2;
                 sp50 = temp_t2 + 0x70;
                 sp48 = temp_t2 + ((s32) ((f32) arg5 * arg1) / 2) + 0x70;
@@ -74,7 +66,7 @@ void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
             sp48 = arg3 + (s32) ((f32) arg5 * arg1);
         }
         sp54 = var_a0;
-        func_80221F44(arg6, arg7, var_a0, arg4, arg8, arg9);
+        func_80221F44(arg6, arg7, var_a0);
         func_8021F6F8(var_a0, sp4C, sp50, sp48, 0, 1.0f, 0.0f, 1.0f);
         if (sp34 > 0.0f) {
             var_v0_2 = 0;
@@ -82,7 +74,7 @@ void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
                 var_v0_2 = 1;
             }
             if (var_v0_2 != 0) {
-                if (M2C_FIELD(arg0, s32 *, 0xC) == 0) {
+                if ((*(s32 *)((char *)(arg0) + 0xC)) == 0) {
                     sp44 = sp48;
                     sp48 = sp50 + (arg5 / 2);
                 } else {
@@ -94,8 +86,8 @@ void func_802B8708(void *arg0, f32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
                 sp48 = sp50 + arg5;
             }
             sp54 = var_a0;
-            func_80221F44(arg10, arg11, var_a0, arg12, arg13);
             func_8021F6F8(var_a0, sp4C, sp44, sp48, 0, 1.0f, 0.0f, 1.0f);
+            func_80221F44(arg10, arg11, var_a0, arg12, arg13);
         }
     } else {
         if (arg14 == 1) {

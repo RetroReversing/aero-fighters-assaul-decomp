@@ -25,40 +25,44 @@ extern s32 D_80256DE4;
 extern s32 D_8025B988;
 
 void func_80203464(s32 arg0) {
+    s32 *__base_D_8025B988;
+    s32 *__base_D_80256DE4;
     s16 var_a1;
     s32 temp_a2;
     s32 temp_s0;
     u8 var_v1;
     void *temp_a0;
-    void *var_v0;
+    
 
     temp_a2 = arg0 & 0xFF;
     arg0 = temp_a2 * 0xB4;
-    func_802011D0(D_80252474, M2C_FIELD((D_80256DE4 + arg0), u8 *, 0xAD), temp_a2);
-    var_v0 = D_80256DE4 + arg0;
-    var_v1 = M2C_FIELD(var_v0, u8 *, 0xAD);
+    __base_D_80256DE4 = &D_80256DE4;
+    func_802011D0(D_80252474, M2C_FIELD(((*__base_D_80256DE4) + arg0), u8 *, 0xAD));
+    temp_a0 = (*__base_D_80256DE4) + arg0;
+    var_v1 = M2C_FIELD(temp_a0, u8 *, 0xAD);
     if ((s32) var_v1 >= 0x10) {
         func_80231C9C("_aemits[ object ]. playVoice < AUD_NSFX_VOICES", "_aobj.c", 0x453);
-        var_v0 = D_80256DE4 + arg0;
-        var_v1 = M2C_FIELD(var_v0, u8 *, 0xAD);
+        temp_a0 = (*__base_D_80256DE4) + arg0;
+        var_v1 = M2C_FIELD(temp_a0, u8 *, 0xAD);
     }
-    if (*(s32 *)(D_8025B988 + (var_v1 * 2)) < 0) {
+    __base_D_8025B988 = &D_8025B988;
+    if (*(s32 *)((*__base_D_8025B988) + (var_v1 * 2)) < 0) {
         func_80231C9C("sfxId[ _aemits[ object ]. playVoice] >= 0", "_aobj.c", 0x454);
-        var_v0 = D_80256DE4 + arg0;
+        temp_a0 = (*__base_D_80256DE4) + arg0;
     }
-    if ((s32) M2C_FIELD(var_v0, u8 *, 0xAE) < 0x80) {
-        var_a1 = *(s16 *)(D_8025B988 + (M2C_FIELD(var_v0, u8 *, 0xAD) * 2));
+    if ((s32) M2C_FIELD(temp_a0, u8 *, 0xAE) < 0x80) {
+        var_a1 = *(s16 *)((*__base_D_8025B988) + (M2C_FIELD(temp_a0, u8 *, 0xAD) * 2));
     } else {
         func_80231C9C("( ALPan ) _aemits[ object ]. playPan <= 127", "_aobj.c", 0x456);
-        var_a1 = *(s16 *)(D_8025B988 + (M2C_FIELD((D_80256DE4 + arg0), u8 *, 0xAD) * 2));
+        var_a1 = *(s16 *)((*__base_D_8025B988) + (M2C_FIELD(((*__base_D_80256DE4) + arg0), u8 *, 0xAD) * 2));
     }
     func_80234E90(D_8024E5B4, var_a1);
     temp_a0 = D_8024E5B4;
     if (M2C_FIELD(temp_a0, s32 *, 0x3C) == -1) {
         func_80231C9C("sndp -> target != -1", "_aobj.c", 0x45A);
     }
-    alSndpSetVol(temp_a0, M2C_FIELD((D_80256DE4 + arg0), s16 *, 0xA6));
-    alSndpSetPitch(D_8024E5B4, M2C_FIELD((D_80256DE4 + arg0), s32 *, 0x9C));
-    alSndpSetFXMix(D_8024E5B4, M2C_FIELD((D_80256DE4 + arg0), u8 *, 0xAF));
-    alSndpSetPan(D_8024E5B4, M2C_FIELD((D_80256DE4 + arg0), u8 *, 0xAE));
+    alSndpSetVol(temp_a0, M2C_FIELD(((*__base_D_80256DE4) + arg0), s16 *, 0xA6));
+    alSndpSetPitch(D_8024E5B4, M2C_FIELD(((*__base_D_80256DE4) + arg0), s32 *, 0x9C));
+    alSndpSetFXMix(D_8024E5B4, M2C_FIELD(((*__base_D_80256DE4) + arg0), u8 *, 0xAF));
+    alSndpSetPan(D_8024E5B4, M2C_FIELD(((*__base_D_80256DE4) + arg0), u8 *, 0xAE));
 }

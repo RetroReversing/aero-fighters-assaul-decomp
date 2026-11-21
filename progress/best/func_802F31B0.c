@@ -27,11 +27,15 @@ extern char D_80328780[];
 extern char D_80328784[];
 
 void func_802F31B0(void *arg0) {
-    s32 sp48;
+int __repair_constant = 0x457;
+
+int __repair_literal;
+
+    char sp48[0x10];
     s32 sp44;
     s32 temp_v0;
     s32 temp_v0_2;
-    s32 var_a2;
+    
 
     func_802344F4(M2C_FIELD(arg0, s32 *, 0xC), 9, 0x13, 0xB, 1, 2, 0x7F, 0x4D, 0);
     func_802344F4(M2C_FIELD(arg0, s32 *, 0x10), 9, 0x13, 0xB, 1, 2, 0x97, 0x4D, 0);
@@ -63,29 +67,31 @@ void func_802F31B0(void *arg0) {
     func_8023413C(M2C_FIELD(arg0, s32 *, 0x18));
     func_8023413C(M2C_FIELD(arg0, s32 *, 0x1C));
     func_8023413C(M2C_FIELD(arg0, s32 *, 0x20));
-    D_80328768 += 0x457;
+    D_80328768 += __repair_constant;
     temp_v0 = M2C_FIELD(arg0, s32 *, 0xB4);
     if (temp_v0 < D_80328768) {
         D_80328768 = temp_v0;
     }
-    sp44 = 8 - (func_8022FF90(&sp48) % 8);
-    func_8023072C(&sp48, D_80328770, D_80328768);
+    sp44 = 8 - (func_8022FF90(sp48) % 8);
+    func_8023072C(sp48, D_80328770, D_80328768);
     func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
-    func_8021E87C((sp44 * 8) + 0xC8, 0x59, &sp48);
+__repair_literal = 8;
+
+    func_8021E87C((sp44 * __repair_literal) + 0xC8, 0x59, sp48);
     func_8021E708(0x58, 0x80, 0xF8, 0xFF);
     func_8021E87C(0x28, 0xC1, D_80328774);
-    D_8032876C += 0x457;
-    var_a2 = D_8032876C;
+    D_8032876C += __repair_constant;
+    temp_v0 = D_8032876C;
     temp_v0_2 = M2C_FIELD(arg0, s32 *, 0x1D0);
-    if (temp_v0_2 < var_a2) {
+    if (temp_v0_2 < temp_v0) {
         D_8032876C = temp_v0_2;
-        var_a2 = temp_v0_2;
+        temp_v0 = temp_v0_2;
     }
-    func_8023072C(&sp48, D_80328780, var_a2);
-    sp44 = 8 - (func_8022FF90(&sp48) % 8);
+    func_8023072C(sp48, D_80328780, temp_v0);
+    sp44 = 8 - (func_8022FF90(sp48) % 8);
     func_8021E708(0x58, 0x80, 0xF8, 0xFF);
     func_8021E87C(0x28, 0x59, D_80328784);
     func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
-    func_8021E87C((sp44 * 8) + 0xC8, 0xC1, &sp48);
+    func_8021E87C((sp44 * 8) + 0xC8, 0xC1, sp48);
     func_8021EC9C();
 }

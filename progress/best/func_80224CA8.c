@@ -171,7 +171,7 @@ void func_80224CA8(u16 arg0) {
     }
     temp_a1_6 = D_80275F7C;
     var_s2 = 0;
-    spAC = temp_a1_6;
+    spAC = D_80275F7C;
     var_s1 = 0;
     if ((s32) M2C_FIELD(temp_v0, u16 *, 0x2C) > 0) {
         do {
@@ -183,16 +183,18 @@ void func_80224CA8(u16 arg0) {
                 var_a0 = 0;
                 if ((s32) temp_a1_7 > 0) {
                     var_v1 = M2C_FIELD(D_802751E0, u16 **, 4);
-loop_22:
-                    var_v0 += 1;
-                    var_v1 += 2;
-                    if (temp_a3 == *(u16 *)var_v1) {
-                        var_s3 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 8) + var_a0);
-                    } else {
-                        var_a0 += 2;
-                        if (var_v0 < (s32) temp_a1_7) {
-                            goto loop_22;
+                    for (;;) {
+                        var_v0 += 1;
+                        var_v1 += 2;
+                        if (temp_a3 == *(u16 *)var_v1) {
+                            var_s3 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 8) + var_a0);
+                        } else {
+                            var_a0 += 2;
+                            if (var_v0 < (s32) temp_a1_7) {
+                                continue;
+                            }
                         }
+                        break;
                     }
                 }
             }
@@ -282,16 +284,18 @@ loop_22:
                 var_a0_2 = 0;
                 if ((s32) temp_a1_8 > 0) {
                     var_v1_2 = M2C_FIELD(D_802751E0, u16 **, 4);
-loop_59:
-                    var_v0_2 += 1;
-                    var_v1_2 += 2;
-                    if (temp_a3_6 == *(u16 *)var_v1_2) {
-                        var_s3_2 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 8) + var_a0_2);
-                    } else {
-                        var_a0_2 += 2;
-                        if (var_v0_2 < (s32) temp_a1_8) {
-                            goto loop_59;
+                    for (;;) {
+                        var_v0_2 += 1;
+                        var_v1_2 += 2;
+                        if (temp_a3_6 == *(u16 *)var_v1_2) {
+                            var_s3_2 = *(u16 *)(M2C_FIELD(D_802751E0, s32 *, 8) + var_a0_2);
+                        } else {
+                            var_a0_2 += 2;
+                            if (var_v0_2 < (s32) temp_a1_8) {
+                                continue;
+                            }
                         }
+                        break;
                     }
                 }
             }

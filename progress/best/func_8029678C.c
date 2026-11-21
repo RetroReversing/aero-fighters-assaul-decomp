@@ -25,8 +25,7 @@ extern s32 D_803240E0;
 extern f64 D_8033FD78;
 
 void func_8029678C(void *arg0) {
-    s8 spBD;
-    u8 spBC;
+    u8 spBC[2];
     f32 temp_fa0;
     f32 temp_fv0;
     f32 temp_fv1;
@@ -39,7 +38,7 @@ void func_8029678C(void *arg0) {
     s32 temp_t1;
     s32 var_s2;
     u32 temp_a0;
-    u32 temp_a0_2;
+    
     u32 var_s0;
 
     func_8021E66C(1);
@@ -50,12 +49,12 @@ void func_8029678C(void *arg0) {
         var_fv1 = 0.0f;
         var_fv0 = 255.0f - M2C_FIELD(arg0, f32 *, 8);
         if (var_fv0 < 0.0f) {
-            goto block_5;
-        }
-        var_fv1 = 100.0f;
-        if (var_fv0 > 100.0f) {
-block_5:
             var_fv0 = var_fv1;
+        } else {
+            var_fv1 = 100.0f;
+            if (var_fv0 > 100.0f) {
+                var_fv0 = var_fv1;
+            }
         }
         func_802344F4(temp_s0, 7, 0xFF, 0xFF, 0xFF, (s32) var_fv0, 0);
     }
@@ -67,7 +66,7 @@ block_5:
         M2C_FIELD(arg0, f32 *, 0x5B4C) = (f32) -temp_fv0;
     }
     temp_fs1 = D_8033FD78;
-    do {
+    __repair_rows: {
         temp_fa0 = (f32) var_s0;
         temp_fv1 = M2C_FIELD(arg0, f32 *, 0x5B4C);
         if (temp_fa0 < temp_fv1) {
@@ -75,26 +74,27 @@ block_5:
         } else {
             var_fv0_2 = -(temp_fv1 - temp_fa0);
         }
-        spBD = 0;
-        spBC = *(u8 *)(D_803240E0 + var_s0);
+        spBC[1] = 0;
+        spBC[0] = *(u8 *)(D_803240E0 + var_s0);
         if (var_fv0_2 <= 4.0f) {
             var_fs0 = temp_fs1 / (f64) (var_fv0_2 + 1.0f);
         } else {
             var_fs0 = 0.0;
         }
         func_8021E708(temp_fa0, 0, 0U, 0, 0xFF);
-        func_8021E87C(var_s2 + 1, (s32) (25.0f - 1.0f), &spBC);
+        func_8021E87C(var_s2 + 1, (s32) (25.0f - 1.0f), spBC);
         if (M2C_FIELD(arg0, u8 *, 0) != 0) {
             temp_a0 = (u32) (f32) var_fs0;
             func_8021E708(M2C_BITWISE(f32, temp_a0), 0xFF, temp_a0, (s32) (255.0f - M2C_FIELD(arg0, f32 *, 8)) & 0xFF);
         } else {
-            temp_a0_2 = (u32) (f32) var_fs0;
-            func_8021E708(M2C_BITWISE(f32, temp_a0_2), 0xFF, temp_a0_2, 0xFF);
+            temp_a0 = (u32) (f32) var_fs0;
+            func_8021E708(M2C_BITWISE(f32, temp_a0), 0xFF, temp_a0, 0xFF);
         }
-        func_8021E87C(var_s2, (s32) 25.0f, &spBC);
-        var_s2 += func_8021E83C(&spBC);
+        func_8021E87C(var_s2, (s32) 25.0f, spBC);
+        var_s2 += func_8021E83C(spBC);
         func_8021EC9C();
         temp_t1 = (var_s0 + 1) & 0xFF;
         var_s0 = (u32) temp_t1;
-    } while (temp_t1 < 0x12);
+    }
+if (temp_t1 < 0x12) goto __repair_rows;
 }

@@ -19,15 +19,15 @@ M2C_UNK func_802CF948(M2C_UNK *);                   /* extern */
 M2C_UNK func_802E9710(s32, M2C_UNK);                /* extern */
 
 s32 func_802C2DF8(void *arg0, f32 arg1, M2C_UNK arg2) {
-    M2C_UNK sp40;
+    char sp40[0x40];
     s32 temp_v0;
 
     M2C_FIELD(arg0, s32 *, 0x18C) = (s32) (M2C_FIELD(arg0, s32 *, 0x18C) - 1);
     M2C_FIELD(arg0, f32 *, 0xF4) = arg1;
-    func_802C5150(arg1, &sp40);
-    func_802CF948(&sp40);
-    func_8022A0D0(&sp40, 0, 0, 0xBF800000);
-    temp_v0 = func_802AAE40(M2C_FIELD(arg0, s32 *, 0), &sp40, 0x44098000, 0x3F800000, 1.0f, 2.0f, M2C_FIELD(arg0, s32 *, 0x8C), 0x18, 3);
+    func_802C5150(arg1, sp40);
+    func_802CF948(sp40);
+    func_8022A0D0(sp40, 0, 0, 0xBF800000);
+    temp_v0 = func_802AAE40(M2C_FIELD(arg0, s32 *, 0), sp40, 0x44098000, 0x3F800000, 1.0f, 2.0f, M2C_FIELD(arg0, s32 *, 0x8C), 0x18, 3);
     if (temp_v0 != 0) {
         func_802E9710(temp_v0, 0x65);
     }

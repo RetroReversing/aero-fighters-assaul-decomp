@@ -30,8 +30,7 @@ s32 func_8022B374(u32 *arg0) {
     if (D_80275E70 > 0) {
         do {
             temp_v0 = D_80275E80 + (var_s0 * 8);
-            temp_v1 = *arg0;
-            if ((temp_v1 >= (u32) M2C_FIELD(temp_v0, u32 *, 0)) && (temp_v1 < (u32) M2C_FIELD(temp_v0, u32 *, 4))) {
+            if (((temp_v1 = *arg0) >= (u32) M2C_FIELD(temp_v0, u32 *, 0)) && (temp_v1 < (u32) M2C_FIELD(temp_v0, u32 *, 4))) {
                 temp_t0 = M2C_FIELD(temp_v0, u32 *, 4);
                 var_s0 = 0;
                 var_s6 = 0;

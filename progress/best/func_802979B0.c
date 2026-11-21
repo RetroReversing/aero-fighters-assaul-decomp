@@ -29,7 +29,7 @@ void func_802979B0(void *arg0, s32 arg1) {
     func_8022A0D0(&spD8, 0xC0A00000, 0, 0xC0A00000);
     func_8022A0D0(&sp98, 0x40A00000, 0, 0xC0A00000);
     func_8022A0D0(&sp58, 0xC0A00000, 0, 0x40A00000);
-    func_8022A0D0(&sp18, 0x40A00000, 0, 0x40A00000);
+    func_8022A0D0(&sp18, 0x40A00000, 0);
     func_8021B4B0(M2C_FIELD(arg0, s32 *, 0), 0, &spD8);
     func_8021B4B0(M2C_FIELD(arg0, s32 *, 4), 0, &sp98);
     func_8021B4B0(M2C_FIELD(arg0, s32 *, 8), 0, &sp58);

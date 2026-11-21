@@ -20,25 +20,27 @@ extern u16 D_80280BEC;
 extern s32 D_80283950;
 
 void func_8023403C(void) {
+    u16 *__base_D_80280BEC;
     s32 var_s0;
     s32 var_v0;
     u16 temp_v1;
     void *temp_a0;
 
     func_8023CBF0(&D_80273B90);
-    temp_v1 = D_80280BEC;
+    __base_D_80280BEC = &D_80280BEC;
+    temp_v1 = (*__base_D_80280BEC);
     var_s0 = 0;
-    if ((s32) temp_v1 > 0) {
+    if ((s32) ((*__base_D_80280BEC)) > 0) {
         do {
             temp_a0 = var_s0 + D_80283950;
-            var_v0 = temp_v1 * 0x19;
+            var_v0 = ((*__base_D_80280BEC)) * 0x19;
             if ((M2C_FIELD(temp_a0, u8 *, 0) == 0) || (M2C_FIELD(temp_a0, u8 *, 2) == 0)) {
 
             } else if (M2C_FIELD(temp_a0, u16 *, 0xC) == 0xFFF) {
-                var_v0 = temp_v1 * 0x19;
+                var_v0 = ((*__base_D_80280BEC)) * 0x19;
             } else {
                 func_80233EA0(temp_a0);
-                var_v0 = D_80280BEC * 0x19;
+                var_v0 = (*__base_D_80280BEC) * 0x19;
             }
             var_s0 += 0x64;
         } while (var_s0 < (var_v0 * 4));
