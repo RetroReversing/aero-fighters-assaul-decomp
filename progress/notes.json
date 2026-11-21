@@ -328,14 +328,6 @@
   "score_after": null
  },
  {
-  "function": "spScale",
-  "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 100-byte function fingerprint fec9d54bc209357b6a6032d4c87070427f3a836d; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
-  "by": "autopilot",
-  "created_at": 1795218557.36309,
-  "score_before": null,
-  "score_after": null
- },
- {
   "function": "osViBlack",
   "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 112-byte function fingerprint a04d227aed64768660b7aca850729541c11dd0ed; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
   "by": "autopilot",
@@ -1006,6 +998,14 @@
   "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 112-byte function fingerprint e450b9af5c68d24ebadd1ba900575fb0260d6e45; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
   "by": "autopilot",
   "created_at": 1795218546.441163,
+  "score_before": null,
+  "score_after": null
+ },
+ {
+  "function": "spScale",
+  "text": "exact relocation-normalized SDK signature. Exact relocation-normalized 100-byte function fingerprint fec9d54bc209357b6a6032d4c87070427f3a836d; one name across selected SDK signatures, unique target fingerprint. Libraries: built in / decompals/ultralib e24c836796df. Name inferred from library code; not a verified C match.",
+  "by": "autopilot",
+  "created_at": 1795218557.36309,
   "score_before": null,
   "score_after": null
  }

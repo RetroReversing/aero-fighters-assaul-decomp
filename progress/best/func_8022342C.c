@@ -1,0 +1,29 @@
+/* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+M2C_UNK func_80220C44(s32 *);                       /* extern */
+extern s32 D_80274348;
+
+void func_8022342C(s32 arg0) {
+    s32 sp28;
+    s32 sp1C;
+    s32 temp_v1;
+
+    temp_v1 = ~arg0 & D_80274348;
+    if (temp_v1 != D_80274348) {
+        sp1C = temp_v1;
+        
+        func_80220C44((sp28 = 0, &sp1C));
+    }
+}
