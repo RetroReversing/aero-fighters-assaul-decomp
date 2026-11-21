@@ -20,9 +20,9 @@ extern void *D_802516DC;
 extern void *D_802516E0;
 
 void func_80249820(void *arg0) {
-    s32 temp_s0;
-    void *var_s1;
-    void *var_s2;
+    register s32 temp_s0;
+    register void *var_s1;
+    register void *var_s2;
 
     temp_s0 = func_80241760();
     if (arg0 == NULL) {
