@@ -25,24 +25,25 @@ M2C_UNK func_802233EC(M2C_UNK);                     /* extern */
 M2C_UNK func_8022970C(M2C_UNK *);                   /* extern */
 M2C_UNK func_8022A848(M2C_UNK *, M2C_UNK, M2C_UNK, M2C_UNK, f32); /* extern */
 
+typedef struct { unsigned char pad_0[28]; signed char field_1C; unsigned char pad_1D[3]; float field_20; unsigned char pad_24[32]; void * field_44; } __repair_record_arg0;
 void func_802F87F0(void *arg0) {
-    M2C_UNK sp58;
+    char sp58[0x40];
+    void *temp_v0;
     u8 sp53;
     u8 sp52;
     u8 sp51;
     u8 sp50;
-    void *temp_v0;
 
-    if (M2C_FIELD(M2C_FIELD(arg0, void **, 0x44), f32 *, 4) <= (f32) (func_80207130(0) - (f64) M2C_FIELD(arg0, f32 *, 0x20))) {
-        M2C_FIELD(arg0, s8 *, 0x1C) = 0;
+    if (M2C_FIELD(((__repair_record_arg0*)arg0)->field_44, f32 *, 4) <= (f32) (func_80207130(0) - (f64) ((__repair_record_arg0*)arg0)->field_20)) {
+        ((__repair_record_arg0*)arg0)->field_1C = 0;
     }
     func_8022331C();
-    func_8022A848(&sp58, 0x41800000, 0x43980000, 0x41800000, 224.0f);
-    func_80221B2C(&sp58);
-    func_8022970C(&sp58);
-    func_8022149C(&sp58);
+    func_8022A848(sp58, 0x41800000, 0x43980000, 0x41800000, 224.0f);
+    func_80221B2C(sp58);
+    func_8022970C(sp58);
+    func_8022149C(sp58);
     func_802233EC(0xC20FFF);
-    temp_v0 = M2C_FIELD(arg0, void **, 0x44);
+    temp_v0 = ((__repair_record_arg0*)arg0)->field_44;
     sp53 = M2C_FIELD(temp_v0, u8 *, 0);
     sp52 = M2C_FIELD(temp_v0, u8 *, 1);
     sp51 = M2C_FIELD(temp_v0, u8 *, 2);

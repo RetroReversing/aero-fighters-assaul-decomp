@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_8022B460(void *, s32, s32 *);          /* extern */
-u32 func_8022B5E0(s32, u32, s32 *);                 /* extern */
+M2C_UNK func_8022B460(void *, s32);          /* extern */
+u32 func_8022B5E0(s32, u32);                 /* extern */
 
 void func_80225424(void *arg0, s32 *arg1, u32 arg2) {
     u32 temp_ret;
@@ -21,7 +21,7 @@ void func_80225424(void *arg0, s32 *arg1, u32 arg2) {
     u32 temp_v1;
 
     if (arg2 < 9U) {
-        temp_ret = func_8022B5E0(*arg1, arg2, arg1);
+        temp_ret = func_8022B5E0(*arg1, arg2);
         temp_v0 = temp_ret;
         temp_v1 = (u32) (u64) temp_ret;
         *arg1 += arg2;
@@ -41,7 +41,7 @@ void func_80225424(void *arg0, s32 *arg1, u32 arg2) {
             return;
         }
     } else {
-        func_8022B460(arg0, *arg1, arg1);
+        func_8022B460(arg0, *arg1);
         *arg1 += arg2;
     }
 }

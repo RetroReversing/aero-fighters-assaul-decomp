@@ -14,12 +14,12 @@ typedef s32 M2C_UNK32;
 
 M2C_UNK func_80228DE0(s32, s32);                    /* extern */
 M2C_UNK func_80231C9C(M2C_UNK *, M2C_UNK *, M2C_UNK, s32); /* extern */
-extern s32 D_80256DE4;
+extern u8 D_80256DE4[];
 extern u16 D_80280BFA;
 
 void func_8020164C(u8 arg0, s32 arg1) {
-    s32 sp1C;
     s32 temp_v1;
+    s32 sp1C;
     s32 var_a3;
     u16 temp_v0;
 
@@ -32,7 +32,7 @@ void func_8020164C(u8 arg0, s32 arg1) {
         func_80231C9C("emitId < AUD_NEMITTERS", "_aobj.c", 0x13F, var_a3);
         var_a3 = (s32) arg0;
     }
-    if (temp_v1 < (s32) temp_v0) {
-        func_80228DE0(D_80256DE4 + (var_a3 * 0xB4), arg1);
+    if (temp_v1 < (s32) D_80280BFA) {
+        func_80228DE0((*(s32 *)D_80256DE4) + (var_a3 * 0xB4), arg1);
     }
 }

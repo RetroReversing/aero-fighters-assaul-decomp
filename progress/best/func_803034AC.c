@@ -17,7 +17,7 @@ s32 func_80303034(s32);                             /* extern */
 s32 func_80303130(s32);                             /* extern */
 
 s32 func_803034AC(s32 arg0) {
-    if (func_80303034(arg0 + 0x20) == 2) {
+    if (func_80303034(arg0 + 0x58) == 2) {
         return func_80303130(arg0);
     }
     return 0;

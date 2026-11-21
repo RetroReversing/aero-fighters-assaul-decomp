@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 func_8021E66C();
 s32 func_8021E708();
@@ -26,15 +14,15 @@ extern s32 D_80327354;
 extern char D_803273B8[];
 
 void func_802CAA44(void *arg0) {
-    s32 *var_s7;
+    char *var_s7;
     char *var_fp;
     char *var_s1;
-    char *var_s1_2;
+    
     char *var_s7_2;
     s32 var_s0;
     s32 var_s0_2;
     s32 var_s2;
-    s32 var_s2_2;
+    
     s32 var_s3;
     s32 var_s3_2;
 
@@ -61,36 +49,36 @@ loop_2:
         var_s7 += 0x14;
     } while (var_s2 < 4);
     var_s3_2 = 0xA2;
-    var_fp = &D_80327354;
     var_s7_2 = &D_803272DC;
-    var_s2_2 = 0;
+    var_fp = &D_80327354;
+    var_s2 = 0;
     do {
-        if (var_s2_2 == M2C_FIELD(arg0, u8 *, 0x1C)) {
-            if (var_s2_2 == M2C_FIELD(arg0, u8 *, 0x1B)) {
+        if (var_s2 == (*(u8 *)((char *)(arg0) + 0x1C))) {
+            if (var_s2 == (*(u8 *)((char *)(arg0) + 0x1B))) {
                 func_8021E708(0xFF, 0xFF, 0x80, 0xFF);
             } else {
                 func_8021E708(0xFF, 0xFF, 0, 0xFF);
             }
-        } else if (var_s2_2 == M2C_FIELD(arg0, u8 *, 0x1B)) {
+        } else if (var_s2 == (*(u8 *)((char *)(arg0) + 0x1B))) {
             func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
         } else {
             func_8021E708(0x80, 0x80, 0x80, 0xFF);
         }
         func_8021E87C(0x28, var_s3_2, *(s32 *)var_s7_2);
         var_s0_2 = 0;
-        var_s1_2 = var_fp;
+        var_s7 = var_fp;
 loop_15:
-        if (func_8022FF90(*(s32 *)var_s1_2) != 0) {
-            func_802CB730(arg0, *(s32 *)var_s1_2, (var_s0_2 * 0x28) + 0x8B, var_s3_2, var_s2_2, var_s0_2);
+        if (func_8022FF90(*(s32 *)var_s7) != 0) {
+            func_802CB730(arg0,  *(s32 *)var_s7,  (var_s0_2 * 0x28) + 0x8B,  var_s3_2);
         }
         var_s0_2 += 1;
-        var_s1_2 += 4;
+        var_s7 += 4;
         if (var_s0_2 != 4) {
             goto loop_15;
         }
-        var_s2_2 += 1;
+        var_s2 += 1;
         var_s3_2 -= 0x12;
         var_s7_2 += 4;
         var_fp += 0x14;
-    } while (var_s2_2 != 5);
+    } while (var_s2 != 5);
 }

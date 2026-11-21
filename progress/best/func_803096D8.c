@@ -14,11 +14,11 @@ typedef s32 M2C_UNK32;
 
 extern u8 D_80348B9A;
 
-f32 func_803096D8(f32 arg0, s32 arg1, s32 arg2) {
+f32 func_803096D8(f32 arg0, s32 arg1, u8 arg2) {
     f32 var_fv1;
     s32 temp_t6;
 
-    temp_t6 = arg2 & 0xFF;
+    temp_t6 = arg2;
     var_fv1 = 1.0f;
     switch (D_80348B9A) {                           /* irregular */
     default:

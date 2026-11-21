@@ -15,38 +15,23 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_80228DE0(f32, f32, f32 *);             /* extern */
 
 void func_8022A210(void *arg0, f32 arg1, f32 arg2, f32 arg3) {
-    f32 sp54;
-    f32 sp50;
-    f32 sp4C;
-    f32 sp48;
-    f32 sp44;
-    f32 sp40;
-    f32 sp3C;
-    f32 sp38;
-    f32 sp34;
-    f32 sp30;
-    f32 sp2C;
-    f32 sp28;
-    f32 sp24;
-    f32 sp20;
-    f32 sp1C;
-    f32 sp18;
+    f32 sp18[16];
 
-    sp18 = M2C_FIELD(arg0, f32 *, 0) * arg1;
-    sp1C = M2C_FIELD(arg0, f32 *, 4) * arg1;
-    sp20 = M2C_FIELD(arg0, f32 *, 8) * arg1;
-    sp24 = M2C_FIELD(arg0, f32 *, 0xC) * arg1;
-    sp28 = M2C_FIELD(arg0, f32 *, 0x10) * arg2;
-    sp2C = M2C_FIELD(arg0, f32 *, 0x14) * arg2;
-    sp30 = M2C_FIELD(arg0, f32 *, 0x18) * arg2;
-    sp34 = M2C_FIELD(arg0, f32 *, 0x1C) * arg2;
-    sp38 = M2C_FIELD(arg0, f32 *, 0x20) * arg3;
-    sp3C = M2C_FIELD(arg0, f32 *, 0x24) * arg3;
-    sp40 = M2C_FIELD(arg0, f32 *, 0x28) * arg3;
-    sp44 = M2C_FIELD(arg0, f32 *, 0x2C) * arg3;
-    sp48 = M2C_FIELD(arg0, f32 *, 0x30);
-    sp4C = M2C_FIELD(arg0, f32 *, 0x34);
-    sp50 = M2C_FIELD(arg0, f32 *, 0x38);
-    sp54 = M2C_FIELD(arg0, f32 *, 0x3C);
-    func_80228DE0(arg1, arg2, &sp18);
+    sp18[0] = M2C_FIELD(arg0, f32 *, 0) * arg1;
+    sp18[1] = M2C_FIELD(arg0, f32 *, 4) * arg1;
+    sp18[2] = M2C_FIELD(arg0, f32 *, 8) * arg1;
+    sp18[3] = M2C_FIELD(arg0, f32 *, 0xC) * arg1;
+    sp18[4] = M2C_FIELD(arg0, f32 *, 0x10) * arg2;
+    sp18[5] = M2C_FIELD(arg0, f32 *, 0x14) * arg2;
+    sp18[6] = M2C_FIELD(arg0, f32 *, 0x18) * arg2;
+    sp18[7] = M2C_FIELD(arg0, f32 *, 0x1C) * arg2;
+    sp18[8] = M2C_FIELD(arg0, f32 *, 0x20) * arg3;
+    sp18[9] = M2C_FIELD(arg0, f32 *, 0x24) * arg3;
+    sp18[10] = M2C_FIELD(arg0, f32 *, 0x28) * arg3;
+    sp18[11] = M2C_FIELD(arg0, f32 *, 0x2C) * arg3;
+    sp18[12] = M2C_FIELD(arg0, f32 *, 0x30);
+    sp18[13] = M2C_FIELD(arg0, f32 *, 0x34);
+    sp18[14] = M2C_FIELD(arg0, f32 *, 0x38);
+    sp18[15] = M2C_FIELD(arg0, f32 *, 0x3C);
+    func_80228DE0(arg1, arg2, sp18);
 }

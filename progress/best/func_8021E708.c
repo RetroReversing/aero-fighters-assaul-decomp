@@ -17,9 +17,9 @@ extern s8 D_8024E768;
 extern s8 D_8024E76C;
 extern s8 D_8024E770;
 
-void func_8021E708(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
-    D_8024E764 = arg0;
-    D_8024E768 = arg1;
-    D_8024E76C = arg2;
-    D_8024E770 = arg3;
+void func_8021E708(u8 arg0, u8 arg1, u8 arg2, s32 arg3) {
+    (*(u8 *)&D_8024E764) = arg0;
+    (*(u8 *)&D_8024E768) = arg1;
+    (*(u8 *)&D_8024E76C) = arg2;
+    (*(u8 *)&D_8024E770) = arg3;
 }

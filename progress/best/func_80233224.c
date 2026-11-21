@@ -24,21 +24,22 @@ extern s32 D_8028394C;
 extern s8 D_80283954;
 
 void func_80233224(void) {
+    unsigned short *__base_D_80280BD6;
     s32 sp24;
     s32 temp_v0;
     s32 var_a0;
     s32 var_v0;
-    s32 var_v1;
+    
     void *temp_v0_2;
 
     temp_v0 = func_8022BA58(D_80280BF4 * 0x1C);
     D_80283940 = temp_v0;
-    func_8022B780(temp_v0, 0, D_80280BF4 * 0x1C, &D_80283940);
-    var_v1 = 0;
+    do { func_8022B780(temp_v0, 0, D_80280BF4 * 0x1C, &D_80283940); } while (0);
+    temp_v0 = 0;
     if ((s32) D_80280BF4 > 0) {
         var_a0 = 0;
         do {
-            var_v1 += 1;
+            temp_v0 += 1;
             temp_v0_2 = var_a0 + D_80283940;
             M2C_FIELD(temp_v0_2, s8 *, 0x1A) = 0;
             M2C_FIELD(temp_v0_2, s8 *, 0x1B) = 0;
@@ -51,25 +52,26 @@ void func_80233224(void) {
             M2C_FIELD(temp_v0_2, s8 *, 0x18) = 0;
             M2C_FIELD(temp_v0_2, s8 *, 0x19) = 0;
             var_a0 += 0x1C;
-        } while (var_v1 < (s32) D_80280BF4);
-        var_v1 = 0;
+        } while (temp_v0 < (s32) D_80280BF4);
+        temp_v0 = 0;
     }
     if (D_80283944 == 0) {
         sp24 = 0;
-        D_80283944 = func_8022BA58(D_80280BD6 * 2, &D_80283944);
-        var_v1 = 0;
+        __base_D_80280BD6 = &D_80280BD6;
+        D_80283944 = func_8022BA58((*__base_D_80280BD6) * 2, &D_80283944);
+        temp_v0 = 0;
     }
     if (D_8028394C == 0) {
-        sp24 = var_v1;
-        D_8028394C = func_8022BA58(D_80280BD6 * 8, &D_80283944);
+        sp24 = temp_v0;
+        D_8028394C = func_8022BA58((*__base_D_80280BD6) * 8, &D_80283944);
     }
     var_v0 = 0;
-    if ((s32) D_80280BD6 > 0) {
+    if ((s32) (*__base_D_80280BD6) > 0) {
         do {
-            var_v1 += 1;
-            *(s32 *)(D_80283944 + var_v0) = 0xFF;
+            temp_v0 += 1;
+            *(s16 *)(D_80283944 + var_v0) = 0xFF;
             var_v0 += 2;
-        } while (var_v1 < (s32) D_80280BD6);
+        } while (temp_v0 < (s32) (*__base_D_80280BD6));
     }
     D_80283948 = 0;
     D_80283954 = 1;

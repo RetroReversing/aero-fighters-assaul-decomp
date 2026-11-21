@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 s32 osVirtualToPhysical();
 extern s32 D_8024E858;
@@ -19,10 +7,12 @@ extern s32 D_80274388;
 extern s32 D_80274398;
 
 void func_802223E0(s32 arg0) {
+int *__repair_home0 = &arg0;
+
     void *sp4C;
-    s32 *sp2C;
-    s32 *sp1C;
     s32 *temp_v1;
+    s32 *sp1C;
+    void *temp_t5;
     s32 *temp_v1_10;
     s32 *temp_v1_11;
     s32 *temp_v1_12;
@@ -37,70 +27,71 @@ void func_802223E0(s32 arg0) {
     s32 *temp_v1_7;
     s32 *temp_v1_8;
     s32 *temp_v1_9;
-    void *temp_t5;
+    s32 *sp2C;
 
     temp_v1 = D_80273B90;
-    D_80273B90 = temp_v1 + 8;
-    M2C_FIELD(temp_v1, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1, s32 *, 4) = 0;
+    D_80273B90 = (s8 *) temp_v1 + 8;
+    (*(s32 *)((char *)(temp_v1) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1) + 4)) = 0;
+    temp_t5 = ((*__repair_home0) << 5) + D_80274398;
     temp_v1_2 = D_80273B90;
-    temp_t5 = (arg0 << 5) + D_80274398;
     D_80273B90 = temp_v1_2 + 8;
-    M2C_FIELD(temp_v1_2, s32 *, 4) = 0x0F0A4000;
-    M2C_FIELD(temp_v1_2, s32 *, 0) = 0xB900031D;
+    (*(s32 *)((char *)(temp_v1_2) + 4)) = 0x0F0A4000;
+    (*(s32 *)((char *)(temp_v1_2) + 0)) = 0xB900031D;
     temp_v1_3 = D_80273B90;
     D_80273B90 = temp_v1_3 + 8;
-    M2C_FIELD(temp_v1_3, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1_3, s32 *, 4) = 0;
+    (*(s32 *)((char *)(temp_v1_3) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_3) + 4)) = 0;
     temp_v1_4 = D_80273B90;
     D_80273B90 = temp_v1_4 + 8;
-    M2C_FIELD(temp_v1_4, s32 *, 0) = 0xBA001402;
-    M2C_FIELD(temp_v1_4, s32 *, 4) = 0x300000;
+    (*(s32 *)((char *)(temp_v1_4) + 0)) = 0xBA001402;
+    (*(s32 *)((char *)(temp_v1_4) + 4)) = 0x300000;
     temp_v1_5 = D_80273B90;
     D_80273B90 = temp_v1_5 + 8;
-    M2C_FIELD(temp_v1_5, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1_5, s32 *, 4) = 0;
+    (*(s32 *)((char *)(temp_v1_5) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_5) + 4)) = 0;
     temp_v1_6 = D_80273B90;
     D_80273B90 = temp_v1_6 + 8;
-    M2C_FIELD(temp_v1_6, s32 *, 0) = 0xF7000000;
-    M2C_FIELD(temp_v1_6, s32 *, 4) = 0xFFFCFFFC;
+    (*(s32 *)((char *)(temp_v1_6) + 0)) = 0xF7000000;
+    (*(s32 *)((char *)(temp_v1_6) + 4)) = 0xFFFCFFFC;
     temp_v1_7 = D_80273B90;
     D_80273B90 = temp_v1_7 + 8;
-    M2C_FIELD(temp_v1_7, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1_7, s32 *, 4) = 0;
+    (*(s32 *)((char *)(temp_v1_7) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_7) + 4)) = 0;
     temp_v1_8 = D_80273B90;
     D_80273B90 = temp_v1_8 + 8;
-    M2C_FIELD(temp_v1_8, s32 *, 0) = 0xFF10013F;
+    (*(s32 *)((char *)(temp_v1_8) + 0)) = 0xFF10013F;
     sp4C = temp_t5;
     sp2C = temp_v1_8;
-    M2C_FIELD(sp2C, s32 *, 4) = osVirtualToPhysical(D_80274388, &D_80273B90, 0xE7000000);
+    (*(s32 *)((char *)(sp2C) + 4)) = osVirtualToPhysical(D_80274388, &D_80273B90);
     temp_v1_9 = D_80273B90;
     D_80273B90 = temp_v1_9 + 8;
-    M2C_FIELD(temp_v1_9, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1_9, s32 *, 4) = 0;
+    (*(s32 *)((char *)(temp_v1_9) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_9) + 4)) = 0;
     temp_v1_10 = D_80273B90;
     D_80273B90 = temp_v1_10 + 8;
-    M2C_FIELD(temp_v1_10, s32 *, 0) = ((M2C_FIELD(temp_t5, s16 *, 0xA) & 0x3FF) << 0xE) | 0xF6000000 | (((0xF0 - M2C_FIELD(temp_t5, s16 *, 0xC)) & 0x3FF) * 4);
-    M2C_FIELD(temp_v1_10, s32 *, 4) = (s32) (((M2C_FIELD(temp_t5, s16 *, 8) & 0x3FF) << 0xE) | (((0xF0 - M2C_FIELD(temp_t5, s16 *, 0xE)) & 0x3FF) * 4));
+    (*(s32 *)((char *)(temp_v1_10) + 0)) = (((*(s16 *)((char *)(temp_t5) + 0xA)) & 0x3FF) << 0xE) | 0xF6000000 | (((0xF0 - (*(s16 *)((char *)(temp_t5) + 0xC))) & 0x3FF) * 4);
+    (*(s32 *)((char *)(temp_v1_10) + 4)) = (s32) ((((*(s16 *)((char *)(temp_t5) + 8)) & 0x3FF) << 0xE) | (((0xF0 - (*(s16 *)((char *)(temp_t5) + 0xE))) & 0x3FF) * 4));
     temp_v1_11 = D_80273B90;
     D_80273B90 = temp_v1_11 + 8;
-    M2C_FIELD(temp_v1_11, s32 *, 0) = 0xE7000000;
-    M2C_FIELD(temp_v1_11, s32 *, 4) = 0;
+    (*(s32 *)((char *)(temp_v1_11) + 0)) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_11) + 4)) = 0;
     temp_v1_12 = D_80273B90;
     D_80273B90 = temp_v1_12 + 8;
-    M2C_FIELD(temp_v1_12, s32 *, 0) = 0xFF10013F;
+    (*(s32 *)((char *)(temp_v1_12) + 0)) = 0xFF10013F;
     sp1C = temp_v1_12;
-    M2C_FIELD(sp1C, s32 *, 4) = osVirtualToPhysical(D_8024E858, &D_80273B90, 0xE7000000);
+temp_v1_12 = 0;
+    (*(s32 *)((char *)(sp1C) + 4)) = osVirtualToPhysical(D_8024E858, &D_80273B90, 0xE7000000);
     temp_v1_13 = D_80273B90;
     D_80273B90 = temp_v1_13 + 8;
-    M2C_FIELD(temp_v1_13, s32 *, 4) = 0;
-    M2C_FIELD(temp_v1_13, s32 *, 0) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_13) + 4)) = 0;
+    (*(s32 *)((char *)(temp_v1_13) + 0)) = 0xE7000000;
     temp_v1_14 = D_80273B90;
     D_80273B90 = temp_v1_14 + 8;
-    M2C_FIELD(temp_v1_14, s32 *, 4) = 0x100000;
-    M2C_FIELD(temp_v1_14, s32 *, 0) = 0xBA001402;
+    (*(s32 *)((char *)(temp_v1_14) + 0)) = 0xBA001402;
+    (*(s32 *)((char *)(temp_v1_14) + 4)) = 0x100000;
     temp_v1_15 = D_80273B90;
     D_80273B90 = temp_v1_15 + 8;
-    M2C_FIELD(temp_v1_15, s32 *, 4) = 0;
-    M2C_FIELD(temp_v1_15, s32 *, 0) = 0xE7000000;
+    (*(s32 *)((char *)(temp_v1_15) + 4)) = 0;
+    (*(s32 *)((char *)(temp_v1_15) + 0)) = 0xE7000000;
 }

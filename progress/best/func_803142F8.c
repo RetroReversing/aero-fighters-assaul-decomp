@@ -17,7 +17,7 @@ M2C_UNK func_8021B6D4(s32, s16, M2C_UNK *);         /* extern */
 M2C_UNK func_8022970C(M2C_UNK *);                   /* extern */
 s32 func_802AD4E8(s32, void *, M2C_UNK *, f32 *, f32 *, s32, f32, f32, f32, f32); /* extern */
 M2C_UNK func_802C5150(void *, M2C_UNK *);           /* extern */
-s32 func_802C53E8(f32, M2C_UNK, void *, s32, f32);  /* extern */
+s32 func_802C53E8(f32,  M2C_UNK,  void *);  /* extern */
 M2C_UNK func_802CF148(M2C_UNK *, f32 *, f32 *, f32 *, f32 *, f32 *, f32 *); /* extern */
 M2C_UNK func_802CF1FC(f32, f32, M2C_UNK32, f32, f32, f32, M2C_UNK *); /* extern */
 f32 func_802CF450(f32, f32);                        /* extern */
@@ -142,7 +142,7 @@ s32 func_803142F8(void *arg0, s32 arg1, f32 arg2) {
                 var_fv1_2 = -temp_fv0_3;
             }
             if (var_fv1_2 < 2.0f) {
-                return func_802C53E8(D_803471B0, 0x40000000, arg0, arg1, arg2);
+                return func_802C53E8(D_803471B0,  0x40000000,  arg0);
             }
             goto block_25;
         }

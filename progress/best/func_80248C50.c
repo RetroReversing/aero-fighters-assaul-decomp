@@ -20,23 +20,26 @@ extern s32 D_A460000C;
 extern s32 D_A4600010;
 
 s32 func_80248C50(void *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
+int *__repair_home3 = &arg3;
+
+    s32 *__base_D_A4600010;
 int *__repair_home1 = &arg1;
 
-    if (D_A4600010 & 3) {
+    __base_D_A4600010 = &D_A4600010;
+    if ((*__base_D_A4600010) & 3) {
         do {
 
-        } while (D_A4600010 & 3);
+        } while ((*__base_D_A4600010) & 3);
     }
-    D_A4600000 = osVirtualToPhysical(arg3);
+    D_A4600000 = osVirtualToPhysical((*__repair_home3));
     D_A4600004 = (M2C_FIELD(arg0, s32 *, 0xC) | arg2) & 0x1FFFFFFF;
     switch ((*__repair_home1)) {                                 /* irregular */
     case 0:
         D_A460000C = arg4 - 1;
-block_8:
         return 0;
     case 1:
         D_A4600008 = arg4 - 1;
-        goto block_8;
+        return 0;
     default:
         return -1;
     }

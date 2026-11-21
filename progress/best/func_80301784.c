@@ -18,7 +18,7 @@ void func_80301784(void *arg0, f32 arg1, f32 arg2) {
     f32 temp_fv0;
     f32 temp_fv1;
 
-    func_8022A0D0(arg2, arg1, 0.0f, arg2, 0x41000000);
+    func_8022A0D0(arg2, arg1, 0.0f);
     temp_fv1 = M2C_FIELD(arg0, f32 *, 0x20);
     temp_fv0 = temp_fv1 * temp_fv1;
     func_8022A0D0(arg1, 0.0f, temp_fv0 * -25.0f, temp_fv0 * 2.0f);

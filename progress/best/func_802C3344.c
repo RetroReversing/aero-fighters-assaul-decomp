@@ -16,30 +16,32 @@ M2C_UNK func_802C2148(void *, f32, M2C_UNK, M2C_UNK, f32, f32); /* extern */
 M2C_UNK func_802C22F4(void *, f32, M2C_UNK);        /* extern */
 M2C_UNK func_802C57C4(void *, M2C_UNK);             /* extern */
 
+typedef struct { unsigned char pad_0[4]; int field_4; unsigned char pad_8[220]; int field_E4; unsigned char pad_E8[8]; float field_F0; unsigned char pad_F4[116]; float field_168; } __repair_record_arg0;
 void func_802C3344(void *arg0, f32 arg1) {
     s32 temp_v0;
     s32 var_v1;
 
-    var_v1 = M2C_FIELD(arg0, s32 *, 0xE4);
-    if ((var_v1 > 0) && ((M2C_FIELD(arg0, f32 *, 0xF0) + M2C_FIELD(arg0, f32 *, 0x168)) <= arg1)) {
-        temp_v0 = M2C_FIELD(arg0, s32 *, 4);
+    var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+    if ((var_v1 > 0) && ((((__repair_record_arg0*)arg0)->field_F0 + ((__repair_record_arg0*)arg0)->field_168) <= arg1)) {
+        temp_v0 = ((__repair_record_arg0*)arg0)->field_4;
         switch (temp_v0) {                          /* irregular */
-        case 12:
-            func_802C57C4(arg0, 6);
-            func_802C22F4(arg0, arg1, 0);
-block_9:
-            var_v1 = M2C_FIELD(arg0, s32 *, 0xE4);
-            break;
         case 10:
             func_802C57C4(arg0, 1);
             func_802C2148(arg0, arg1, 3, 0x3F800000, 5.0f, 70.0f);
-            goto block_9;
+            var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+            break;
         case 11:
             func_802C57C4(arg0, 8);
             func_802C2148(arg0, arg1, 0, 0x3F400000, 4.0f, 87.5f);
-            goto block_9;
+            var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+            break;
+        case 12:
+            func_802C57C4(arg0, 6);
+            func_802C22F4(arg0, arg1, 0);
+            var_v1 = ((__repair_record_arg0*)arg0)->field_E4;
+            break;
         }
-        M2C_FIELD(arg0, s32 *, 0xE4) = (s32) (var_v1 - 1);
-        M2C_FIELD(arg0, f32 *, 0xF0) = arg1;
+        ((__repair_record_arg0*)arg0)->field_E4 = (s32) (var_v1 - 1);
+        ((__repair_record_arg0*)arg0)->field_F0 = arg1;
     }
 }

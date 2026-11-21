@@ -17,12 +17,12 @@ extern char D_80327808[];
 extern char D_8032780C[];
 extern char D_80327810[];
 
-void func_802D00F8(s16 arg0, s16 arg1, s8 arg2, s32 arg3, u8 arg4) {
+void func_802D00F8(s32 arg0, s32 arg1, s32 arg2, s32 arg3, u8 arg4) {
     s32 temp_v0;
 
     temp_v0 = arg3 * 2;
-    *(D_80327804 + temp_v0) = arg0;
-    *(D_80327808 + temp_v0) = arg1;
+    *(s16 *)(D_80327804 + temp_v0) = arg0;
+    *(s16 *)(D_80327808 + temp_v0) = arg1;
     *(D_8032780C + arg3) = arg2;
     *(D_80327810 + arg3) = arg4;
 }

@@ -21,8 +21,10 @@ extern M2C_UNK D_80323758;
 extern s32 D_8032AA74;
 
 void func_80290D88(s32 arg0) {
+int *__repair_home0 = &arg0;
+
     s32 sp34;
-    s32 sp28;
+    
     s32 temp_a1;
     s32 temp_a1_2;
     s32 temp_s0;
@@ -33,14 +35,14 @@ void func_80290D88(s32 arg0) {
     func_80231A24(&D_80323758);
     temp_v0 = func_80305E10(0x1388, 0);
     temp_s0 = sp34 + 0x8F4;
-    temp_a1 = arg0 + 0x32C;
-    sp28 = temp_a1;
+    temp_a1 = (*__repair_home0) + 0x32C;
+    sp34 = temp_a1;
     func_803021B8(temp_s0, temp_a1, 0x39, temp_v0, 0x20);
     func_803025AC(temp_s0, temp_a1, 0x3F800000);
     func_803025E4(temp_s0, temp_a1, 0x3F19999A);
     temp_v0_2 = func_80305E10(0x1388, 0);
-    temp_a1_2 = arg0 + 0x334;
-    sp28 = temp_a1_2;
+    temp_a1_2 = (*__repair_home0) + 0x334;
+    sp34 = temp_a1_2;
     func_803021B8(temp_s0, temp_a1_2, 0x29, temp_v0_2, 0x20);
     func_803025AC(temp_s0, temp_a1_2, 0x3F4CCCCD);
     func_803025E4(temp_s0, temp_a1_2, 0x3EB33333);

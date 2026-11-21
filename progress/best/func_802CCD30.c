@@ -19,11 +19,14 @@ s32 func_802CA3A8();
 s32 func_802CB998();
 u8 func_802CD1F4();
 extern s8 D_8032AA80;
-extern s8 D_8032AA84;
+extern s8 D_8032AA84[];
 
 u8 func_802CCD30(void *arg0) {
     u8 sp27;
     u8 temp_v0;
+    s8 *__base_D_8032AA84;
+
+    __base_D_8032AA84 = D_8032AA84;
 
     sp27 = 1;
     func_802CB998(arg0, 1);
@@ -33,13 +36,13 @@ u8 func_802CCD30(void *arg0) {
         case 0:
             D_8032AA80 = 0xE;
             M2C_FIELD(arg0, s8 *, 0x86) = 6;
-            D_8032AA84 = 6;
+            (*__base_D_8032AA84) = 6;
             sp27 = 0;
             break;
         case 1:
             D_8032AA80 = 0xE;
             M2C_FIELD(arg0, s8 *, 0x86) = 7;
-            D_8032AA84 = 7;
+            (*D_8032AA84) = 7;
             sp27 = 0;
             break;
         case 2:

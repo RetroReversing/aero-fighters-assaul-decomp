@@ -40,9 +40,7 @@ extern f32 D_803469F8;
 extern M2C_UNK func_8030DE3C;
 
 void func_8030F150(s32 arg0) {
-    f32 sp128;
-    f32 sp124;
-    f32 sp120;
+    f32 sp120[3];
     M2C_UNK spF0;
     M2C_UNK spB0;
     M2C_UNK sp70;
@@ -62,9 +60,9 @@ void func_8030F150(s32 arg0) {
     func_8022A0D0(&spB0, 0, 0xC35C0000, 0x41200000);
     func_8021B4B0(temp_v0, 0, &spB0);
     func_8022970C(&spF0);
-    sp120 = D_803469E0;
-    sp124 = D_803469E4;
-    sp128 = D_803469E8;
+    sp120[0] = D_803469E0;
+    sp120[1] = D_803469E4;
+    sp120[2] = D_803469E8;
     func_8021E66C(0);
     func_80205E0C(0, 2);
     func_80309CC8(0, 0, 0);

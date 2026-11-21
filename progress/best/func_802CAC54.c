@@ -1,16 +1,4 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
 extern unsigned short D_80348BA2;
 s32 func_8021E708();
@@ -33,20 +21,20 @@ void func_802CAC54(void *arg0) {
     var_s3 = &D_803273C8;
     var_s0 = 0;
     do {
-        if (var_s0 == M2C_FIELD(arg0, u8 *, 0x1B)) {
+        if (var_s0 == (*(u8 *)((char *)(arg0) + 0x1B))) {
             func_8021E708(0, 0xFF, 0, 0xFF);
         } else {
             func_8021E708(0, 0x80, 0, 0xFF);
         }
-        if ((var_s0 == 2) && (M2C_FIELD(arg0, u8 *, 0x7C) == 0)) {
+        if ((var_s0 == 2) && ((*(u8 *)((char *)(arg0) + 0x7C)) == 0)) {
             func_8021E708(0x80, 0, 0, 0xFF);
-            if (M2C_FIELD(arg0, u8 *, 0x1B) == 2) {
+            if ((*(u8 *)((char *)(arg0) + 0x1B)) == 2) {
                 func_8021E708(0xFF, 0, 0, 0xFF);
             }
         }
-        if ((var_s0 == 5) && ((D_80348BA2 == 0) || (D_80348BA2 & 0x400) || (D_8032AA90 != 0) || ((D_80348BA2 & 0x40) && !(D_80348BA2 & 0x200)))) {
+        if ((var_s0 == 5) && ((D_80348BA2 == 0) || (D_80348BA2 & 0x400) || (D_8032AA90 != 0) || ((D_80348BA2 & 0x40) && !((u32)D_80348BA2 & 0x200)))) {
             func_8021E708(0x80, 0, 0, 0xFF);
-            if (M2C_FIELD(arg0, u8 *, 0x1B) == 5) {
+            if ((*(u8 *)((char *)(arg0) + 0x1B)) == 5) {
                 func_8021E708(0xFF, 0, 0, 0xFF);
             }
         }

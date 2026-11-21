@@ -17,8 +17,12 @@ M2C_UNK func_802FCD44(void *);                      /* extern */
 extern void *D_8032AA74;
 
 void func_802FD104(void *arg0) {
-    M2C_FIELD(arg0, void **, 0) = (void *) D_8032AA74;
-    if ((M2C_FIELD(arg0, u8 *, 0xA9) != 0) && (M2C_FIELD(D_8032AA74, u8 *, 0x716C) != 0) && (M2C_FIELD(arg0, u8 *, 0xA8) != 0)) {
+char *__repair_addr;
+
+    void **__base_D_8032AA74;
+    __base_D_8032AA74 = &D_8032AA74;
+    M2C_FIELD(arg0, void **, 0) = (void *) (*__base_D_8032AA74);
+    if ((M2C_FIELD(arg0, u8 *, 0xA9) != 0) && (M2C_FIELD((__repair_addr = (char *)((*__base_D_8032AA74))), u8 *, 0x716C) != 0) && (M2C_FIELD(arg0, u8 *, 0xA8) != 0)) {
         func_802FCA30();
         func_802FCD44(arg0);
     }

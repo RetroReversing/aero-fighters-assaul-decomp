@@ -23,6 +23,8 @@ extern s32 D_8025C3E0;
 extern u16 D_80280BE6;
 
 void func_8021B240(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+int *__repair_home0 = &arg0;
+
     s32 *var_s0;
     s32 *var_v0;
     s32 *var_v1;
@@ -39,21 +41,24 @@ void func_8021B240(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
     s32 temp_v0_2;
     void *temp_s1;
 
-    if (arg0 >= (s32) D_80280BE6) {
-        func_80231A24(D_802531A8, arg0);
+    if ((*__repair_home0) >= (s32) D_80280BE6) {
+        func_80231A24(D_802531A8);
         return;
     }
-    temp_s1 = (arg0 * 0x24) + D_8025C3E0;
+    temp_s1 = ((*__repair_home0) * 0x24) + D_8025C3E0;
     var_s0 = &arg1;
     if (M2C_FIELD(temp_s1, u16 *, 0) == 0xFFFF) {
         func_80231A24(D_802531D8);
         return;
     }
 loop_5:
-    temp_s0 = (s32) (var_s0 + 3) & ~3;
+    temp_s0 = (s32) ((s8 *) var_s0 + 3) & ~3;
     temp_a1 = M2C_FIELD(temp_s0, s16 *, 2);
     temp_s0_2 = temp_s0 + 4;
     switch (temp_a1) {
+    default:
+        func_80231A24(D_8025326C, (s32) temp_a1);
+        break;
     case 1:
         if (temp_s0_2 & 1) {
             var_s0 = temp_s0_2 + 7;
@@ -104,8 +109,5 @@ loop_5:
         var_s0 = temp_s0_8 + 4;
         M2C_FIELD(temp_s1, s32 *, 0x20) = (s32) *(s32 *)temp_s0_8;
         goto loop_5;
-    default:
-        func_80231A24(D_8025326C, (s32) temp_a1);
-        break;
     }
 }

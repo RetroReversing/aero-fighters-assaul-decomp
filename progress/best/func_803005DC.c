@@ -16,7 +16,7 @@ M2C_UNK func_80231A24(M2C_UNK *);                   /* extern */
 extern M2C_UNK D_803293A4;
 
 void func_803005DC(void) {
-    s16 var_s0;
+    s32 var_s0;
 
     var_s0 = 0;
     do {

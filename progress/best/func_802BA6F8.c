@@ -1,34 +1,21 @@
 /* machine draft (m2c) for ido-7.1 -O2 -mips2 -G 0 -non_shared -Xcpluscomm -Wab,-r4300_mul -woff 649,838,712, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 
-M2C_UNK func_8028C240(M2C_UNK, f32 *, f32 *, f32 *); /* extern */
+s32 func_8028C240(s32, f32 *, f32 *, f32 *); /* extern */
 
-s32 func_802BA6F8(s32 arg0, void *arg1, M2C_UNK arg2, s32 *arg3, s32 *arg4) {
+s32 func_802BA6F8(s32 arg0, void *arg1, s32 arg2, s32 *arg3, s32 *arg4) {
 int *__repair_home0 = &arg0;
 
-    f32 sp3C;
     f32 sp38;
     f32 sp34;
-    f32 temp_fa0;
     f32 temp_fv0;
     f32 temp_fv1;
+    f32 temp_fa0;
+    f32 sp3C;
 
     func_8028C240(arg2, &sp3C, &sp38, &sp34);
-    temp_fv0 = (sp3C * M2C_FIELD(arg1, f32 *, 0xC)) + (sp38 * M2C_FIELD(arg1, f32 *, 0x1C)) + (sp34 * M2C_FIELD(arg1, f32 *, 0x2C)) + M2C_FIELD(arg1, f32 *, 0x3C);
-    temp_fv1 = ((sp3C * M2C_FIELD(arg1, f32 *, 0)) + (sp38 * M2C_FIELD(arg1, f32 *, 0x10)) + (sp34 * M2C_FIELD(arg1, f32 *, 0x20)) + M2C_FIELD(arg1, f32 *, 0x30)) / temp_fv0;
-    temp_fa0 = ((sp3C * M2C_FIELD(arg1, f32 *, 4)) + (sp38 * M2C_FIELD(arg1, f32 *, 0x14)) + (sp34 * M2C_FIELD(arg1, f32 *, 0x24)) + M2C_FIELD(arg1, f32 *, 0x34)) / temp_fv0;
-    if ((temp_fv1 < -1.0f) || (temp_fv1 > 1.0f) || (temp_fa0 < -1.0f) || (temp_fa0 > 1.0f) || ((((sp3C * M2C_FIELD(arg1, f32 *, 8)) + (sp38 * M2C_FIELD(arg1, f32 *, 0x18)) + (sp34 * M2C_FIELD(arg1, f32 *, 0x28)) + M2C_FIELD(arg1, f32 *, 0x38)) / temp_fv0) > 1.0f)) {
+    temp_fv1 = ((sp3C * (*(f32 *)((char *)(arg1) + 0))) + (sp38 * (*(f32 *)((char *)(arg1) + 0x10))) + (sp34 * (*(f32 *)((char *)(arg1) + 0x20))) + (*(f32 *)((char *)(arg1) + 0x30))) / (temp_fv0 = (sp3C * (*(f32 *)((char *)(arg1) + 0xC))) + (sp38 * (*(f32 *)((char *)(arg1) + 0x1C))) + (sp34 * (*(f32 *)((char *)(arg1) + 0x2C))) + (*(f32 *)((char *)(arg1) + 0x3C)));
+    temp_fa0 = ((sp3C * (*(f32 *)((char *)(arg1) + 4))) + (sp38 * (*(f32 *)((char *)(arg1) + 0x14))) + (sp34 * (*(f32 *)((char *)(arg1) + 0x24))) + (*(f32 *)((char *)(arg1) + 0x34))) / temp_fv0;
+    if ((temp_fv1 < -1.0f) || (temp_fv1 > 1.0f) || (temp_fa0 < -1.0f) || (temp_fa0 > 1.0f) || ((((sp3C * (*(f32 *)((char *)(arg1) + 8))) + (sp38 * (*(f32 *)((char *)(arg1) + 0x18))) + (sp34 * (*(f32 *)((char *)(arg1) + 0x28))) + (*(f32 *)((char *)(arg1) + 0x38))) / temp_fv0) > 1.0f)) {
         return 0;
     }
     *arg3 = (s32) ((temp_fv1 * 160.0f) + 160.0f);
