@@ -10,9 +10,9 @@ s32 func_8022342C(s32);                     /* extern */
 
 void func_8021A628(void *arg0) {
     f32 sp60;
-    f32 sp58;
-    register f32 sp5C;
     f32 temp_ft0;
+    register f32 sp5C;
+    f32 sp58;
     register f32 sp54;
     register f32 sp50;
     register f32 sp4C;
@@ -38,7 +38,7 @@ void func_8021A628(void *arg0) {
     temp_ft3 = sp58;
     temp_ft5 = sp50;
     func_8021F35C(temp_ft1, temp_ft3, temp_ft5, 0, 0, 0xFF, 0xFF, 0xFF, 0x78);
-    temp_ft1_2 = (s32) sp54;
+    temp_ft1_2 = (s32) (s32)sp54;
     func_8021F35C(temp_ft1, temp_ft1_2, temp_ft5, 0, 0, 0xFF, 0xFF, 0xFF, 0x78);
     temp_ft3_2 = (s32) sp5C;
     func_8021F35C(temp_ft3_2, temp_ft1_2, temp_ft5, 0, 0, 0xFF, 0xFF, 0xFF, 0x78);
