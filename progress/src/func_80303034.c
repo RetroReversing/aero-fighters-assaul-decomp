@@ -13,7 +13,7 @@ typedef s32 M2C_UNK32;
 #endif
 
 s32 func_80231A24();
-s32 func_80302FBC();
+s32 func_80302FBC(void *, f32);
 extern char D_8032A42C[];
 extern char D_8032A470[];
 
@@ -22,10 +22,10 @@ void func_80303034(void *arg0) {
 
     temp_fv0 = M2C_FIELD(arg0, f32 *, 8);
     if ((f64) temp_fv0 < 0.0) {
-        func_80231A24(D_8032A42C, arg0);
+        func_80231A24(D_8032A42C);
         func_80231A24(D_8032A470);
         func_80302FBC(arg0, 10.0f);
         return;
     }
-    func_80302FBC(arg0, temp_fv0, arg0);
+    func_80302FBC(arg0, temp_fv0);
 }
