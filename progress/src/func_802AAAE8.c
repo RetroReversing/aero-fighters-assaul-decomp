@@ -17,9 +17,9 @@ M2C_UNK func_802D6F68(void *, s32);                 /* extern */
 extern M2C_UNK D_8032618C;
 
 void *func_802AAAE8(s32 arg0, s32 arg1) {
-    void *sp24;
     void *temp_v0;
     void *var_a0;
+    void *sp24;
 
     temp_v0 = func_802A2620(arg0 + 0x6828, arg0 + 0x6830, 2, arg0 + 0x6831, &D_8032618C);
     var_a0 = temp_v0;
