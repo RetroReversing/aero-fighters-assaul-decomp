@@ -999,5 +999,14 @@
   "score_before": 300,
   "score_after": 0,
   "handoff_inputs": "bffc1b1acd2d3c07df921e31fb90e945c37a26203aa1924df8fa8954089645e2:c8e377fb691cb04e92ce1744edbb1ef4b7d00367f2012b634f1f3ed8e2fdec23:945c184d7dbe1ebe931e98e8d9c02240617d6de0135e3d73c7b8e69b90713fb5"
+ },
+ {
+  "function": "func_8023CD4C",
+  "text": "Autopilot matched from MIPS leaf template",
+  "by": "autopilot",
+  "created_at": 1795222022.419061,
+  "score_before": 300,
+  "score_after": 0,
+  "handoff_inputs": "bffc1b1acd2d3c07df921e31fb90e945c37a26203aa1924df8fa8954089645e2:c8e377fb691cb04e92ce1744edbb1ef4b7d00367f2012b634f1f3ed8e2fdec23:f25f63dda2c28bd6ae535a1daa1f9bcd8b72824914fc6eac7c35d189d4ee1f6d"
  }
 ]
