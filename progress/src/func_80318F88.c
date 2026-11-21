@@ -22,9 +22,9 @@ void func_80318F88(void *arg0, s32 arg1) {
 
     var_a2 = M2C_FIELD(arg0, s32 *, 0xC);
     if (var_a2 == 0) {
-        func_80231A24(D_8032BCA4, D_8032BCB8, var_a2, arg0);
+        func_80231A24(D_8032BCA4,  D_8032BCB8);
         *(s32 *)NULL = 0x29A;
         var_a2 = M2C_FIELD(arg0, s32 *, 0xC);
     }
-    func_802D2910(var_a2, arg1, var_a2, arg0);
+    func_802D2910(var_a2,  arg1);
 }
