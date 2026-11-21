@@ -23,15 +23,15 @@ extern M2C_UNK D_80273BBC;
 s32 func_80223230(u32 arg0) {
     switch (arg0) {
     case 0:
-        return *(&D_80273B9C + -(D_8024E874 * 4));
+        return *((M2C_UNK *)((s8 *)&D_80273B9C + -(D_8024E874 * 4)));
     case 1:
-        return *(&D_80273BA4 + -(D_8024E874 * 4));
+        return *((M2C_UNK *)((s8 *)&D_80273BA4 + -(D_8024E874 * 4)));
     case 4:
-        return *(&D_80273BAC + -(D_8024E874 * 4));
+        return *((M2C_UNK *)((s8 *)&D_80273BAC + -(D_8024E874 * 4)));
     case 2:
-        return *(&D_80273BB4 + -(D_8024E874 * 4));
+        return *((M2C_UNK *)((s8 *)&D_80273BB4 + -(D_8024E874 * 4)));
     case 3:
-        return *(&D_80273BBC + -(D_8024E874 * 4));
+        return *((M2C_UNK *)((s8 *)&D_80273BBC + -(D_8024E874 * 4)));
     default:
         func_80231A24("uvGfxGetCnt: no such count type %d", arg0);
         return 0;
