@@ -16,7 +16,7 @@ s32 func_80233D58();
 
 void func_8028EE68(void *arg0) {
     M2C_FIELD(arg0, s8 *, 0x10) = 0;
-    func_80233D58(M2C_FIELD(arg0, s32 *, 0x358), arg0);
+    func_80233D58(M2C_FIELD(arg0, s32 *, 0x358));
     func_80233D58(M2C_FIELD(arg0, s32 *, 0x35C));
     func_80233D58(M2C_FIELD(arg0, s32 *, 0x360));
 }
