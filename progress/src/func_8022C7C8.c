@@ -22,7 +22,7 @@ extern s32 D_A4040010;
 
 void func_8022C7C8(void) {
     func_80231A24(&D_80254464);
-    D_A4040010 = 0x2902;
+    *(volatile s32 *)0xA4040010 = 0x2902;
     if (D_80278729 != 0) {
         osSendMesg(&D_80281258, 0x29B, 0);
     }
