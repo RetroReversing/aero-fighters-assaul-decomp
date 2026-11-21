@@ -5141,6 +5141,23 @@
    "timeout": 20,
    "function": "func_80320E60",
    "vram": 2150764128
+  },
+  "379324:2150154444": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_8028C0CC",
+   "vram": 2150154444
   }
  },
  "instructions": "",
@@ -7834,6 +7851,11 @@
   "func_80320E60": {
    "vram": 2150764128,
    "matched_by": "autopilot",
+   "readable": false
+  },
+  "func_8028C0CC": {
+   "vram": 2150154444,
+   "matched_by": "permuter-51539607638",
    "readable": false
   }
  },
