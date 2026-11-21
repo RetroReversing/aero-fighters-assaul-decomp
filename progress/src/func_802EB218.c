@@ -25,13 +25,13 @@ extern s32 D_80328418;
 extern void *D_8032AA74;
 
 void func_802EB218(void *arg0) {
+    void *sp34;
     s32 temp_v0_6;
     s32 temp_v0;
     s32 temp_v0_3;
     u32 temp_v0_2;
     s32 temp_v0_4;
     s32 temp_v0_5;
-    void *sp34;
     
 
     sp34 = D_8032AA74;
@@ -73,8 +73,8 @@ void func_802EB218(void *arg0) {
     (*(s32 *)((char *)(arg0) + 0x40)) = func_80233CE8();
     (*(s32 *)((char *)(arg0) + 0x44)) = func_80233CE8();
     (*(s32 *)((char *)(arg0) + 0x48)) = func_80233CE8();
-    temp_v0 = (*(s32 *)((char *)(arg0) + 0x1BC));
     (*(s32 *)((char *)(arg0) + 0x4C)) = func_80233CE8();
+    temp_v0 = (*(s32 *)((char *)(arg0) + 0x1BC));
     switch (temp_v0) {                              /* irregular */
     case 6:
         func_802F62C8(arg0, 1);
