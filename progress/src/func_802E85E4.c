@@ -15,13 +15,11 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_802E7F10();                            /* extern */
 
 s32 func_802E85E4(void *arg0, s32 arg1) {
-    s32 var_v0;
 
-    var_v0 = 0;
     if ((M2C_FIELD(arg0, u8 *, 0x968) != 0) && (arg1 != M2C_FIELD(arg0, s32 *, 0x960))) {
         M2C_FIELD(arg0, s32 *, 0x960) = arg1;
         func_802E7F10();
-        var_v0 = 1;
+        return 1;
     }
-    return var_v0;
+    return 0;
 }
