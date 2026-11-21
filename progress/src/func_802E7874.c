@@ -18,7 +18,7 @@ M2C_UNK func_802DABD0(void *, M2C_UNK);             /* extern */
 s32 func_803183A0();                                /* extern */
 
 void func_802E7874(void *arg0) {
-    func_8021BA1C(func_803183A0(), 3);
+    func_8021BA1C(func_803183A0(arg0), 3);
     M2C_FIELD(arg0, s8 *, 0x541) = 0;
     M2C_FIELD(arg0, s16 *, 0x60) = 0;
     func_802DABD0(arg0, 0);
