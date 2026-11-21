@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80224CA8(M2C_UNK, void *);             /* extern */
+M2C_UNK func_80224CA8(M2C_UNK);             /* extern */
 void *func_802C676C(M2C_UNK, void *);               /* extern */
 extern M2C_UNK D_80346390;
 
@@ -30,7 +30,7 @@ void *func_803085E8(void *arg0) {
         M2C_FIELD(var_a1, f32 *, 0x18) = 0.0f;
         M2C_FIELD(var_a1, f32 *, 0x1C) = 0.0f;
         arg0 = var_a1;
-        func_80224CA8(0x14, var_a1);
+        func_80224CA8(0x14);
         var_a1 = arg0;
     }
     return var_a1;

@@ -12,14 +12,18 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_80303100();                                /* extern */
+s32 func_80303100(void *arg0);                                /* extern */
 
 s32 func_803030A8(void *arg0) {
+char *__repair_addr;
+
     s32 var_v0;
 
-    if (func_80303100() != 0) {
+    if (func_80303100(arg0) != 0) {
         var_v0 = 0xFF;
-        if (M2C_FIELD(M2C_FIELD(arg0, void **, 0), f32 *, 4) < M2C_FIELD(arg0, f32 *, 0x14)) {
+__repair_addr = (char *)(M2C_FIELD(arg0, void **, 0));
+
+        if (M2C_FIELD(__repair_addr, f32 *, 4) < M2C_FIELD(arg0, f32 *, 0x14)) {
             return 1;
         }
         /* Duplicate return node #4. Try simplifying control flow for better match */

@@ -42,6 +42,12 @@ extern char D_8032AAC8[];
 
 s32 func_802CC2F4(void *arg0) {
     u8 var_v0;
+    int *__base_D_80348B58;
+    short *__base_D_80348B70;
+
+    __base_D_80348B70 = &D_80348B70;
+
+    __base_D_80348B58 = &D_80348B58;
 
     func_802CB998(arg0, 1);
     if ((func_80223FC4(0, 0x1000) != 0) || (func_80223FC4(0, 0x8000) != 0)) {
@@ -55,10 +61,10 @@ s32 func_802CC2F4(void *arg0) {
             D_80348BBA = 0;
             D_80348BBB = 0;
             D_80348BAC = 0;
-            D_80348B70 = 0;
+            (*__base_D_80348B70) = 0;
             D_80348B72 = 0;
             D_80348B74 = 0;
-            D_80348B58 = 0;
+            (*__base_D_80348B58) = 0;
             D_80348B5C = 0;
             D_80348B60 = 0;
             D_80348B80 = 0;
@@ -66,7 +72,7 @@ s32 func_802CC2F4(void *arg0) {
             D_80348B88 = 0;
             D_80348B90 = 0;
             D_80348BB6 = 0;
-            func_8030AA50(D_8032AA94, &D_80348B70, &D_80348B58);
+            func_8030AA50(D_8032AA94);
             func_8030AA50(D_8032AAC8);
             func_8030BFA0(0);
             func_802CA0CC(arg0);

@@ -12,12 +12,12 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80231A24(M2C_UNK, M2C_UNK *, s32, s32); /* extern */
+M2C_UNK func_80231A24(M2C_UNK, M2C_UNK *, s32); /* extern */
 M2C_UNK func_802CF1FC(f32, f32, s32, f32, f32, f32, s32); /* extern */
 M2C_UNK func_80304BCC(M2C_UNK, void *, f32 *, M2C_UNK, s32); /* extern */
 extern M2C_UNK D_8032A8F4;
 extern f32 D_80345FC0;
-extern M2C_UNK D_803482A0;
+extern u8 D_803482A0[];
 
 void func_80304B04(s32 arg0, s32 arg1, M2C_UNK arg2) {
     union {
@@ -33,9 +33,9 @@ void func_80304B04(s32 arg0, s32 arg1, M2C_UNK arg2) {
              
 
     if ((arg1 < 0) || (arg1 >= 2)) {
-        func_80231A24(arg2, &D_8032A8F4, arg1, arg1);
+        func_80231A24(arg2, &D_8032A8F4, arg1);
         return;
     }
-    func_80304BCC(arg2, (arg1 * 0x354) + &D_803482A0, &m2c_initial_frame.view_sp44.value, arg2, arg1);
+    func_80304BCC(arg2, (arg1 * 0x354) + D_803482A0, &m2c_initial_frame.view_sp44.value, arg2, arg1);
     func_802CF1FC(m2c_initial_frame.view_sp44.value, m2c_initial_frame.view_sp48.value, m2c_initial_frame.view_sp4C.value, D_80345FC0 * m2c_initial_frame.view_sp50.value, D_80345FC0 * m2c_initial_frame.view_sp54.value, D_80345FC0 * m2c_initial_frame.view_sp58.value, arg0);
 }

@@ -22,16 +22,16 @@ extern f32 D_80347AE4;
 void func_80322F28(void *arg0, s32 arg1, f32 arg2) {
 int *__repair_home1 = &arg1;
 
-    M2C_UNK sp20;
+    char sp20[0x40];
     f32 sp1C;
     f32 temp_fv0;
     f32 temp_fv1;
 
-    func_80228DE0(&sp20);
+    func_80228DE0(sp20);
     temp_fv0 = M2C_FIELD(arg0, f32 *, 0x20);
     temp_fv1 = temp_fv0 * temp_fv0;
-    sp1C = temp_fv1;
-    func_8022A0D0((*__repair_home1), 0, arg2 + (temp_fv1 * D_80347ADC), 8.0f);
-    func_802D0154((*__repair_home1), temp_fv1 * D_80347AE0, 0x7A);
-    func_8022A0D0((*__repair_home1), 0, temp_fv1 * D_80347AE4, temp_fv1 * -5.0f);
+    sp1C = (temp_fv0 * temp_fv0);
+    func_8022A0D0((*__repair_home1), 0, arg2 + ((temp_fv0 * temp_fv0) * D_80347ADC), 8.0f);
+    func_802D0154((*__repair_home1), (temp_fv0 * temp_fv0) * D_80347AE0, 0x7A);
+    func_8022A0D0((*__repair_home1), 0, (temp_fv0 * temp_fv0) * D_80347AE4, (temp_fv0 * temp_fv0) * -5.0f);
 }

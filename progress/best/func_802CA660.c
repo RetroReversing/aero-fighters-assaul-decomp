@@ -31,7 +31,9 @@ void func_802CA660(s32 arg0, M2C_UNK arg1, s32 arg2, s32 arg3) {
     M2C_UNK *var_s0;
 
     var_s0 = NULL;
-    switch (arg3) {                                 /* irregular */
+    switch (arg3) {
+case 0: break;
+                                 /* irregular */
     case 0x8:
         var_s0 = &D_803271A0;
         break;

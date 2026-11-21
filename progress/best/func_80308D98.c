@@ -23,15 +23,15 @@ M2C_UNK func_802C57CC(s32, M2C_UNK);                /* extern */
 void func_80308D98(s32 arg0) {
 int *__repair_home0 = &arg0;
 
-    M2C_UNK sp28;
+    char sp28[0x40];
     s32 temp_s0;
 
-    func_8022970C(&sp28);
-    func_8022A0D0(&sp28, 0, 0x42200000, 0x41200000);
+    func_8022970C(sp28);
+    func_8022A0D0(sp28, 0, 0x42200000, 0x41200000);
     temp_s0 = (*__repair_home0) + 0x2F0;
-    func_802C49A0(temp_s0, 0x30, &sp28, 5);
+    func_802C49A0(temp_s0, 0x30, sp28, 5);
     func_802C578C(temp_s0, 0x43340000);
     func_802C5798(temp_s0, 0x42B40000);
-    func_802C57A4(temp_s0, 0);
+    func_802C57A4(((*__repair_home0) + 0x2F0), 0);
     func_802C57CC(temp_s0, 0x42700000);
 }

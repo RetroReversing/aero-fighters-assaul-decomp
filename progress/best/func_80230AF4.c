@@ -31,7 +31,7 @@ s32 func_80230AF4(u8 *arg0) {
             temp_v0_2 = func_802306FC(*var_s1);
             var_s0 += 1;
             var_s1 += 1;
-            var_s2 = (var_s2 * 0xA) + temp_v0_2;
+            var_s2 = var_s2 * 0xA; var_s2 = var_s2 + temp_v0_2;
         } while (var_s0 < temp_v0);
     }
     return var_s2;

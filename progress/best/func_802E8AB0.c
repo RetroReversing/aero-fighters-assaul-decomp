@@ -19,9 +19,7 @@ M2C_UNK func_802D0154(M2C_UNK *, s32, M2C_UNK);     /* extern */
 extern s32 D_8033E63C;
 
 void func_802E8AB0(void *arg0, s32 arg1) {
-    M2C_UNK32 sp70;
-    M2C_UNK32 sp6C;
-    M2C_UNK32 sp68;
+    f32 sp68[3];
     M2C_UNK sp38;
     s32 sp34;
     s32 sp30;
@@ -41,11 +39,11 @@ void func_802E8AB0(void *arg0, s32 arg1) {
         sp2C = 1;
         break;
     }
-    func_802CEF48(0, M2C_FIELD(arg0, M2C_UNK32 *, 0xF8), M2C_FIELD(arg0, M2C_UNK32 *, 0xFC), M2C_FIELD(arg0, M2C_UNK32 *, 0x100), &sp34, &sp30);
+    func_802CEF48(0, M2C_FIELD(arg0, f32 *, 0xF8), M2C_FIELD(arg0, f32 *, 0xFC), M2C_FIELD(arg0, f32 *, 0x100), &sp34, &sp30);
     func_8022970C(&sp38);
-    sp68 = M2C_FIELD(arg0, M2C_UNK32 *, 0xF8);
-    sp6C = M2C_FIELD(arg0, M2C_UNK32 *, 0xFC);
-    sp70 = M2C_FIELD(arg0, M2C_UNK32 *, 0x100);
+    sp68[0] = M2C_FIELD(arg0, f32 *, 0xF8);
+    sp68[1] = M2C_FIELD(arg0, f32 *, 0xFC);
+    sp68[2] = M2C_FIELD(arg0, f32 *, 0x100);
     func_802D0154(&sp38, sp34, 0x7A);
     func_802D0154(&sp38, sp30, 0x78);
     func_802AB26C(D_8033E63C, arg1, &sp38, sp2C);

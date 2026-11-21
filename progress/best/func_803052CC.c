@@ -31,7 +31,7 @@ extern f64 D_803460F8;
 void func_803052CC(void *arg0, s32 arg1, M2C_UNK arg2, M2C_UNK arg3) {
     f32 sp84;
     f32 sp80;
-    M2C_UNK sp3C;
+    char sp3C[0x44];
     f32 sp38;
     f32 sp34;
     f32 temp_fv0;
@@ -54,11 +54,11 @@ void func_803052CC(void *arg0, s32 arg1, M2C_UNK arg2, M2C_UNK arg3) {
     if (M2C_FIELD(arg0, u8 *, 0xC56) != 0) {
         M2C_FIELD(arg0, f32 *, 0xC58) = (f32) (M2C_FIELD(arg0, f32 *, 0xC58) + sp80);
         if ((M2C_FIELD(arg0, f32 *, 0xC58) > 5.0f) && ((f64) func_8023499C() < D_803460F8)) {
-            func_80228DE0(&sp3C, arg1);
+            func_80228DE0(sp3C, arg1);
             sp38 = (func_8023499C() - 0.5f) * 2.0f * 75.0f;
             sp34 = func_8023499C() * 50.0f;
-            func_8022A0D0(&sp3C, sp38, sp34, func_8023499C() * 15.0f);
-            func_802AAA80(D_8032B734, &sp3C);
+            func_8022A0D0(sp3C, sp38, sp34, func_8023499C() * 15.0f);
+            func_802AAA80(D_8032B734, sp3C);
             M2C_FIELD(arg0, f32 *, 0xC58) = 0.0f;
         }
     }

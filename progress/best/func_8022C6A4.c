@@ -30,13 +30,18 @@ extern s32 D_80278734;
 extern s32 D_80278740;
 
 void func_8022C6A4(void) {
+int __repair_literal;
+
     s32 sp24;
     s32 sp20;
     s32 sp1C;
-    s32 temp_a0;
+    
+s32 __repair_phase_temp_a0;
     s32 temp_v1;
+__repair_literal = 4;
 
-    temp_v1 = *(&D_80278720 + (D_8027872E * 4));
+
+    temp_v1 = *((M2C_UNK *)((s8 *)&D_80278720 + (D_8027872E * __repair_literal)));
     if ((D_80278740 == 0) || (D_8027872C != 0)) {
         if (temp_v1 == 0) {
             func_80231A24(&D_80254448);
@@ -44,8 +49,8 @@ void func_8022C6A4(void) {
         }
         if ((D_80278729 != 0x67) && ((D_8027872C != 0) || (D_8027872A != 0x67))) {
             sp24 = temp_v1;
-            sp20 = func_8023DAE0();
-            if (func_8023DB20() == sp20) {
+            temp_v1 = func_8023DAE0();
+            if (func_8023DB20() == temp_v1) {
                 D_80278729 = 0x67;
                 if (D_8027872C == 0) {
                     D_80278734 += 1;
@@ -55,10 +60,10 @@ void func_8022C6A4(void) {
                 D_8027872B = 0;
                 D_8027872C = 0;
                 osWritebackDCacheAll();
-                temp_a0 = sp24 + 0x10;
-                sp1C = temp_a0;
-                func_8023D92C(temp_a0);
-                osSpTaskStartGo(temp_a0);
+                __repair_phase_temp_a0 = sp24 + 0x10;
+                sp1C = __repair_phase_temp_a0;
+                func_8023D92C(__repair_phase_temp_a0);
+                osSpTaskStartGo(__repair_phase_temp_a0);
             }
         }
     }

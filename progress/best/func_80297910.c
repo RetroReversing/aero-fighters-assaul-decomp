@@ -22,7 +22,7 @@ void func_80297910(void *arg0) {
 
     temp_a2 = M2C_FIELD(arg0, s32 *, 0);
     if (temp_a2 != 0xFFFF) {
-        func_8021BAE0(temp_a2, arg0, temp_a2);
+        func_8021BAE0(temp_a2, arg0);
         M2C_FIELD(arg0, s32 *, 0) = 0xFFFF;
     }
     temp_a0 = M2C_FIELD(arg0, s32 *, 4);

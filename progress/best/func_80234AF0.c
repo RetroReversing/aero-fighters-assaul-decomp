@@ -23,8 +23,8 @@ f32 func_80234AF0(void) {
     temp_t8 = (D_80250900 * 0x41C64E6D) + 0x3039;
     temp_v0 = (temp_t8 >> 0x10) & 0x7FFF;
     D_80250900 = temp_t8;
-    var_ft1 = (f32) temp_v0;
-    if (temp_v0 < 0) {
+    var_ft1 = (f32) ((temp_t8 >> 0x10) & 0x7FFF);
+    if (((temp_t8 >> 0x10) & 0x7FFF) < 0) {
         var_ft1 += 4294967296.0f;
     }
     return var_ft1 / D_802553B4;

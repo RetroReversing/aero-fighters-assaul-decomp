@@ -34,13 +34,13 @@ loop_1:
         }
     }
     if (var_a3 == 2) {
-        func_80231A24("Ran out of IFF file ids.  (IFF_NIFFS==%d)", 2, var_a2, var_a3);
+        func_80231A24("Ran out of IFF file ids.  (IFF_NIFFS==%d)", 2, var_a2);
         return -1;
     }
     M2C_FIELD(var_a2, s32 *, 0) = arg0;
     sp18 = var_a3;
     sp1C = var_a2;
-    M2C_FIELD(var_a2, s32 *, 8) = (s32) ((u32) func_8022B5E0(arg0 + 4, 4, var_a2, var_a3) + 8);
+    M2C_FIELD(var_a2, s32 *, 8) = (s32) ((u32) func_8022B5E0(arg0 + 4, 4, var_a2) + 8);
     M2C_FIELD(var_a2, u32 *, 4) = (u32) func_8022B5E0(arg0 + 8, 4, var_a2);
     func_80223C3C(sp18);
     return sp18;

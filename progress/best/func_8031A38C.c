@@ -14,7 +14,7 @@ typedef s32 M2C_UNK32;
 
 extern f32 D_8032BCD4;
 
-s32 func_8031A38C(void *arg0, s32 arg1) {
+s32 func_8031A38C(void *arg0, u8 arg1) {
     f32 temp_fa0;
     f32 temp_fv1;
     s16 temp_v0;
@@ -38,15 +38,17 @@ s32 func_8031A38C(void *arg0, s32 arg1) {
         temp_fa0 = (M2C_FIELD(arg0, f32 *, 0x5C) + 1.0f) - temp_fv1;
         if ((temp_fa0 > 0.0f) && (M2C_FIELD(arg0, u8 *, 0x74) != 0)) {
             M2C_FIELD(arg0, s16 *, 0x72) = (s16) (s32) (254.0f * (1.0f - temp_fa0));
-            return 1;
+            goto __shared_return_1;
         }
         M2C_FIELD(arg0, s16 *, 0x72) = 0xFF;
-        return 1;
+        __shared_return_1:
+    return 1;
     }
     if (temp_v0 == 1) {
         M2C_FIELD(arg0, s16 *, 0x68) = 2;
+    } else {
+        M2C_FIELD(arg0, s16 *, 0x68) = 1;
         return 1;
     }
-    M2C_FIELD(arg0, s16 *, 0x68) = 1;
     return 1;
 }

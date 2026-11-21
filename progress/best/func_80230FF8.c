@@ -28,25 +28,29 @@ extern M2C_UNK D_80281500;
 extern M2C_UNK D_80283518;
 
 void func_80230FF8(void) {
+    s32 *__base_D_80000300;
     s32 var_s0;
 
     osCreateMesgQueue(&D_80281500, &D_802814D8, 0xA);
     var_s0 = 0x10;
-    if (D_80000300 != 0) {
+    __base_D_80000300 = &D_80000300;
+    if ((*__base_D_80000300) != 0) {
         var_s0 = 2;
-        if (D_80000300 != 1) {
+        if ((*__base_D_80000300) != 1) {
             var_s0 = 0x1E;
-            if (D_80000300 != 2) {
-                func_80231A24(&D_80254FB0, D_80000300);
+            if ((*__base_D_80000300) != 2) {
+                func_80231A24(&D_80254FB0, (*__base_D_80000300));
                 var_s0 = 0x10;
-            } else {
-                func_80231A24(&D_80254F98, D_80000300);
+            } else {/*__repair_call_balance*/if(var_s0){
+                func_80231A24(&D_80254F98, (*__base_D_80000300));}else{
+                func_80231A24(&D_80254F98, (*__base_D_80000300));}
             }
-        } else {
-            func_80231A24(&D_80254F80, D_80000300);
+        } else {/*__repair_call_balance*/if(var_s0){
+            func_80231A24(&D_80254F80, (*__base_D_80000300));}else{
+            func_80231A24(&D_80254F80, (*__base_D_80000300));}
         }
     } else {
-        func_80231A24(&D_80254F68, D_80000300);
+        func_80231A24(&D_80254F68, (*__base_D_80000300));
     }
     func_8022C838(&D_80281218, &D_80283518, 0x7F, var_s0 & 0xFF, 1);
     func_8022CA14(&D_80281218, &D_80283518, &D_802814C0);

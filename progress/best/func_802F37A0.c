@@ -34,7 +34,7 @@ M2C_UNK func_80233D58(s32);                         /* extern */
 M2C_UNK func_8023413C(s32);                         /* extern */
 M2C_UNK func_802EDFD0(void *);                      /* extern */
 M2C_UNK func_802F1444(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_802F62C8(M2C_UNK);                     /* extern */
+M2C_UNK func_802F62C8(void *, M2C_UNK);                     /* extern */
 extern M2C_UNK D_80328794;
 extern M2C_UNK D_803287A4;
 extern M2C_UNK D_803287B0;
@@ -49,7 +49,7 @@ extern s8 D_8034823F;
 extern s32 D_80348B58;
 extern s32 D_80348B5C;
 extern s32 D_80348B60;
-extern M2C_UNK D_80348B64;
+extern u8 D_80348B64[];
 extern M2C_UNK D_80348B6A;
 extern u8 D_80348BB7;
 
@@ -59,7 +59,7 @@ void func_802F37A0(void *arg0) {
     M2C_UNK sp38;
     u8 temp_v0;
 
-    func_802F62C8(0);
+    func_802F62C8(arg0, 0);
     sp7F = 0;
     D_8034823F = 0;
     func_802EDFD0(arg0);
@@ -112,19 +112,19 @@ void func_802F37A0(void *arg0) {
     func_8021E87C(0xD5, 0xA0, &D_8034823C);
     func_8021E66C(0);
     func_8021E708(0xFF, 0xCA, 7, 0xFF);
-    func_8022B460(&sp7C, &D_80348B64, 3);
+    func_8022B460(&sp7C, D_80348B64, 3);
     func_8021E87C(0xF0, 0xB1, &sp7C);
     func_802F1444(arg0, 0x52, 0xA8, 0);
     func_8023413C(M2C_FIELD(arg0, s32 *, 0x50));
     temp_v0 = D_80348BB7;
-    if ((s32) temp_v0 >= 2) {
+    if ((s32) D_80348BB7 >= 2) {
         func_8021E66C(7);
         func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
         func_8023072C(&D_8034823C, &D_803287C4, D_80348B5C);
         func_8021E87C(0xD5, 0x70, &D_8034823C);
         func_8021E66C(0);
         func_8021E708(0xFF, 0xCA, 7, 0xFF);
-        func_8022B460(&sp7C, &D_80348B64 + 3, 3);
+        func_8022B460(&sp7C, D_80348B64 + 3, 3);
         func_8021E87C(0xF0, 0x81, &sp7C);
         func_8021E708(0xFF, 0xFF, 0xFF, 0xFF);
         func_802F1444(arg0, 0x52, 0x78, 1);

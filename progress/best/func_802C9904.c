@@ -29,6 +29,7 @@ extern M2C_UNK D_80326EF0;
 extern M2C_UNK D_80326F04;
 
 void func_802C9904(void *arg0) {
+    M2C_UNK *__base_D_80326EF0;
     M2C_UNK sp30;
     s32 temp_s0;
 
@@ -45,7 +46,8 @@ void func_802C9904(void *arg0) {
     func_802233EC(0x04C20000);
     func_8021E66C(0);
     func_80309D6C(0, 0, 0, (s32) M2C_FIELD(arg0, f32 *, 0x74));
-    temp_s0 = (s32) (0x140 - func_8021E83C(&D_80326EF0)) >> 1;
+    __base_D_80326EF0 = &D_80326EF0;
+    temp_s0 = (s32) (0x140 - func_8021E83C(__base_D_80326EF0)) >> 1;
     func_8021E708(0, 0x80, 0, 0xFF);
     func_8021E87C(temp_s0, 0x74, &D_80326F04);
     func_8021EC9C();

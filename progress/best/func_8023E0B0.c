@@ -1,3 +1,5 @@
+/* Draft from identical target func_8023E1F0, retargeted and judged independently. */
+/* Draft from identical target func_8023E0B0, retargeted and judged independently. */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -24,6 +26,8 @@ extern char D_80285ED8[];
 extern char D_80285EF0[];
 
 s32 func_8023E0B0(s32 arg0, u8 arg1, s32 arg2, s32 arg3) {
+int *__repair_home2 = &arg2;
+
     s32 sp3C;
     u32 sp34;
     s32 sp30;
@@ -44,14 +48,14 @@ loop_3:
         }
         arg3 -= 8;
         arg1 += 1;
-        arg2 += 8;
+        (*__repair_home2) += 8;
         temp_ret = __ll_mul(0);
         sp28 = temp_ret;
         sp2C = (u32) (u64) temp_ret;
-        temp_ret_2 = __ull_div(sp28, sp2C, 0);
+        temp_ret_2 = __ull_div(sp28);
         sp30 = temp_ret_2;
         sp34 = (u32) (u64) temp_ret_2;
-        osSetTimer(D_80285EB8, 0, 0, D_80285ED8, D_80285EF0);
+        osSetTimer(D_80285EB8, 0, 0, D_80285ED8);
         osRecvMesg(D_80285ED8, 0, 1);
         if (arg3 <= 0) {
             goto block_6;

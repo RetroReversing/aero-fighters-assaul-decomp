@@ -22,35 +22,39 @@ f32 func_802CF450(f32 arg0, f32 arg1) {
     f32 var_fa0;
     f32 var_fa1;
     f32 var_fv1;
+    f32 *__base_D_80342A2C;
+
+    __base_D_80342A2C = &D_80342A2C;
 
     var_fa0 = arg0;
     var_fa1 = arg1;
     if (D_80342A24 < var_fa0) {
-        do {
+        __repair_rows: {
             var_fa0 -= D_80342A28;
-        } while (D_80342A24 < var_fa0);
+        }
+if (D_80342A24 < var_fa0) goto __repair_rows;
     }
     if (var_fa0 < D_80342A30) {
         do {
-            var_fa0 += D_80342A2C;
+            var_fa0 += (*__base_D_80342A2C);
         } while (var_fa0 < D_80342A30);
     }
     if (D_80342A24 < var_fa1) {
         do {
-            var_fa1 -= D_80342A2C;
+            var_fa1 -= (*__base_D_80342A2C);
         } while (D_80342A24 < var_fa1);
     }
     if (var_fa1 < D_80342A30) {
         do {
-            var_fa1 += D_80342A2C;
+            var_fa1 += (*__base_D_80342A2C);
         } while (var_fa1 < D_80342A30);
     }
     temp_fv0 = var_fa1 - var_fa0;
     var_fv1 = temp_fv0;
     if (D_80342A24 < temp_fv0) {
-        var_fv1 = temp_fv0 - D_80342A2C;
+        var_fv1 = temp_fv0 - (*__base_D_80342A2C);
     } else if (temp_fv0 < D_80342A30) {
-        var_fv1 = temp_fv0 + D_80342A2C;
+        var_fv1 = temp_fv0 + (*__base_D_80342A2C);
     }
     return var_fv1;
 }

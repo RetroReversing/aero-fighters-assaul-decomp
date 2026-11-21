@@ -19,13 +19,13 @@ extern u8 D_8032AA80;
 
 void func_8028FB04(s32 *arg0) {
     switch (D_8032AA80) {                           /* irregular */
-    case 24:
-        func_802F9668(*arg0 + 0x10, 9);
-        func_802FA148(*arg0 + 0x10, 9);
-        break;
     case 15:
         func_802F9668(*arg0 + 0x10, 7);
         func_802FA148(*arg0 + 0x10, 7);
+        break;
+    case 24:
+        func_802F9668(*arg0 + 0x10, 9);
+        func_802FA148(*arg0 + 0x10, 9);
         break;
     }
     func_8029025C(*arg0 + 0x78, 2);

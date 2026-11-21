@@ -25,18 +25,18 @@ u8 func_803036F8(s32 *arg0, s32 arg1, s32 arg2) {
 
     *arg0 = arg1;
     if (arg1 == 0x1E) {
-        func_802057FC(arg0, arg1, arg1);
+        func_802057FC(arg0, arg1);
         func_8030363C(arg0, 0);
         func_80303894(arg0, 0, 0, 1);
         return 1U;
     }
     if (arg1 >= 0x1F) {
-        func_802057FC((s32) arg0, arg1);
-        func_8030363C(arg0, 0);
+        func_802057FC((s32) arg0);
+        func_8030363C(arg0);
         func_80303894(arg0, 0, 0, 1);
         return 2U;
     }
-    func_8030363C(arg0, arg2, arg1);
+    func_8030363C(arg0, arg2);
     temp_v0 = func_8030361C(arg0, *(D_8032A4F8 + (arg1 * 0xC)), arg1);
     sp27 = temp_v0;
     if (temp_v0 != 0) {

@@ -20,26 +20,28 @@ s32 func_8031A2EC();
 s32 func_8031A2F4();
 
 void func_802B0884(s32 arg0, s32 arg1, s32 arg2) {
-    s32 sp24;
+int *__repair_home1 = &arg1;
+
+    
     s32 sp1C;
     s32 temp_a0;
     s32 temp_v0;
 
-    if (func_80318340(arg1) <= 0.0f) {
+    if (func_80318340((*__repair_home1)) <= 0.0f) {
         if (arg2 == 4) {
             temp_a0 = arg0 + 0x365C;
             sp1C = temp_a0;
-            if ((func_80317D90(temp_a0) != 0) && (func_8031A2EC(arg1) == 0)) {
-                func_802E83EC(sp1C);
-                func_8031A2F4(arg1, 1);
+            if ((func_80317D90(temp_a0) != 0) && (func_8031A2EC((*__repair_home1)) == 0)) {
+                func_802E83EC(temp_a0);
+                func_8031A2F4((*__repair_home1), 1);
             }
         } else if (arg2 == 2) {
-            temp_v0 = func_80318764(arg1);
+            temp_v0 = func_80318764((*__repair_home1));
             if (temp_v0 != 0) {
-                sp24 = temp_v0;
-                if (func_8031A2EC(arg1) == 0) {
-                    func_802E83EC(sp24, sp24);
-                    func_8031A2F4(arg1, 1);
+                
+                if (func_8031A2EC((*__repair_home1)) == 0) {
+                    func_802E83EC(temp_v0);
+                    func_8031A2F4((*__repair_home1), 1);
                 }
             }
         }

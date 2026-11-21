@@ -24,7 +24,9 @@ int *__repair_home0 = &arg0;
     f32 temp_fa1;
     f32 temp_fv0;
     f32 var_fa0;
+f32 __repair_var_fa0_1;
     f32 var_ft4;
+f32 __repair_var_ft4_1;
     f32 var_fv1;
     s32 temp_a0;
 
@@ -37,18 +39,18 @@ int *__repair_home0 = &arg0;
     if (temp_fv0 < 0.0f) {
         var_fv1 = 0.0f;
     } else {
-        var_fa0 = 1.0f;
+        __repair_var_fa0_1 = 1.0f;
         if (temp_fv0 > 1.0f) {
             var_fv1 = 1.0f;
         }
     }
     if (temp_fa1 < D_80346990) {
-        var_ft4 = D_80346990;
+        __repair_var_ft4_1 = D_80346990;
     } else if (temp_fa1 > 2.0f) {
         var_ft4 = 2.0f;
     }
     sp1C = temp_a0;
     sp20 = var_ft4;
-    func_803025AC(var_fa0, temp_fa1, temp_a0, arg1, var_fv1, (*__repair_home0));
+    func_803025AC(__repair_var_fa0_1, temp_fa1, temp_a0, arg1, var_fv1, (*__repair_home0));
     func_803025E4(temp_a0, arg1, var_ft4);
 }

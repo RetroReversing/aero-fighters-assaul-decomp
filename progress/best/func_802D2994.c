@@ -17,12 +17,10 @@ extern s32 D_8032AA74;
 
 s32 func_802D2994(void *arg0) {
     f32 temp_fv1;
-    s32 var_v0;
 
-    var_v0 = 0;
     temp_fv1 = M2C_FIELD(arg0, f32 *, 0xD4);
     if ((temp_fv1 <= func_802AED10(D_8032AA74)) && (temp_fv1 != 0.0f)) {
-        var_v0 = 1;
+        return 1;
     }
-    return var_v0;
+    return 0;
 }

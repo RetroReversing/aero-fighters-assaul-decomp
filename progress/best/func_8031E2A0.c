@@ -13,12 +13,12 @@ typedef s32 M2C_UNK32;
 #endif
 
 void func_8031E2A0(void *arg0) {
-    M2C_FIELD(arg0, s16 *, 0) = 0x20;
-    M2C_FIELD(arg0, s16 *, 0xA4) = 1;
+    M2C_FIELD(arg0, u16 *, 0) = 0x20;
+    M2C_FIELD(arg0, u16 *, 0xA4) = 1;
     M2C_FIELD(arg0, s16 *, 0xA6) = 0xC;
     M2C_FIELD(arg0, s16 *, 0x9C) = 0x18D;
-    M2C_FIELD(arg0, s16 *, 0x98) = 0x20;
-    M2C_FIELD(arg0, s16 *, 0x9A) = 0x20;
+    M2C_FIELD(arg0, u16 *, 0x98) = 0x20;
+    M2C_FIELD(arg0, u16 *, 0x9A) = 0x20;
     M2C_FIELD(arg0, s8 *, 0x74) = 1;
     M2C_FIELD(arg0, f32 *, 0x44) = 1.0f;
     M2C_FIELD(arg0, f32 *, 0x48) = 1.0f;

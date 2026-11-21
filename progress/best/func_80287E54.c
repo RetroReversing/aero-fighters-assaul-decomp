@@ -26,7 +26,6 @@ void func_80287E54(void *arg0, s32 arg1) {
         M2C_FIELD(arg0, s16 *, 0x108) = 0x199;
         M2C_FIELD(arg0, s16 *, 0x104) = 0x20;
         M2C_FIELD(arg0, s16 *, 0x106) = 0x20;
-block_15:
         M2C_FIELD(arg0, f32 *, 0x10C) = var_ft0;
         return;
     case 0x0:
@@ -81,6 +80,7 @@ block_15:
         M2C_FIELD(arg0, s16 *, 0x104) = 0x20;
         M2C_FIELD(arg0, s16 *, 0x106) = 0x20;
         M2C_FIELD(arg0, s16 *, 0x110) = 0;
-        goto block_15;
+        M2C_FIELD(arg0, f32 *, 0x10C) = var_ft0;
+        return;
     }
 }

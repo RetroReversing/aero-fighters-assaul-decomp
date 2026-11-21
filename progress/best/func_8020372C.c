@@ -12,10 +12,10 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-extern s32 D_80256DE4;
+extern s8 D_80256DE4;
 
-s32 func_8020372C(s32 arg0) {
-    if (M2C_FIELD((D_80256DE4 + ((arg0 & 0xFF) * 0xB4)), u8 *, 0xAC) == 0) {
+s32 func_8020372C(u8 arg0) {
+    if (M2C_FIELD(((*(s32 *)&D_80256DE4) + ((arg0 & 0xFF) * 0xB4)), u8 *, 0xAC) == 0) {
         return 0;
     }
     return 1;
