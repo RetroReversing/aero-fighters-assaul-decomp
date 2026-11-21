@@ -16,8 +16,9 @@ M2C_UNK func_80225424(s32, s32 *, M2C_UNK);         /* extern */
 s32 func_8022B948(M2C_UNK, M2C_UNK);                /* extern */
 
 s32 func_802254F4(s32 arg0) {
-    s32 sp1C;
     s32 temp_v0;
+    s32 sp1C;
+
 
     temp_v0 = func_8022B948(4, 4);
     sp1C = temp_v0;
