@@ -23,7 +23,7 @@ extern s32 D_8032AA74;
 void func_8029131C(s32 arg0) {
     s32 sp2C;
     s32 sp24;
-    s32 sp20;
+    
     s32 temp_a0;
     s32 temp_a1;
     s32 temp_v0;
@@ -33,7 +33,7 @@ void func_8029131C(s32 arg0) {
     temp_v0 = func_80305E10(0x1388, 0);
     temp_a0 = sp2C + 0x8F4;
     temp_a1 = arg0 + 0x324;
-    sp20 = temp_a1;
+    sp2C = temp_a1;
     sp24 = temp_a0;
     func_803021B8(temp_a0, temp_a1, 0x29, temp_v0, 0);
     func_803025AC(temp_a0, temp_a1, 0x3F333333);
