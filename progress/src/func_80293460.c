@@ -17,13 +17,17 @@ M2C_UNK func_80205E0C(M2C_UNK, s32);                /* extern */
 M2C_UNK func_80233D58(s32);                         /* extern */
 
 void func_80293460(void *arg0) {
+char *__repair_addr;
+
     s32 temp_a1;
 
     func_80233D58(M2C_FIELD(arg0, s32 *, 0x7C));
     func_80233D58(M2C_FIELD(arg0, s32 *, 0x80));
     func_80205AA0(0, 3);
     temp_a1 = M2C_FIELD(arg0, s32 *, 0xB0);
-    M2C_FIELD(M2C_FIELD(arg0, void **, 0x74), s32 *, 0x7168) = temp_a1;
+__repair_addr = (char *)(M2C_FIELD(arg0, void **, 0x74));
+
+    M2C_FIELD(__repair_addr, s32 *, 0x7168) = temp_a1;
     if (temp_a1 >= 0) {
         func_80205E0C(0, temp_a1);
     }
