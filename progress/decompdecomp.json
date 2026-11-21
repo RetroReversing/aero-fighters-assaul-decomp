@@ -1537,6 +1537,23 @@
    "timeout": 20,
    "function": "func_8030DD10",
    "vram": 2150685968
+  },
+  "916788:2150691908": {
+   "toolchain": "ido-7.1",
+   "flags": [
+    "-O2",
+    "-mips2",
+    "-G",
+    "0",
+    "-non_shared",
+    "-Xcpluscomm",
+    "-Wab,-r4300_mul",
+    "-woff",
+    "649,838,712"
+   ],
+   "timeout": 20,
+   "function": "func_8030F444",
+   "vram": 2150691908
   }
  },
  "instructions": "",
@@ -3188,6 +3205,11 @@
   },
   "func_8030DD10": {
    "vram": 2150685968,
+   "matched_by": "autopilot",
+   "readable": false
+  },
+  "func_8030F444": {
+   "vram": 2150691908,
    "matched_by": "autopilot",
    "readable": false
   }
