@@ -15,12 +15,10 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_802B3958();                            /* extern */
 
 s32 func_802B3A6C(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
-    s32 var_v0;
 
-    var_v0 = 1;
     if ((M2C_FIELD(arg0, s16 *, 0x68) < 0) && (M2C_FIELD(arg0, s16 *, 0x1508) < 0)) {
         func_802B3958();
-        var_v0 = 0;
+        return 0;
     }
-    return var_v0;
+    return 1;
 }
